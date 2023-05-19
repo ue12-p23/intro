@@ -20,3 +20,5 @@ nb-courselevels
 #
 jupyter-contrib-nbextensions
 
+# jlab extensions
+jupyterlab-courselevels
