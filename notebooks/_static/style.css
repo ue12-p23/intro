@@ -1,0 +1,114 @@
+/*
+ * jupyter has its own way to render lists
+ * which, let's just say, is not optimal
+ * let's cancel that
+ */
+ .rendered_html * + ol,
+ .rendered_html * + ul {
+     margin-top: initial !important;
+ }
+
+
+ /*
+  * jupyter-book: outline cell outputs
+  * for a more legible book
+  * and it is also easier to check for proper execution
+  */
+div.cell div.cell_output .output pre {
+    background-color: #fee;
+}
+
+
+/* minimal layout tooling */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.column.center {
+    align-items: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* colors */
+.grey {
+    background-color: #eee;
+}
+.blue {
+    background-color: rgb(223, 235, 251);
+}
+.red {
+    background-color: rgb(234, 125, 110);
+}
+.pink {
+    background-color: pink;
+}
+
+
+/* notes and warning */
+.note {
+    font-style: italic;
+    border-left: 1px dotted #ccc;
+    border-radius: 5px;
+    padding: 5px 0px 0px 10px;
+}
+.note p {
+    line-height: 1.3;
+}
+.note>p:first-child::before {
+    content: "note : ";
+    font-weight: 900;
+}
+
+.outline {
+    background-color:#ddd;
+    border-radius: 6px;
+    margin:12px;
+    padding: 12px;
+}
+
+.red-pill {
+    background-color:red;
+    padding:4px;
+    border-radius: 4px;
+}
+
+
+/*
+ * manually add a frame - maybe look at nb-courselevels instead ?
+ */
+.frame {
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius:5px
+}
+
+
+/*
+ * leveraging nb-courselevels
+ * the first entry in a framed cell
+ * if it's a (sub)title, gets outlined
+ */
+
+div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h1:first-child,
+div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h2:first-child,
+div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h3:first-child,
+div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
+        color: purple;
+        text-decoration-line: underline;
+        text-decoration-color: rgb(227, 129, 227);
+        text-decoration-style: double;
+}
+
+
+/*
+ * ----------- specific to this course
+ * used in the notebook on memory layout
+ */
+.memory {
+    font-size: 180%;
+    line-height: 1.2;
+}

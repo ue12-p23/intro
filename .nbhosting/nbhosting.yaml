@@ -1,0 +1,26 @@
+# the course structure under nbhosting
+tracks:
+  - name: "Intro UE12"
+    description: "installations"
+    id: intro
+    sections:
+      - name: intro
+        notebooks: [ "notebooks/0-*-nb.md" ]
+      - name: installations
+        notebooks: [ "notebooks/1-*-nb.md" ]
+      - name: compléments
+        notebooks: [ "notebooks/2-*-nb.md" ]
+      - name: résumé
+        notebooks: [ "notebooks/3-*-nb.md" ]
+
+builds:
+  - id: handouts
+    name: format HTML
+    description: contenu statique et cherchable
+    directory: notebooks
+    script: |
+      pip install jupyter-book
+      jupyter-book build .
+
+# no mapping needed
+static-mappings: []

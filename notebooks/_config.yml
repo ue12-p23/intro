@@ -1,0 +1,43 @@
+# Jupyter Book settings
+
+title: Introduction
+author: Thierry Parmentelat & Valérie Roy
+logo: media/logo-python.svg
+
+repository:
+  url: https://github.com/ue12-p22/intro
+  branch: main
+  path_to_book: notebooks
+
+html:
+  use_repository_button: yes
+  use_edit_page_button: yes
+  use_issues_button: yes
+
+only_build_toc_files: true
+
+exclude_patterns:
+  - "**/.teacher/*"
+
+execute:
+  execute_notebooks: cache
+  exclude_patterns:
+    - "**/*-corrige*"
+    - "**/.teacher/*"
+    - "**/snake*.py"
+
+parse:
+  myst_enable_extensions:
+    - html_image    # for raw <img> tags in markdown
+    - dollarmath    # for mathjax
+    - strikethrough
+
+sphinx:
+  config:
+    nb_custom_formats:
+      .py:
+        - jupytext.reads
+        - fmt: py:percent
+    html_show_copyright: false
+    # not quite convincing but...
+    html_extra_path: ['media']
