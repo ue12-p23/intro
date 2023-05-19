@@ -386,7 +386,7 @@ et vous ajoutez votre clé publique SSH; mettez ce que vous voulez comme titre, 
 
 ### pour conclure
 
-à ce stade vous pouvez naviguer jusqu'au cours; pour cela, repartez de l'organisation qui va bien, ici `ue12-p22`, c'est-à–dire ici
+à ce stade vous pouvez naviguer jusqu'au cours; pour cela, repartez de l'organisation qui va bien, ici `ue12-p23`, c'est-à–dire ici
 
 <img src="media/github-orga.png" width="60%">
 
@@ -406,7 +406,7 @@ vous avez maintenant tout le bagage pour pouvoir copier le dépôt du cours
 
 il vous suffit pour ça de faire (lisez bien jusqu'au bout avant de copier-coller)
 
-    git clone https://github.com/ue12-p22/intro ue12-p22-intro
+    git clone https://github.com/ue12-p23/intro ue12-p23-intro
 
 **Attention toutefois**
 
@@ -417,15 +417,15 @@ il vous suffit pour ça de faire (lisez bien jusqu'au bout avant de copier-colle
 * le nom `intro` est déduit de la dernière partie de l'URL  
   et si cela ne vous convient pas comme nom, vous pouvez en choisir un autre :
 
-    git clone https://github.com/ue12-p22/intro ue12-p22-intro
+    git clone https://github.com/ue12-p23/intro ue12-p23-intro
 
 +++
 
 pour vérifier que tout s'est bien passé :
 
     # si vous avez utilisé la deuxième forme
-    # votre répertoire local s'appelle ue12-p22-intro et pas juste intro
-    cd ue12-p22-intro
+    # votre répertoire local s'appelle ue12-p23-intro et pas juste intro
+    cd ue12-p23-intro
 
     # le répertoire est rempli avec la dernière version du cours
     cat README.md

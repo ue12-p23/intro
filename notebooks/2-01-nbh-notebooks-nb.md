@@ -41,7 +41,7 @@ HTML(filename="_static/style.html")
 
 pour que vous puissiez lire ce premier cours, alors que vous n'avez encore rien installé sur votre ordi, rendez-vous en ligne sur le serveur de notebooks
 
-<https://nbhosting.inria.fr/auditor/notebook/ue12-p22-intro>
+<https://nbhosting.inria.fr/auditor/notebook/ue12-p23-intro>
 
 **note**: vous avez reçu par mail les identifiants correspondants
 

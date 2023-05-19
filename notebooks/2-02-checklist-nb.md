@@ -125,7 +125,7 @@ voici maintenant une liste un peu plus complète des compétences qui sont atten
 idéalement à la fin de cette leçon vous devriez être capable
 
 * de cloner les supports de cours qui sont ici  
-  <https://github.com/ue12-p22-intro>
+  <https://github.com/ue12-p23-intro>
 
 * d'ouvrir sous jupyter le notebook principal `notebooks/0-10-demonstration.md`
 * de le modifier, ajouter de nouvelles cellules, le sauver, ...

@@ -5,7 +5,7 @@ author: Thierry Parmentelat & Valérie Roy
 logo: media/logo-python.svg
 
 repository:
-  url: https://github.com/ue12-p22/intro
+  url: https://github.com/ue12-p23/intro
   branch: main
   path_to_book: notebooks
 

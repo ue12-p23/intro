@@ -582,17 +582,17 @@ et en dessous de ce dossier principal vous allez ranger vos différents dossiers
 
 évitez de couper les cheveux en 4 en créant plein de sous-répertoires, genre :
 
-~~`/User/jeanmineur/Desktop/git/mines/première-année/info/ue12/python-numerique`~~
+~~`/User/jeanmineur/Desktop/git/mines/première-année/info/ue12/numerique`~~
 
 au contraire :
 
 * si vous créez un dossier par sujet avec un nom explicite
-  * par exemple ce cours pourrait s'appeler `ue12-p22-python-numerique`
+  * par exemple ce cours pourrait s'appeler `ue12-p23-numerique`
 * et que vous regroupez tous ces dossiers dans **un seul répertoire**,
 * ça peut largement suffire
 
 du coup créez plutôt un dossier  
-`/User/jeanmineur/Desktop/git/ue12-p22-python-numerique`
+`/User/jeanmineur/Desktop/git/ue12-p23-numerique`
 
 +++
 

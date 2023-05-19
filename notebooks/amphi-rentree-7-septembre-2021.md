@@ -17,9 +17,9 @@
 ## Organisation
 
 certains supports de cours seront accessibles sous <span style="color:blue">github</span>  
-https://github.com/ue12-p22
+https://github.com/ue12-p23
 
-la version <span style="color:blue">textuelle (html)</span> des cours est sur l'URL https://nbhosting.inria.fr/public/mines-p22/
+la version <span style="color:blue">textuelle (html)</span> des cours est sur l'URL https://nbhosting.inria.fr/public/mines-p23/
 
 - version utile pour réviser et faire des recherches
 - qui ne se substitue pas au repo git  

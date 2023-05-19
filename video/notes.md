@@ -14,7 +14,7 @@ copier l'URL sur github (**toujours** choisir SSH)
 puis taper
 
 ```bash
-git clone git@github.com:ue12-p22/intro.git ue12-intro
+git clone git@github.com:ue12-p23/intro.git ue12-intro
 cd ue12-intro
 ```
 
@@ -61,5 +61,5 @@ code .
 
 # pip
 
-cd ~/git/ue12-p22
+cd ~/git/ue12-p23
 pip install -r requirements.txt

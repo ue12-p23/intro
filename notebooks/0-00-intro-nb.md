@@ -90,7 +90,7 @@ notez que
   ceux qui savent déjà **aident leurs camarades**
 
 * voyez aussi la liste des compétences requises - [notebook
-  `2-02-checklist-nb.md`](https://nbhosting.inria.fr/builds/ue12-p22-intro/handouts/latest/1-06-checklist-nb.html) qui contient notamment [une vidéo YouTube en guise de checklist](https://youtu.be/i_ZcP7iNw-U)
+  `2-02-checklist-nb.md`](https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-06-checklist-nb.html) qui contient notamment [une vidéo YouTube en guise de checklist](https://youtu.be/i_ZcP7iNw-U)
 
 * à terminer pour la prochaine fois si nécessaire
 
@@ -108,9 +108,9 @@ ces contenus vous sont exposés au travers d'un **dépôt git** (hébergé sur <
 
 en général il y aura **un dépôt par bloc de cours** (typiquement, un pour cette introduction, un pour le cours Python numérique, un pour votre cours de langage, …)
 
-du côté **github.com**, les cours du premier semestre sont exposés sous une **organisation** (c'est un terme propre à github pour structurer l'espace de noms des dépôts, il y en a plusieurs dizaines de millions...) qui s'appelle `ue12-p22`; ça signifie que vous pouvez retrouver tous les cours à cette adresse
+du côté **github.com**, les cours du premier semestre sont exposés sous une **organisation** (c'est un terme propre à github pour structurer l'espace de noms des dépôts, il y en a plusieurs dizaines de millions...) qui s'appelle `ue12-p23`; ça signifie que vous pouvez retrouver tous les cours à cette adresse
 
-<https://github.com/ue12-p22/>
+<https://github.com/ue12-p23/>
 
 +++
 
@@ -129,7 +129,7 @@ les contenus des notebooks sont également publiés sur *nbhosting* dans un form
 
 le point d'entrée se situe ici:
 
-<https://nbhosting.inria.fr/public/mines-p22/>
+<https://nbhosting.inria.fr/public/mines-p23/>
 
 +++
 
