@@ -37,20 +37,22 @@ Ce notebook est un résumé des installations qu'il va nous falloir faire
 
 Il nous faut a minima
 
-* le terminal - nous utilisons **`bash`**, qui est natif sur les OS linux et MacOS, et qui vient avec le produit `git for windows`
+* le terminal - nous utilisons **`bash`**, qui est
+  * natif sur les OS linux et MacOS,
+  * et qui vient avec le produit `git for windows`
 * l'éditeur de code **VS-code** (Visual Studio Code)
 * **miniconda** pour **Python** (et les environnements virtuels)
 * **Jupyter** pour les notebooks
-  * et accessoirement, *markdown* pour la mise en forme du texte,
-  * et les formules mathématiques en $\LaTeX$
-* **`git`** pour la gestion de versions; c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser
+  * on parlera un peu de *markdown* pour la mise en forme du texte,
+  * et de $\LaTeX$ pour les formules mathématiques
+* et enfin **`git`** pour la gestion de versions  
+  c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser
 
 ## roadmap
 
 Voici un parcours accéléré pour faire toutes les installations:
 
-```{admonition} installation de git
-:class: dropdown
+```{admonition} installation de git (et bash sur Windows)
 * **(Windows seulement)** git for windows (git + bash)
   <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-01-os-terminal-nb.html#installation-de-bash>
 
@@ -66,7 +68,7 @@ puis ensuite, pour tous les OS
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-02-vscode-python-nb.html#installation-editeur-de-code>
 ```
 
-```{admonition} installation de miniconda
+```{admonition} installation de miniconda (pour Python et IPython)
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-02-vscode-python-nb.html#installation-de-base>
@@ -91,4 +93,3 @@ voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-03-git-
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-local-notebooks-nb.html#notebooks-en-local>
 ```
-
