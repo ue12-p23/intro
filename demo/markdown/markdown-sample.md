@@ -6,16 +6,17 @@
 * avec des bullets
 
 1. une liste
-5. ordonnée avec des
-9. numéros
+1. ordonnée avec des
+1. numéros
 
 ## les fontes
 
-le **gras**, l'*italique*, le ***gras italique***
+* le **gras**,
+* l'*italique*,
+* le ***gras italique***,
+* on peut ~~même barrer~~ des morceaux
 
-mais surtout pour nous `le code` lorsqu'il est *inline*
-
-et enfin deux façons de mettre des **blocs** de code (avec des sauts de ligne)
+mais surtout pour nous du code `l = string.lower()` comme ceci lorsqu'il est *inline*, ou dans un **bloc** (avec des sauts de ligne) séparé comme cela:
 
 ```python
 # avec le nom du langage on a des couleurs
@@ -24,15 +25,11 @@ def foo():
     print("Hello World")
 ```
 
-    # une autre façon
-    # consite à simplement décaler de 4 espaces vers la gauche
-    # un peu plus triste sans les couleurs...
-    def bar():
-        print("Hello World")
-
 ***
 
-on peut aussi écrire des maths
+## équations
+
+on peut aussi écrire des maths en $\LaTeX$, soit *inline* comme ceci $\forall x\in\mathbb{R}$, ou encore dans un bloc comme cela:
 
 $$
 \forall x \in \mathbb{R}, \forall \epsilon \in \mathbb{R}^+, \exists\alpha\in\mathbb{R}^+ \\
@@ -44,10 +41,21 @@ $$
 pensez à utiliser l'extension vs-code 'Draw.io Integration' pour produire vos images
 
 ### format png (bitmap)
+
 ![](../../notebooks/media/fig-vscode-markdown.png)
 
 ### format svg (vectoriel)
+
 ![](../../notebooks/media/logo-python.svg)
+
+## tables
+
+ça n'est pas forcément supporté dans toutes les variantes de markdown, mais on peut aussi créer des tables simples
+
+| Nom | Prénom | email |
+|-:|:-:|:-|
+|Dupont|Jean-Daniel|`jean.dupont@example.com`|
+|John|Doe|`jd@foo.com`|
 
 ## divers
 
