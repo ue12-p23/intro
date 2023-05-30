@@ -115,7 +115,7 @@ par exemple comme ceci
 
 * on peut insérer une image au format vectoriel (ici du svg)
   ![](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
-* en format bitmap (ici du jpg) ![](https://upload.wikimedia.org/wikipedia/commons/a/a1/IPy-logo.png)
+* en format bitmap (ici du png) ![](https://upload.wikimedia.org/wikipedia/commons/a/a1/IPy-logo.png)
 
 ***
 
