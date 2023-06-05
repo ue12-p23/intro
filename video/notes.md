@@ -1,3 +1,7 @@
+# video
+
+voir aussi sur youtube: <https://youtu.be/i_ZcP7iNw-U>
+
 # terminal
 
 ```bash
