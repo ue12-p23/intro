@@ -4,7 +4,6 @@
 #
 jupyter
 jupytext
-ipywidgets
 calysto_bash
 
 numpy
@@ -21,4 +20,9 @@ nb-courselevels
 jupyter-contrib-nbextensions
 
 # jlab extensions
+jupyterlab
+# xxx wait for jlab4-ready version
+#jupyterlab-myst
+#jupyterlab-jupytext
+#ipywidgets
 jupyterlab-courselevels
