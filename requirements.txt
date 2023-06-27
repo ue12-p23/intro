@@ -1,9 +1,8 @@
+#
 # first we have the core requirements
 # i.e. libraries used for running 
 # code in the notebooks per se
 #
-jupyter
-jupytext
 calysto_bash
 
 numpy
@@ -13,16 +12,22 @@ seaborn
 
 ipythontutor
 nbautoeval
-nb-courselevels
 
-# jupyter extensions
 #
-jupyter-contrib-nbextensions
+# jupyter basics
+#
+jupyterlab
+# does not work, need to 
+# pip install --pre notebook
+#notebook >= 7.0
+jupytext
 
 # jlab extensions
-jupyterlab
 # xxx wait for jlab4-ready version
-#jupyterlab-myst
 #jupyterlab-jupytext
-#ipywidgets
+git+https://github.com/mwouts/jupyterlab-jupytext.git@jupyterlab4
+#jupyterlab-myst
+jupyterlab-myst
+ipywidgets >= 8.0
+
 jupyterlab-courselevels
