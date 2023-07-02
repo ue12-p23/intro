@@ -52,44 +52,46 @@ Il nous faut a minima
 
 Voici un parcours accéléré pour faire toutes les installations:
 
-```{admonition} installation de git (et bash sur Windows)
+````{admonition} installation de git (et bash sur Windows)
+:class: dropdown
+
 * **(Windows seulement)** git for windows (git + bash)
   <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-01-os-terminal-nb.html#installation-de-bash>
 
 * **(tous sauf Windows)** installation git seul
   <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-03-git-setup-nb.html#installation>
-```
+````
 
 puis ensuite, pour tous les OS
 
-```{admonition} installation de vs-code
+````{admonition} installation de vs-code
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-02-vscode-python-nb.html#installation-editeur-de-code>
-```
+````
 
-```{admonition} installation de miniconda (pour Python et IPython)
+````{admonition} installation de miniconda (pour Python et IPython)
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-02-vscode-python-nb.html#installation-de-base>
-```
+````
 
-```{admonition} configuration git
+````{admonition} configuration git
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-03-git-setup-nb.html#setup-git>
-```
+````
 
 et pour se servir de tout cela
 
-```{admonition} cloner le dépôt du cours
+````{admonition} cloner le dépôt du cours
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-03-git-setup-nb.html#cloner-le-depot-du-cours>
-```
+````
 
-```{admonition} ouvrir les notebooks sur votre ordi
+````{admonition} ouvrir les notebooks sur votre ordi
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-local-notebooks-nb.html#notebooks-en-local>
-```
+````
