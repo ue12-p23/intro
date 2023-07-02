@@ -1,16 +1,16 @@
 # the course structure under nbhosting
 tracks:
   - name: "Intro UE12"
-    description: "installations"
+    description: "Cours d'introduction"
     id: intro
     sections:
       - name: intro
         notebooks: [ "notebooks/0-*-nb.md" ]
-      - name: installations
+      - name: les outils
         notebooks: [ "notebooks/1-*-nb.md" ]
       - name: compléments
         notebooks: [ "notebooks/2-*-nb.md" ]
-      - name: résumé
+      - name: installations
         notebooks: [ "notebooks/3-*-nb.md" ]
 
 builds:
