@@ -2,16 +2,25 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
 #     formats: py:percent
+#     notebook_metadata_filter: 'all, -jupytext.text_representation.jupytext_version,
+#       -jupytext.text_representation.format_version,
+#
+#       -language_info.version, -language_info.codemirror_mode.version, -language_info.codemirror_mode,
+#
+#       -language_info.file_extension, -language_info.mimetype, -toc'
 #     text_representation:
 #       extension: .py
 #       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.14.0
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
+#   language_info:
+#     name: python
+#     nbconvert_exporter: python
+#     pygments_lexer: ipython3
 # ---
 
 # %% [markdown]
@@ -22,9 +31,9 @@
 #
 # avantages:
 #
-# * se prête beaucoup mieux à la gestion de version (git)
-# * peut s'exécuter dans vscode
-# * et si il faut, on peut exécuter le fichier directement
+# 1. se prête beaucoup mieux à la gestion de version (git)
+# 1. on peut exécuter le fichier directement avec `python lefichier.py`
+# 1. et si il faut, on peut aussi l'exécuter dans vscode
 #
 # le seul inconvénient par rapport à un `.ipynb` est qu'on ne peut pas sauver la valeur de sortie des cellules une fois qu'elles sont évaluées
 
@@ -37,8 +46,6 @@
 # ```
 # pip install jupytext
 # ```
-#
-# **Attention** bien sûr si vous ne l'avez pas fait, vous pouvez qund même ouvrir ces fichiers avec jupyter, mais ça ne rend pas bien du tout
 
 # %%
 print("je suis un notebook en jupytext")
@@ -46,10 +53,20 @@ print("je suis un notebook en jupytext")
 # %% [markdown]
 # **exercice 1**
 #
-# exécutez ce notebook depuis le terminal
+# ouvrez ce notebook dans jupyter; il doit apparaitre comme un notebook, et non pas comme un simple fichier .py
 
 # %% [markdown]
 # **exercice 2**
 #
-# créez un nouveau notebook jupytext en vous inspirant de 
-# ![](create-a-text-notebook.png)
+# toujours dans jupyter, exécutez le code ci-dessous, et sauvez le notebook  
+# ouvrez alors le fichier dans vs-code et vérifiez que la sortie (notamment la courbe) ne sont pas sauvées dans le fichier
+
+# %%
+import numpy as np
+import matplotlib.pyplot as plt
+
+# %matplotlib ipympl
+
+X = np.linspace(-5, 5)
+Y = X**3
+plt.plot(X, Y);

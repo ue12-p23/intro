@@ -40,7 +40,7 @@ de commencer par là
 
 +++
 
-on peut produire des tas d'effets rien qu'en écrivant du texte; du **gras**, de
+grâce à markdown, on peut produire des tas d'effets rien qu'en écrivant du texte; du **gras**, de
 l'*italique*, `du code`
 
 +++
@@ -69,6 +69,7 @@ et aussi
 
 1. des listes
 1. à numéros
+1. qui se numérotent toutes seules
 
 +++
 
@@ -197,8 +198,8 @@ def pythagore(N):
     avec 1 <= n <= N  et 1 <= m <= N
     """
     solutions = set()
-    for n in range(N+1):
-        for m in range(N+1):
+    for n in range(1, N+1):
+        for m in range(1, N+1):
             # on calcule (n + im) au carré
             z = (n + 1j*m) ** 2
             # on extrait ses parties réelle et imaginaire
@@ -213,12 +214,18 @@ def pythagore(N):
 ```
 
 ```{code-cell} ipython3
+len(pythagore(7))
+```
+
+```{code-cell} ipython3
 # affichons ce qu'on a trouvé
-for a, b in pythagore(7):
+for a, b in sorted(pythagore(7)):
     # en Python pour calculer x au carré
     # on peut - par exemple - écrire x**2
     c = math.sqrt(a**2 + b**2)
-    print(f"racine({a}*{a} + {b}*{b}) = {c}")
+    # convert into int
+    ci = int(c)
+    print(f"({a}, {b}, {ci})\t{ci == c}, {a**2 + b**2 == ci**2}")
 ```
 
 **exercice**
@@ -250,7 +257,7 @@ import numpy as np
 # et pour dessiner on utilise matplotlib
 import matplotlib.pyplot as plt
 
-%matplotlib notebook
+%matplotlib widget
 ```
 
 ```{code-cell} ipython3
@@ -314,6 +321,6 @@ remarquez que toutes ces cellules sont des cellules *markdown* bien sûr, et pas
 
 +++
 
-activez la table des matières 
+activez la table des matières (*`View -> Table of Contents`*)
 
 voyez comment on crée les titres en markdown; pour cela, passez en édition sur les cellules qui contiennent ces titres
