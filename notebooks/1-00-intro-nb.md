@@ -31,45 +31,8 @@ HTML(filename="_static/style.html")
 
 # introduction
 
-bienvenue dans ce premier cours d'informatique
-
-+++
-
-## objectifs globaux
-
-+++
-
-l'approche pédagogique des cours d'info vise en premier lieu **à vous mener à l'autonomie** en ce qui
-concerne l'utilisation des ressources digitales; c'est pourquoi nous ne sommes **pas en
-salle informatique** comme ça a pu se faire à une époque; l'objectif est que vous sachiez
-à terme utiliser **uniquement votre ordinateur** pour travailler (ce qui a été très
-pratique lors des confinements liés au covid).
-
-+++ {"slideshow": {"slide_type": ""}}
-
-en détail, pour le cours d'informatique de 1ère année :
-
-* prise d'**autonomie**  
-  * par rapport à un ordinateur personnel
-  * par rapport au numérique et à la programmation
-  * focus sur quelques outils (du moment)
-* pour les mathématiques, le machine-learning et autres enseignements
-  * Python - numpy - pandas - matplotlib  
-  * notebooks Jupyter
-* workflow de gestion de projets de développement
-  * git & github
-* approfondissement langage (un au choix)
-  * Python
-  * C++
-* culture informatique
-  * notions d'algorithmique et de complexité
-  * notions sur les systèmes d'exploitation des ordinateurs (OS)   
-  * rudiments de programmation Web
-  * rudiments sur programmation parallèle
-  * rudiments sur l'utilisation du réseau
-* projet informatique
-  * en équipe
-  * posé par une personne extérieure à l'équipe d'enseignants
+bienvenue dans le premier cours d'informatique de **UE12**  
+*Unité d'Enseignement de l'informatique du premier semestre*
 
 +++
 
