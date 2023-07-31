@@ -5,10 +5,10 @@ FROM nbhosting/minimal-notebook
 # we cannot use jupyter nbextension enable/disable
 # because we provide our own nbconfig/notebook.json
 # and that is where is stored the enabled/disabled extensions
+# jupyterlab-nbhosting not ready
 RUN true \
- && pip install -U --pre jupyterlab notebook jupyterlab-myst jupytext \
- && pip install -U git+https://github.com/mwouts/jupyterlab-jupytext.git@jupyterlab4 \
- && pip install jupyterlab-courselevels jupyterlab-nbhosting \
+ && pip install -U jupyterlab notebook jupytext jupyterlab-myst \
+ && pip install -U jupyterlab-courselevels \
  && pip install -U ipythontutor nbautoeval  \
  && pip install numpy pandas matplotlib seaborn \
  && pip install calysto_bash \
