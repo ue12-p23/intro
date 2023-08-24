@@ -50,17 +50,32 @@ et des cellules de code...
 le socle s'installe comme ceci (ça peut prendre un moment) :
 
 ```console
-pip install jupyter
+pip install -U jupyter
 ```
 
 +++
 
-je vous invite à installer également ceci; c'est optionnel pour débuter avec Jupyter, mais
-ça sera nécessaire très vite pour lire les notebooks du cours
+je vous invite à installer également ceci, c'est nécessaire pour lire les notebooks du cours
 
 ```console
-pip install jupytext
+pip install -U jupytext jupyterlab-myst jupyterlab-courselevels
 ```
+
++++
+
+enfin pour pouvoir plus facilement ouvrir les notebooks jupytext,
+je vous invite à taper ceci dans votre terminal
+
+```bash
+jupytext-config set-default-viewer
+```
+
+````{note}
+en l'absence de cette commande, vous pouvez toujours ouvrir les notebooks jupytext, 
+mais il faut passer par *Clic droit* → *Open with* → *Notebook Editor*  
+une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
+simplement en double-cliquant dessus
+````
 
 +++
 
@@ -75,13 +90,25 @@ Jupyter comme ceci :
 jupyter --version
 ```
 
-## utilisation de base
+````{note}
+
+Depuis Juillet 2019, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
+
+Si vous avez installé votre environnement avant cette date, il se peut que vous ayez
+des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
+et dans ce cas il est recommandé de mettre à jour votre installation,
+c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U` 
+qui signifie *mettre à jour*.
+
+````
 
 +++
 
+## utilisation de base
+
 pour lancer un serveur jupyter vous tapez dans le terminal la commande
 
-```
+```bash
 jupyter notebook
 ```
 
