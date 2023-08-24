@@ -63,19 +63,21 @@ pip install -U jupytext jupyterlab-myst jupyterlab-courselevels
 
 +++
 
-enfin pour pouvoir plus facilement ouvrir les notebooks jupytext,
-je vous invite à taper ceci dans votre terminal
+pour pouvoir plus facilement ouvrir les notebooks jupytext,
+je vous invite également à taper ceci dans votre terminal
 
 ```bash
 jupytext-config set-default-viewer
 ```
 
 ````{note}
-en l'absence de cette commande, vous pouvez toujours ouvrir les notebooks jupytext, 
-mais il faut passer par *Clic droit* → *Open with* → *Notebook Editor*  
+en l'absence de cette commande, vous pouvez toujours ouvrir les notebooks jupytext,
+mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
 une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
 simplement en double-cliquant dessus
 ````
+
+
 
 +++
 
@@ -92,9 +94,9 @@ jupyter --version
 
 ````{note}
 
-Depuis Juillet 2019, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
+depuis Juillet 2019, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
 
-Si vous avez installé votre environnement avant cette date, il se peut que vous ayez
+si vous avez installé votre environnement avant cette date, il se peut que vous ayez
 des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
 et dans ce cas il est recommandé de mettre à jour votre installation,
 c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U` 
@@ -104,7 +106,21 @@ qui signifie *mettre à jour*.
 
 +++
 
+## dépendances supplémentaires
+
+si vous êtes en train de lire un cours que vous avez cloné depuis github, et que celui-ci contient un fichier `requirements.txt`, alors tapez également cette commande
+
+```bash
+pip install -r requirements.txt
+```
+
+et de cette façon, vous aurez déjà toutes les librairies utilisées à l'intérieur des notebooks (typiquement numpy, pandas, et autres éventuellement plus exotiques)
+
++++
+
 ## utilisation de base
+
+XXX - cette partie est à reprendre avec nb7
 
 pour lancer un serveur jupyter vous tapez dans le terminal la commande
 
@@ -138,19 +154,17 @@ du coup ça signifie que **le serveur Jupyter doit tourner en permanence**
 
 ## micro-démo Jupyter classic
 
-+++
-
 * un notebook est associé à **un langage**
 * nos supports de cours :
   * le plus souvent le langage est **Python**
-  * le présent notebook est une exception, son langage est **bash** 
+  * le présent notebook est une exception, son langage est **bash**
 * chaque cellule est *typée* comme **markdown** ou **code**
 * et bien sûr celles typées **code** sont exécutées par … le langage du notebook
 
-+++ {"tags": ["level_intermediate"]}
-
-(il est possible aussi de mélanger plusieurs langages dans un notebook, mais c'est d'un
-usage plus complexe)
+````{note}
+il est possible aussi de mélanger plusieurs langages dans un notebook, mais c'est d'un
+usage plus complexe
+````
 
 +++
 
@@ -252,7 +266,7 @@ du coup on peut par exemple les déplacer toutes ensemble
 pour pouvoir ouvrir un notebook du cours - n'importe lequel - il faut avoir fait ceci
 
 ```console
-pip install jupytext
+pip install jupytext jupyterlab-myst
 ```
 
 autrement, vous allez avoir un affichage bizarre…
@@ -264,7 +278,13 @@ autrement, vous allez avoir un affichage bizarre…
 pour pouvoir exécuter les notebooks en bash (dont celui-ci, donc), il vous faut également
 faire
 
-    pip install calysto_bash
+```bash
+pip install -r requirements.txt
+```
+
+````{note}
+attention, pour pouvoir faire ceci, il faut d'abord avoir cloné le repo, car c'est dans le repo que se trouve le fichier `requirements.txt`
+````
 
 +++
 
@@ -301,6 +321,8 @@ je vous demande surtout de
 ### jupyter lab
 
 +++ {"tags": ["level_advanced"]}
+
+XXX à revoir
 
 pour les curieux, sachez qu'il existe une nouvelle interface Jupyter qui s'appelle
 JupyterLab
@@ -430,6 +452,8 @@ information
 ## extensions Jupyter
 
 +++
+
+XXX à revoir ou à supprimer
 
 si vous avez le temps (section intermédiaire)
 

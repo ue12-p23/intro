@@ -687,7 +687,7 @@ voici pour résumer un rappel des commandes bash les plus simples et les plus ut
 
 +++
 
-plutôt que d'afficher la résultat d'une commande dans le terminal, il est parfois praqtique de rediriger cela dans un fichier
+plutôt que d'afficher la résultat d'une commande dans le terminal, il est parfois pratique de rediriger cela dans un fichier
 
 par exemple si j'écris dans le terminal
 
