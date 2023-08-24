@@ -53,7 +53,7 @@ notez que
   ceux qui savent déjà **aident leurs camarades**
 
 * voyez aussi la liste des compétences requises - [notebook
-  `2-02-checklist-nb.md`](https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-06-checklist-nb.html) qui contient notamment [une vidéo YouTube en guise de checklist](https://youtu.be/i_ZcP7iNw-U)
+  `2-02-checklist-nb.md`](https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/2-02-checklist-nb.html) qui contient notamment [une vidéo YouTube en guise de checklist](https://youtu.be/i_ZcP7iNw-U)
 
 * à terminer pour la prochaine fois si nécessaire
 
@@ -102,7 +102,7 @@ enfin les années précédentes, nous avions utilisé une plateforme hébergée 
 il s'agissait essentiellement d'une facilité pour les premiers cours, de sorte que l'on puisse avancer avant que toute la promo soit entièrement bien installée sur les ordis perso.
 
 il devrait être entendu que le mode d'utilisation "normal" des notebooks est **en local sur votre ordi**,
-aussi cette année 2022, nous allons essayer de nous passer totalement de nbhosting dans ce mode (il continue à servir les versions html, mais pas d'accès avec login); 
+aussi cette année 2023, nous allons essayer de nous passer totalement de nbhosting dans ce mode (il continue à servir les versions html, mais pas d'accès avec login); 
 on pourra envisager de donner un accès à ce service aux élèves qui auraient des difficultés insurmontables avec leurs installations
 
 +++

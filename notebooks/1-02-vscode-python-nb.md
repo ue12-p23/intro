@@ -135,9 +135,10 @@ exercice :
 * refaire les manipulations vous-mêmes une fois l'installation de l'éditeur de code
   terminée.
 
-+++ {"tags": ["level_intermediate"]}
++++ {"tags": []}
 
-**note**: il est recommandé, avec vs-code, de prendre l'habitude d'ouvrir un **répertoire** plutôt
+````{note}
+il est recommandé, avec vs-code, de prendre l'habitude d'ouvrir un **répertoire** plutôt
 qu'un fichier
 
 si vous ouvrez un fichier (par exemple par un clic droit sur le fichier dans l'explorateur
@@ -149,6 +150,7 @@ pour cela, vous pouvez soit
 
 * taper `code .` dans le terminal comme on l'a vu (et ici le `.` correspond au dossier courant)
 * ou utiliser le clic droit depuis l'explorateur Windows, mais sur le dossier lui-même et non le fichier
+````
 
 +++
 

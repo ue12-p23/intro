@@ -37,7 +37,7 @@ Les notebooks sont de petits *cahiers* d'exercices exécutables. Ils sont très 
 pour expliquer pas à pas ce qu'on fait, comme dans ces cours mais ils ne servent pas
 uniquement aux cours.
 
-Nous allons vous montrer dans cette section comment installer et lancer `jupyter`, 
+Nous allons vous montrer dans cette section comment installer et lancer `jupyter`,
 **localement sur votre ordi**, pour créer des notebooks avec des cellules de texte
 et des cellules de code...
 
@@ -342,8 +342,8 @@ beaucoup de langages
 
 vs-code a besoin de savoir où est installé Python, pour pouvoir le lancer
 
-ne serait-ce que pour lancer `pylint`,   
-mais il peut aussi, dans un usage plus avancé, vous aider à exécuter votre code;   
+ne serait-ce que pour lancer `pylint`,  
+mais il peut aussi, dans un usage plus avancé, vous aider à exécuter votre code;  
 bref il a besoin de savoir où se trouve l'interpréteur Python  
 
 en fait il est malin et il sait trouver **tous** les interpréteurs qui sont installés  
@@ -518,6 +518,7 @@ aide-mémoire
 +++
 
 #### la liste de mes environnements
+
 ```
 [base] ~ $ conda env list
 # conda environments:
@@ -530,7 +531,7 @@ base                  *  /Users/tparment/miniconda3
 
 #### j'en crée un nouveau avec Python-3.10
 
-```
+```bash
 [base] ~ $ conda create -n demo-py310 python=3.10
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -540,7 +541,8 @@ Solving environment: done
 +++
 
 #### on le voit
-```
+
+```bash
 [base] ~ $ conda env list
 # conda environments:
 #
@@ -553,7 +555,7 @@ demo-py310                /Users/tparment/miniconda3/envs/demo-py310
 
 ##### pour entrer dans le nouvel environnement
 
-```
+```bash
 [base] ~ $ conda activate demo-py310
 [demo-py310] ~ $
 ```
@@ -564,7 +566,7 @@ demo-py310                /Users/tparment/miniconda3/envs/demo-py310
 
 très peu de choses
 
-```
+```bash
 [demo-py310] ~ $ pip list
 Package    Version
 ---------- -------------------
@@ -577,14 +579,16 @@ wheel      0.34.2
 +++
 
 #### on y installe ce qu'on veut
-```
+
+```bash
 [demo-py310] ~ $ pip install numpy==1.15.3
 ```
 
 +++
 
 #### la version de python
-```
+
+```bash
 [demo-py310] ~ $ python --version
 Python 3.8.2
 ```
@@ -592,7 +596,8 @@ Python 3.8.2
 +++
 
 #### sortir 
-```
+
+```bash
 [demo-py310] ~ $ conda deactivate
 [base] ~ $
 ```
@@ -600,7 +605,8 @@ Python 3.8.2
 +++
 
 #### la version de python
-```
+
+```bash
 [base] ~ $ python --version
 Python 3.7.6
 ```
@@ -608,7 +614,8 @@ Python 3.7.6
 +++
 
 #### on n'a pas perturbé l'environnement de départ
-```
+
+```bash
 [base] ~ $ pip show numpy
 Name: numpy
 Version: 1.18.1
@@ -617,7 +624,8 @@ Version: 1.18.1
 +++
 
 #### pour détruire l'environnement en question
-```
+
+```bash
 [base] ~ $ conda env remove -n demo-py310
 
 Remove all packages in environment /Users/tparment/miniconda3/envs/demo-py310:
