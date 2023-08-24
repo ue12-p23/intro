@@ -406,18 +406,20 @@ vous avez maintenant tout le bagage pour pouvoir copier le dépôt du cours
 
 il vous suffit pour ça de faire (lisez bien jusqu'au bout avant de copier-coller)
 
-    git clone https://github.com/ue12-p23/intro ue12-p23-intro
+    git clone https://github.com/ue12-p23/intro
 
 **Attention toutefois**
 
 * cette commande va créer sur votre disque tout un dossier (dans le dossier courant), dont le nom est `intro`
-
 * notez qu'il sera créé **dans votre répertoire de travail** (`pwd`)
 * donc commencez par **vous mettre au bon endroit**
 * le nom `intro` est déduit de la dernière partie de l'URL  
   et si cela ne vous convient pas comme nom, vous pouvez en choisir un autre :
 
-    git clone https://github.com/ue12-p23/intro ue12-p23-intro
+  ```bash
+  # pour choisir un autre nom pour le dossier contenant le clone
+  git clone https://github.com/ue12-p23/intro ue12-p23-intro
+  ```
 
 +++
 
