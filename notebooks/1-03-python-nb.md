@@ -24,341 +24,22 @@ nbhosting:
 Licence CC BY-NC-ND, Thierry Parmentelat & Valérie Roy
 
 ```{code-cell}
-:tags: [raises-exception]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [raises-exception]
+---
 %%python
 from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
-# vs-code et Python
-
-## éditeur de code
+# Python
 
 +++
 
-pour pouvoir facilement modifier le contenu de nos fichiers texte, comme tout à l'heure le
-fichier `foo.txt`, on va utiliser un programme qui s'appelle un **éditeur de code**
-
-en effet, il **ne faut pas** utiliser un **outil comme Word** pour éditer des programmes:
-c'est un éditeur de texte, et pas un éditeur de code !
-
-> l'enseignant lance Visual Studio Code et le montre très très rapidement
-
-+++
-
-### installation éditeur de code
-
-+++
-
-nous demandons à **tous** les élèves d'installer et de savoir utiliser vs-code
-
-et **ATTENTION** il y a eu **beaucoup de problèmes** les années passé avec les éditeurs de type *pyzo*, ne les utilisez surtout pas dans nos cours, vous allez perdre un temps précieux et en faire perdre à vos enseignants pour des raisons inintéressantes et extérieures à Python
-
-+++
-
-On y va. Le site est là <https://code.visualstudio.com/>. Vous voulez installer donc il va
-falloir que vous alliez dans une section *download* ... vous la voyez ? à vous de jouer
-maintenant
-
-+++
-
-### micro-démo vs-code
-
-+++
-
-Que vous ayez réussi à installer visual studio code sur votre portable ou pas encore,
-suivez maintenant ce que montre l'enseignant.
-
-Si vous avez rencontré des problèmes imprévus lors de l'installation (ce qui n'est pas
-rare en informatique), venez nous voir plus tard pour que nous vous aidions.
-
-+++
-
-> micro démo de Visual Code sur le fichier `foo.txt`
-
-* depuis le terminal, aller dans le bon répertoire et lancer
-  ```
-  code .
-  ```
-
-***
-
-* manipulations simples
-  * afficher/cacher l'explorateur de fichiers
-  * modifier `foo.txt`, sauver la version modifiée
-  * créer un nouveau fichier `bar.txt`, le sauver
-  * observer le contenu des fichiers depuis le terminal avec `cat`
-  * montrer comment se manifeste la fin de ligne
-
-***
-
-* montrer des manipulations élémentaires de fenêtres
-  * afficher les deux fichiers côte à côte
-  * puis l'un au dessus de l'autre
-
-***
-
-* montrer comment :
-  * chercher une extension  (prétexte : l'extension 'Markdown All in One' et/ou Python)
-  * installer/désinstaller
-  * activer/désactiver une nouvelle extension
-
-***
-
-* montrer comment :
-  * passer d'une application à une autre avec `⌥ ⇥` (Alt-Tab)
-  * typiquement pour basculer entre vscode et terminal
-
-***
-
-* de retour dans vs-code, montrer la palette :
-  * `⇧ ⌘ P` Shift-Command-P (mac)
-  * `⇧ ⌃ P` Shift-Control-P (windows)
-
-* sur Windows, pour choisir 'bash' comme terminal
-  * utiliser la palette et taper
-  * `Select Default Shell`
-
-* montrer comment lancer le terminal
-  * Control \` - la deuxième fois on le ferme
-
-+++
-
-pour plus de détails, voir aussi  
-<https://code.visualstudio.com/docs/getstarted/userinterface>
-
-+++
-
-exercice :
-
-* refaire les manipulations vous-mêmes une fois l'installation de l'éditeur de code
-  terminée.
-
-+++ {"tags": []}
-
-````{note}
-il est recommandé, avec vs-code, de prendre l'habitude d'ouvrir un **répertoire** plutôt
-qu'un fichier
-
-si vous ouvrez un fichier (par exemple par un clic droit sur le fichier dans l'explorateur
-de fichiers), vs-code va vous ouvrir le fichier dans une fenêtre déjà ouverte - souvent ça
-va arriver comme un cheveu sur la soupe, dans un autre répertoire; si votre objectif c'est
-d'ouvrir une nouvelle fenêtre, préfèrez ouvrir tout un dossier
-
-pour cela, vous pouvez soit 
-
-* taper `code .` dans le terminal comme on l'a vu (et ici le `.` correspond au dossier courant)
-* ou utiliser le clic droit depuis l'explorateur Windows, mais sur le dossier lui-même et non le fichier
-````
-
-+++
-
-## markdown
-
-+++
-
-c'est un format simple, léger et bien pensé pour mettre en forme facilement vos textes, il
-est devenu le couteau suisse pour écrire des documents
-
-* avec un minimum de présentation
-  * sections
-  * listes
-  * gras, italique, code
-  * liens
-  * maths
-* toujours dans un **fichier texte** (à nouveau, ≠ Word)
-
-+++
-
-format **très populaire** en ce moment, supporté e.g. :
-
-* dans les notebooks, justement,
-* dans discourse
-* dans github
-* sur whatsapp (en partie), …
-
-et plus généralement dans tous les sites web de forums/blogs, où on peut entrer du texte
-directement depuis le navigateur
-
-+++
-
-### micro-démo sous vs-code
-
-> sous vs-code
-
-* créer un fichier `foo.md`
-* remarquer la petite icône ![](media/fig-vscode-markdown.png)
-  * afficher côte à côte le markdown brut et rendu
-* rapide survol
-  * sections
-  * listes avec et sans numérotation
-  * gras, italique
-* insister sur les plusieurs façons de mettre du code,
-  * soit `inline` sans saut de ligne, ou alors
-  * avec des "triple ticks" <code>```</code>
-  * avec 4 espaces de marge
-* images et liens
-  * montrer le code markdown de cette cellule notebook
-
-cheatsheet <https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf>
-
-+++
-
-### mathjax
-
-+++
-
-on peut aussi écrire des maths en markdown  
-ça se fait en utilisant le langage $\LaTeX$  
-c'est un peu abscons au début mais on s'y habitue vite  
-parce que c'est vraiment très joli
-
-***
-
-$$
-\forall \epsilon \in \mathbb{R}^+, \exists\alpha\in\mathbb{R}^+,
-\forall x, |x-x_0| < \alpha\implies |f(x)-f(x_0)| < \epsilon
-$$
-
-***
-
-$$
-\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
-$$
-
-+++
-
-#### *inline*
-
-à la base markdown utilise pour ça le signe `$`
-
-si vous voulez mettre des maths dans un paragraphe (on dit *inline*), vous utilisez un
-seul `$` au début et à la fin de l'équation; c-a-d si vous écrivez
-
-```latex
-voici une petite équation $y = x^2 +2x +1$ au milieu de la ligne
-```
-
-vous obtenez
-
-voici une petite équation $y = x^2 +2x +1$ au milieu de la ligne
-
-+++
-
-#### paragraphe séparé
-
-pour mettre une équation dans un paragraphe séparé on double le dollar de début et de fin
-
-du coup
-
-```latex
-$$
-\forall x \in \mathbb{R}, \forall \epsilon \in \mathbb{R}^+, \exists\alpha\in\mathbb{R}^+ \\
- |x'-x| < \alpha\implies |f(x')-f(x)| < \epsilon
-$$
-```
-
-se présentera comme ceci :
-
-$$
-\forall x \in \mathbb{R}, \forall \epsilon \in \mathbb{R}^+, \exists\alpha\in\mathbb{R}^+ \\
- |x'-x| < \alpha\implies |f(x')-f(x)| < \epsilon
-$$
-
-+++
-
-au passage, vous remarquez que les commandes $\LaTeX$  commencent par `\`
-
-+++
-
-#### les mots du jargon $\LaTeX$
-
-+++
-
-ça dépasse complètement notre périmètre que d'essayer de faire le tour de $\LaTeX$; je
-préfère commencer par quelques exemples qui devraient vous permettre de démarrer
-
-+++ {"cell_style": "split"}
-
-$$
-\forall x\in \mathbb{R},
-\; \exists y \leq \epsilon
-$$
-
-+++ {"cell_style": "split"}
-
-```
-\forall x \in \mathbb{R},
-\; \exists y \leq \epsilon
-```
-
-+++ {"cell_style": "split"}
-
-$$x_1=\frac{-b+\sqrt{b^2-4ac}}{2a}$$
-
-+++ {"cell_style": "split"}
-
-```
-x_1=\frac{-b+\sqrt{b^2-4ac}}{2a}
-```
-
-+++ {"cell_style": "split"}
-
-$$
-A_{m,n} =
- \begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
- \end{pmatrix}
-$$
-
-+++ {"cell_style": "split"}
-
-```
-$$
-A_{m,n} =
- \begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
- \end{pmatrix}
-$$
-```
-
-+++ {"cell_style": "split"}
-
-$$
-\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
-$$
-
-+++ {"cell_style": "split", "slideshow": {"slide_type": ""}}
-
-```
-\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
-```
-
-+++ {"tags": ["level_intermediate"]}
-
-ceux qui veulent creuser peuvent
-
-* s'exercer avec un outil en ligne <https://www.codecogs.com/latex/eqneditor.php>
-
-* commencer par cet article 
-<https://www.physicsoverflow.org/15329/mathjax-basic-tutorial-and-quick-reference>
-
-* approfondir avec celui-ci <https://en.wikibooks.org/wiki/LaTeX/Mathematics>
-
-+++
-
-## Python
-
-+++
-
-### installation de base
+## installation de base
 
 * il y a de très nombreuses distributions disponibles
 * notre recommandation : miniconda
@@ -377,7 +58,7 @@ nous allons
 
 +++
 
-### préparation : création d'un dossier `c:\miniconda`
+## préparation : création d'un dossier `c:\miniconda`
 
 +++
 
@@ -418,7 +99,7 @@ droite par exemple)
 
 +++
 
-### installation de miniconda
+## installation de miniconda
 
 +++
 
@@ -460,7 +141,7 @@ ce stade dans un terminal
 
 +++
 
-### première utilisation / vérification
+## première utilisation / vérification
 
 +++
 
@@ -488,7 +169,7 @@ sera déjà affiché lorsque vous taperez vos commandes
 
 +++
 
-#### vérifier que Python est bien installé
+### vérifier que Python est bien installé
 
 ```console
 $ type python
@@ -505,7 +186,7 @@ si à ce stade vous avez un `python: not found` c'est que vous n'avez pas bien c
 
 +++
 
-#### lancer python en mode interactif
+### lancer python en mode interactif
 
 depuis `GitBash`, on va lancer un Python interactif et lui faire calculer $2^{100}$,
 afficher un texte, puis quitter l'interpréteur.
@@ -533,7 +214,7 @@ afficher un texte, puis quitter l'interpréteur.
 ***
 
 ```console
-# pensez à bien mettre le -i - voyez ci-dessus
+pensez à bien mettre le -i - voyez ci-dessus
 $ python -i
 >>> 2 ** 100
 1267650600228229401496703205376
@@ -544,7 +225,7 @@ hello world
 
 +++
 
-#### créer et lancer un premier script
+### créer et lancer un premier script
 
 +++
 
@@ -561,7 +242,7 @@ et dans le même répertoire lancez python pour exécuter ce programme, et donc 
 python ../demo/python/fact.py 10
 ```
 
-#### afficher le numéro de version de Python
+### afficher le numéro de version de Python
 
 +++
 
@@ -572,7 +253,7 @@ environnments virtuels)
 python --version
 ```
 
-### installation de IPython avec `pip`
+## installation de IPython avec `pip`
 
 +++
 
@@ -595,13 +276,13 @@ pip list
 
 +++
 
-#### installer d'autres librairies avec `pip install`
+### installer d'autres librairies avec `pip install`
 
 nous allons utliser `pip install` pour installer IPython, et pour ça vous allez taper
 (dans un terminal)
 
 ```bash
-# la première fois qu'on installe une librairie, ça peut prendre
+la première fois qu'on installe une librairie, ça peut prendre
 # un petit moment pour aller chercher les packages
 # sur Internet et les installer
 pip install ipython
@@ -609,9 +290,7 @@ pip install ipython
 
 +++
 
-### micro-démo `ipython`
-
-+++
+## micro-démo `ipython`
 
 si vous devez taper du code Python directement dans le terminal, je vous recommande
 d'utiliser la commande `ipython` plutôt que l'interpréteur standard `python`
@@ -644,7 +323,7 @@ pratique dès qu'on va au delà de ce genre de session de démo, notamment pour
 
 +++
 
-### installation de numpy / pandas / matplotlib
+## installation de numpy / pandas / matplotlib
 
 +++
 
@@ -659,7 +338,7 @@ pip install numpy pandas matplotlib
 
 +++
 
-#### vérification
+### vérification
 
 pour vérifier, vous pouvez d'abord, depuis le terminal, faire
 
@@ -685,7 +364,7 @@ Out[2]: '1.19.1'
 
 +++
 
-### la complétion
+## la complétion
 
 +++
 
@@ -708,7 +387,7 @@ noms de fichiers, entre autres
 
 +++
 
-### *RTFEM*
+## *RTFEM*
 
 +++
 
@@ -747,3 +426,49 @@ en pratique il arrive qu'on se trouve face à des erreurs plus difficiles à dia
 mais dans tous les cas **commencez par *RTFEM***  
 ça va de soi mais ça va mieux en le disant, je suis certain qu'on aura l'occasion de le
 rappeler pendant les cours de langage :)
+
++++
+
+## `autoreload` avec IPython ou les notebooks
+
+**le problème**: vous êtes dans `ipython` ou dans un notebook, et vous faites
+
+```python
+from my_module import my_function
+my_function(...)
+```
+
+et puis ensuite un peu plus tard, vous modifiez `my_module.py` sous vs-code, et vous
+voulez essayer la nouvelle version; votre première idée est de refaire l'import pour
+recharger le module dans l'interpréteur
+
+là attention, **un second `import` ne recharge pas le fichier** c'est le
+comportement attendu, et souhaitable, car charger un module est coûteux; c'est
+pourquoi l'interpréteur garde en mémoire les modules qu'il a déjà chargés, et du
+coup vous pouvez ré-importer autant que vous voulez, vous allez toujours utiliser
+le premier code, et non le nouveau
+
+**la solution**: avec l'astuce suivante, vous n'aurez plus besoin de ré-importer,
+vous pourrez juste ré-exécuter `my_function()` et vous utiliserez la dernière
+version du module (pour autant que le nouveau module ne contienne pas d'erreur qui
+empêche son chargement, bien entendu)
+
+il vous suffit de copier-coller les lignes suivantes dans un terminal bash
+
+```bash
+mkdir -p ~/.ipython/profile_default
+cat >> ~/.ipython/profile_default/ipython_config.py << EOF
+c.InteractiveShellApp.exec_lines = []
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')
+EOF
+```
+
+````{note} pour les curieux
+:class:dropdown
+
+pour ceux qui veulent comprendre, ce script
+
+* commence par s'assurer que le dossier `.ipython/profile_default` existe sous le home directory
+* puis dans ce dossier, il ajoute dans le fichier `ipython_config.py` les 3 lignes de configuration qui précèdent le `EOF` (c'est du Python bien sûr)
+````
