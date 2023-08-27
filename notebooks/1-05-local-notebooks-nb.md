@@ -328,27 +328,6 @@ je vous demande surtout de
 * et si vous êtes en avance, attaquez-vous à l'exercice qui figure à la fin de la
   checklist
 
-+++ {"tags": ["level_advanced"]}
-
-### jupyter lab
-
-+++ {"tags": ["level_advanced"]}
-
-XXX à revoir
-
-pour les curieux, sachez qu'il existe une nouvelle interface Jupyter qui s'appelle
-JupyterLab
-
-c'est un plus moderne que Jupyter classic que nous utilisons, mais c'est beaucoup plus
-compliqué à intégrer… quoi qu'il en soit, si vous voulez jeter un coup d'oeil à cet outil,
-il faut savoir que
-
-* on le lance en tapant `jupyter lab` au lieu de `jupyter notebook`
-* et pour ouvrir un notebook en `.py` - comme ceux du cours donc - on ne peut pas
-  double-cliquer dans le .md, il faut utiliser `Open with` comme ceci
-
-![](media/fig-jupyter-lab-open-md.png)
-
 +++
 
 ***
