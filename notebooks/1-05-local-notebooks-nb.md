@@ -21,6 +21,8 @@ nbhosting:
   title: notebooks en local
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
+
 Licence CC BY-NC-ND, Thierry Parmentelat & Valérie Roy
 
 ```{code-cell}
@@ -87,7 +89,7 @@ jupyter --version
 ````{note} notebook 7
 :class: dropdown
 
-depuis Juillet 2019, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
+depuis Juillet 2023, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
 
 si vous avez installé votre environnement avant cette date, il se peut que vous ayez
 des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
@@ -172,7 +174,7 @@ créez un nouveau notebook, et appelez-le `foo` (*File* -> *Rename Notebook...*)
 
 ### créer des cellules mixtes
 
-à présent arrangez-vous pour créer une nouvelle cellule, de sorte à avoir une cellule de texte suivies d'une cellule de code, comme ceci
+à présent arrangez-vous pour créer une nouvelle cellule, de sorte à avoir une cellule de texte suivie d'une cellule de code, comme ceci
 
 ![](media/jlab-005-mixed-cells.png)
 
