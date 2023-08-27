@@ -36,13 +36,37 @@ un résumé des compétences attendues pour commencer les cours d'info
 
 ## vidéo
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
 
-voici une vidéo assez courte qui vous montre le minimum de choses que vous devriez pouvoir faire sur votre ordi, afin de vérifier que vous avez bien tout installé:
+voici une vidéo d'une dizaine de minutes qui vous montre le minimum de choses que vous devriez pouvoir faire sur votre ordi, afin de vérifier que vous avez bien tout installé
 
-<https://youtu.be/i_ZcP7iNw-U>
+````{warning} Attention
+la vidéo a été tournée en 2022 et certaines petites choses ont changé depuis, et notamment
 
-+++
+* cette année nous allons utiliser `jupyter lab` plus volontiers que `jupyter notebook`
+* bien sûr il faut remplacer les noms comme `ue12-p22` en `ue12-p23`, comme vous allez le deviner
+````
+
+```{code-cell} ipython3
+---
+editable: true
+hide_input: true
+slideshow:
+  slide_type: ''
+tags: [hide-input]
+---
+from IPython.display import IFrame
+
+# Youtube
+IFrame(
+    "https://www.youtube.com/embed/i_ZcP7iNw-U?rel=0&amp;controls=0&amp;showinfo=0",
+    width="600",
+    height="400",
+    # extras='frameborder="0" allowfullscreen',
+)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
 
 ## les compétences
 
@@ -102,7 +126,7 @@ voici maintenant une liste un peu plus complète des compétences qui sont atten
 
 * avoir installé `git`; savoir :
 * cloner un dépôt trouvé sur github
-* créer un compte sous <https://github.com/join>
+* créer un compte <https://github.com/>
 * mettre à jour un dépôt cloné, après que son auteur a publié des modifications
 
 +++
@@ -111,7 +135,7 @@ voici maintenant une liste un peu plus complète des compétences qui sont atten
 
 * avoir installé jupyter
 * avoir installé jupytext
-* lancer `jupyter notebook`; savoir :
+* lancer `jupyter lab`; savoir :
 * créer un nouveau notebook
 * ajouter des cellules, alterner entre code et markdown
 * sauver un notebook
@@ -127,10 +151,8 @@ idéalement à la fin de cette leçon vous devriez être capable
 * de cloner les supports de cours qui sont ici  
   <https://github.com/ue12-p23-intro>
 
-* d'ouvrir sous jupyter le notebook principal `notebooks/0-10-demonstration.md`
+* d'ouvrir sous jupyter les notebooks du cours
 * de le modifier, ajouter de nouvelles cellules, le sauver, ...
-* en option, regarder les différences entre votre dépôt et le cours d'origine avec `git
-  status` et `git diff`
 
 +++ {"tags": ["level_intermediate"]}
 
