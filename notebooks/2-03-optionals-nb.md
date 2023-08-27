@@ -18,7 +18,7 @@ language_info:
     url: https://metakernel.readthedocs.io/en/latest/source/README.html
   name: bash
 nbhosting:
-  title: divers optionnels
+  title: divers Python
 ---
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
@@ -31,15 +31,15 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
-# divers optionnels
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
 
-+++ {"tags": ["level_intermediate"]}
-
-## Python et vs-code
-
-+++
+# divers Python
 
 si vous avez le temps (section intermédiaire)
+
++++ {"tags": []}
+
+## Python et vs-code
 
 +++
 
@@ -84,10 +84,12 @@ bref il a besoin de savoir où se trouve l'interpréteur Python
 en fait il est malin et il sait trouver **tous** les interpréteurs qui sont installés  
 et donc ce dont il a besoin c'est que vous lui disiez **lequel** vous voulez utiliser
 
-+++ {"tags": ["level_advanced"]}
++++ {"tags": []}
 
+````{note}
 lorsqu'on fait du développement professionnel, on a habituellement une installation Python
 par projet; une partie optionnelle avancée sera consacrée à ce sujet un peu plus loin
+````
 
 +++
 
@@ -133,49 +135,7 @@ d'erreurs le plus tôt possible, **mais** :
 donc il faut garder votre cerveau en marche, et ne pas se fier aveuglément à cette
 information
 
-+++ {"tags": ["level_intermediate"]}
-
-## extensions Jupyter
-
-+++
-
-XXX à revoir ou à supprimer
-
-si vous avez le temps (section intermédiaire)
-
-+++
-
-vous remarquerez que certaines *features*, disponibles sur nbhosting, ne le sont pas sur
-votre ordinateur à ce stade; par exemple, les codes de couleur des cellules par niveau, ou
-la table des matières navigable sur le coté
-
-Jupyter est un système extensible; sur nbhosting on a activé quelques-unes de ces
-extensions, et voici comment vous pouvez les activer également de votre côté
-
-```{code-cell}
-# d'abord on installe les extensions standard
-
-pip install -U ipywidgets
-jupyter nbextension enable --py widgetsnbextension
-
-pip install -U jupyter_contrib_nbextensions
-jupyter contrib nbextension install
-```
-
-```{code-cell}
-# puis on active celles qui nous intéressent
-
-# la table des matières navigable
-jupyter nbextension enable toc2/main
-# les cellules qui ne prennent que la moitié de la largeur
-jupyter nbextension enable splitcell/splitcell
-
-# les codes de couleur
-pip install nb-courselevels
-jupyter nbextension enable courselevels/index
-```
-
-+++ {"tags": ["level_advanced"]}
++++ {"tags": []}
 
 ## multiples environnements Python
 
@@ -189,8 +149,9 @@ on l'a mentionné un peu plus haut, cela peut être utile de créer plusieurs en
 Python différents; c'est utile notamment :
 
 * si vous travaillez sur plusieurs projets différents, qui ont chacun leur ensemble de
-  dépendances, pas forcément compatibles entre elles; par exemple, l'un utilise Django-2.x
-  et l'autre Django-3.x
+  dépendances, pas forcément compatibles entre elles;
+  par exemple, l'un utilise Django-3.x et l'autre Django-2.x
+  ou même, l'un utilise python-3.9 et l'autre python-3.12
 
 * et aussi, lors de la sortie d'une nouvelle release de Python, que vous voulez essayer
   sans tout casser
@@ -198,7 +159,7 @@ Python différents; c'est utile notamment :
 +++
 
 il existe plusieurs solutions pour gérer cela, notamment la solution `virtualenv`, mais
-nous allons pour notre part nous concentrer sur miniconda, puisque c'est ce qu'on a
+nous allons pour notre part nous concentrer sur `miniconda`, puisque c'est ce qu'on a
 installé
 
 +++
@@ -246,11 +207,15 @@ mental est simple :
 
 voici à titre indicatif une session sous MacOS pour illustrer tout ceci
 
+````{note}
 vous remarquerez comme le *prompt* bash reflète **l'environnement dans lequel on se
-trouve**, ça semble **relativement impératif** si on ne veut pas s'emmêler les pinceaux;
+trouve**  
+ça semble **relativement impératif** si on ne veut pas s'emmêler les pinceaux  
 surtout n'utilisez pas cette technologie si votre prompt ne montre pas l'environnement
-courant, c'est beaucoup trop facile de se tirer une balle dans le pied si on n'a pas cet
+courant,  
+c'est beaucoup trop facile de se tirer une balle dans le pied si on n'a pas cet
 aide-mémoire
+````
 
 +++
 
@@ -385,32 +350,3 @@ lui-même : la liste des fichiers en cours d'édition, les onglets ouverts, etc
 pour expérimenter, créez une session vs-code dans un directory, choisissez votre
 environnement Python, sortez de la session; ré-ouvrez vs-code sur le même répertoire, vous
 devez retrouver ce réglage
-
-+++
-
-### note à propos de conda-forge
-
-+++
-
-<div class=note>
-
-**Décembre 2022**:
-
-alors que la version 3.11 est sortie depuis 1 mois, j'essaie de créer
-un environnement avec python-3.11 et je n'y arrive pas tout de suite
-
-```
-PackagesNotFoundError: The following packages are not available from current channels:
-```
-
-pour que cela fonctionne il me faut faire
-
-```bash
-conda config --add channels conda-forge
-```
-
-ce qui ajoute le 'canal' `conda-forge` aux recherches
-
-Cela va sans doute se normaliser dans le futur, mais au cas où...
-
-</div>
