@@ -16,7 +16,7 @@ language_info:
   nbconvert_exporter: python
   pygments_lexer: ipython3
 nbhosting:
-  title: roadmap
+  title: fast track installations
 ---
 
 Licence CC BY-NC-ND, Thierry Parmentelat & Valérie Roy

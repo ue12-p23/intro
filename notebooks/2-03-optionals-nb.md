@@ -18,7 +18,7 @@ language_info:
     url: https://metakernel.readthedocs.io/en/latest/source/README.html
   name: bash
 nbhosting:
-  title: notebooks en local
+  title: divers optionnels
 ---
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}

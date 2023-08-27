@@ -16,7 +16,7 @@ language_info:
   nbconvert_exporter: python
   pygments_lexer: ipython3
 nbhosting:
-  title: introduction
+  title: présentation des UEs
 ---
 
 Licence CC BY-NC-ND, Thierry Parmentelat & Valérie Roy
