@@ -31,8 +31,6 @@ HTML(filename="_static/style.html")
 
 # notebooks en local
 
-+++
-
 Les notebooks sont de petits *cahiers* d'exercices exécutables. Ils sont très pratiques
 pour expliquer pas à pas ce qu'on fait, comme dans ces cours mais ils ne servent pas
 uniquement aux cours.
@@ -45,23 +43,17 @@ et des cellules de code...
 
 ## installation
 
-+++
-
 le socle s'installe comme ceci (ça peut prendre un moment) :
 
 ```console
 pip install -U jupyter
 ```
 
-+++
-
 je vous invite à installer également ceci, c'est nécessaire pour lire les notebooks du cours
 
 ```console
 pip install -U jupytext jupyterlab-myst jupyterlab-courselevels
 ```
-
-+++
 
 pour pouvoir plus facilement ouvrir les notebooks jupytext,
 je vous invite également à taper ceci dans votre terminal
@@ -70,14 +62,14 @@ je vous invite également à taper ceci dans votre terminal
 jupytext-config set-default-viewer
 ```
 
-````{note}
+````{note} à quoi ça sert ?
+:class: dropdown
+
 en l'absence de cette commande, vous pouvez toujours ouvrir les notebooks jupytext,
 mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
 une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
 simplement en double-cliquant dessus
 ````
-
-
 
 +++
 
@@ -92,7 +84,8 @@ Jupyter comme ceci :
 jupyter --version
 ```
 
-````{note}
+````{note} notebook 7
+:class: dropdown
 
 depuis Juillet 2019, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
 
@@ -120,25 +113,33 @@ et de cette façon, vous aurez déjà toutes les librairies utilisées à l'int�
 
 ## utilisation de base
 
-XXX - cette partie est à reprendre avec nb7
-
 pour lancer un serveur jupyter vous tapez dans le terminal la commande
+
+```bash
+jupyter lab
+```
+
+````{note} notebook classic
+:class: dropdown
+
+si on préfère on peut aussi lancer ceci - c'est une interface un peu plus simple, mais le principe est grosso-modo le même
 
 ```bash
 jupyter notebook
 ```
+````
 
-![](media/notebooks-001-run.png)
+quelle que soit l'option choisie, le terminal va afficher plein de messages genre ceci
+
+![](media/jlab-001-blob.png)
+
+mais ça aura aussi pour effet, bien plus intéressant, d'ouvrir une fenêtre ou un onglet dans votre navigateur Web
+
+![](media/jlab-002-welcome.png)
 
 +++
 
-ce qui va avoir pour effet d'ouvrir une fenêtre ou un onglet dans votre navigateur Web
-
-![](media/notebooks-002-welcome.png)
-
-+++
-
-## le processus serveur
+### le processus serveur
 
 en fait là on fait deux choses complémentaires
 
@@ -152,104 +153,113 @@ du coup ça signifie que **le serveur Jupyter doit tourner en permanence**
 
 +++
 
-## micro-démo Jupyter classic
+## micro-démo Jupyter lab
 
-* un notebook est associé à **un langage**
-* nos supports de cours :
-  * le plus souvent le langage est **Python**
-  * le présent notebook est une exception, son langage est **bash**
-* chaque cellule est *typée* comme **markdown** ou **code**
-* et bien sûr celles typées **code** sont exécutées par … le langage du notebook
+depuis le navigateur, vous pouvez vous déplacer dans le cours  
+pour commencer allez dans le dossier `demo/notebooks` où vous verrez ceci
 
-````{note}
-il est possible aussi de mélanger plusieurs langages dans un notebook, mais c'est d'un
-usage plus complexe
-````
+![](media/jlab-003-in-demo.png)
 
 +++
 
-pour créer un nouveau notebook
+### créer un notebook
 
-![](media/notebooks-003-creating-py3.png)
+créez un nouveau notebook, et appelez-le `foo` (*File* -> *Rename Notebook...*), vous devez voir maintenant ceci
 
-+++
-
-pour renommer le notebook menu  *File* → *Rename*
-
-![](media/notebooks-004-renaming.png)
-
-![](media/notebooks-005-named.png)
+![](media/jlab-004-new-notebook-foo.png)
 
 +++
 
-comme toujours il faut sauver son travail régulièrement;  
-remarquez dans le terminal où vous avez lancé le serveur, un message de confirmation
+### créer des cellules mixtes
 
-![](media/notebooks-006-saved.png)
+à présent arrangez-vous pour créer une nouvelle cellule, de sorte à avoir une cellule de texte suivies d'une cellule de code, comme ceci
+
+![](media/jlab-005-mixed-cells.png)
 
 +++
 
-choisir le type de la cellule; on peut aussi faire
+### gérer l'affichage
 
-* `Control-M M` pour markdown
-* `Control-M Y` pour code (y comme pYthon)
+vous pouvez libérer de la place et supprimer le browser de fichiers sur la gauche
 
-![](media/notebooks-007-markdown.png)
+essayez de cliquer sur les boutons de la barre de gauche pour comprendre la logique
+
+remarquez la troisième icône ![](media/jlab-006-toc-icon.png), qui permet d'afficher la table des matières
+
+![](media/jlab-006-more-space.png)
+
++++
+
+### mode édition ou commande
+
+chaque cellule est dans un des deux modes :
+
+* édition : pour changer le contenu d'une cellule (le texte que vous tapez va directement dans la cellule)
+* commande : cette fois quand vous tapez un caractère il est interprété comme une commande
+* pour sortir du mode édition : tapez `Escape` ou encore `Control-M`
+
+voici à quoi ressemblent **nos deux cellules en mode 'commande'**
+
+![](media/jlab-007-command-mode.png)
+
+et maintenant **les mêmes en mode 'édition'** - la différence est un peu subtile 
+
+![](media/jlab-007-edit-mode.png)
+
++++
+
+### raccourcis utiles
+
+autant prendre rapidement l'habitude d'utiliser les raccourcis clavier - ça va tellement plus vite !
+
+parmi les plus fréquemment utilisés, il y a :
+
+* `Shift-Entrée`: pour évaluer la cellule courante et passer à la suivante
+* `⌥-Entrée`: pour évaluer la cellule et en insérer une dessous`
+* `Control-M M` pour passer la cellule courante en `Markdown`
+* `Control-M Y` pour passer la cellule courante en `Code` (y comme pYthon)
 
 il y a aussi des raccourcis pratiques pour créer directement des sections
 
 * `Control-M 1` met la cellule en markdown, et insère si nécessaire un `#` au début de la
   cellule; on crée ainsi une cellule de titre de rang 1
-
 * `Control-M 2` : de rang 2, etc…
 
-+++
+pour une liste exhaustive, à partir du menu, faites *Help* → *Keyboard Shortcuts*
 
-insérer une cellule; souvent on fait aussi/plutôt
-
-* `⌥-Enter` pour évaluer la cellule et en insérer une dessous
-
-![](media/notebooks-008-insert-cell.png)
-
-+++
-
-une cellule de code
-
-![](media/notebooks-009-code-cell.png)
+````{note}
+en fait, le préfixe `Control-M` est un raccourci pour **revenir en mode commande**  
+et donc quand on dit que, par exemple, `Control-M M` fait passer en `Markdown`, il faut comprendre qu'en mode commande, la lettre `M` fait passer en `Markdown`; on ajoute juste le `Control-M` pour être sûr que la séquence marche dans les deux modes, mais si on est déjà en mode commande on n'a pas besoin de taper le `Control-M`
+````
 
 +++
 
-on est toujours dans un des deux modes :
+### la palette
 
-* édition : pour changer le contenu d'une cellule
-* commande : pour voir le résultat
-* la couleur du bandeau vous dit dans quel mode vous êtes
-* pour sortir du mode édition : tapez `Escape` ou encore `Control-M`
+mimée sur celle de vs-code, il y a ici aussi une palette, que l'on invoque avec `Shift-Ctrl-C` (`Shift-Command-C` sur Mac)
 
-![](media/notebooks-010-edit-mode.png)
+c'est extrêmement utile pour trouver des commandes un peu évoluées, qui ne sont pas forcément toutes accessibles au travers d'un bouton dans l'interface
 
-![](media/notebooks-011-cmd-mode.png)
+![](media/jlab-008-palette.png)
 
 +++
 
-à partir du menu, faites *Help* → *Keyboard Shortcuts*
-
-![](media/notebooks-020-keyboard-shortcuts.png)
-
-+++
-
-sélection multiple
+### sélection multiple
 
 * en général on a exactement **une** cellule courante
 * mais avec `Shift-⬆` ou `Shift-⬇` on peut sélectionner plusieurs cellules contigües
 
-![](media/notebooks-030-sel-mult.png)
+![](media/jlab-009-multiple-selection.png)
+
+c'est utile pour par exemple les déplacer toutes ensemble
 
 +++
 
-du coup on peut par exemple les déplacer toutes ensemble
+### déplacer les cellules
 
-![](media/notebooks-031-sel-moved-down.png)
+parlant de déplacer les cellules, on peut le faire à la souris comme ceci
+
+![](media/jlab-010-move-cells.gif)
 
 +++
 
@@ -257,7 +267,7 @@ du coup on peut par exemple les déplacer toutes ensemble
 
 +++
 
-### prérequis
+### prérequis (rappels)
 
 +++
 
@@ -283,12 +293,12 @@ pip install -r requirements.txt
 ```
 
 ````{note}
-attention, pour pouvoir faire ceci, il faut d'abord avoir cloné le repo, car c'est dans le repo que se trouve le fichier `requirements.txt`
+évidemment, pour pouvoir faire ceci, il faut d'abord avoir cloné le repo, car c'est dans le repo que se trouve le fichier `requirements.txt`
 ````
 
 +++
 
-### épilogue
+### y'a plus qu'à
 
 +++
 
