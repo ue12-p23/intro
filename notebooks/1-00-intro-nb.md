@@ -52,7 +52,7 @@ notez que
 * le cours est **coopératif**, et pas compétitif  
   ceux qui savent déjà **aident leurs camarades**
 
-* [voyez aussi la checklist](label-checklist) qui contient la liste des compétences requises, ainsi qu'une vidéo de démonstration sur YouTube(https://youtu.be/i_ZcP7iNw-U)
+* [voyez aussi la checklist](label-checklist) qui contient la **liste des compétences requises**, ainsi qu'une **vidéo de démonstration** sur YouTube
 
 * à terminer pour la prochaine fois si nécessaire
 
