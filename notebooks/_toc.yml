@@ -1,15 +1,12 @@
 format: jb-book
 parts:
-- caption: intro
+- caption: installations
   chapters:
-  - glob: 0-*-nb
+  - glob: 3-*-nb
 - caption: les outils
   chapters:
   - glob: 1-*-nb
 - caption: "compl\xE9ments"
   chapters:
   - glob: 2-*-nb
-- caption: installations
-  chapters:
-  - glob: 3-*-nb
 root: 0-00-presentation-ue12-ue22

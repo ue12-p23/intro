@@ -31,11 +31,11 @@ HTML(filename="_static/style.html")
 
 # fast track
 
-Ce notebook est un résumé des installations qu'il va nous falloir faire
+ce notebook est un résumé des installations qu'il va nous falloir faire
 
 ## les outils
 
-Il nous faut a minima
+il nous faut a minima
 
 * le terminal - nous utilisons **`bash`**, qui est
   * natif sur les OS linux et MacOS,
@@ -50,7 +50,7 @@ Il nous faut a minima
 
 ## les installations
 
-Voici un parcours accéléré pour faire toutes les installations:
+voici un parcours accéléré pour faire toutes les installations:
 
 ````{admonition} installation de git (et bash sur Windows)
 :class: dropdown

@@ -4,14 +4,14 @@ tracks:
     description: "Cours d'introduction"
     id: intro
     sections:
-      - name: intro
-        notebooks: [ "notebooks/0-*-nb.md" ]
+      # - name: intro
+      #   notebooks: [ "notebooks/0-*-nb.md" ]
+      - name: installations
+        notebooks: [ "notebooks/3-*-nb.md" ]
       - name: les outils
         notebooks: [ "notebooks/1-*-nb.md" ]
       - name: compléments
         notebooks: [ "notebooks/2-*-nb.md" ]
-      - name: installations
-        notebooks: [ "notebooks/3-*-nb.md" ]
 
 builds:
   - id: handouts
