@@ -84,11 +84,10 @@ HTML(filename="_static/style.html")
   * à relativement haute fréquence
   * c'est le travail du *scheduler*
 
-+++ {"tags": ["level_intermediate"]}
++++ {"tags": []}
 
-#### soyons précis
-
-**optionnel**
+````{admonition} soyons précis (pour les curieux)
+:class: dropdown
 
 le terme *OS* - *Operating System* a plein de significations différentes dans le langage
 courant
@@ -114,6 +113,7 @@ c'est-à-dire techniquement :
     le disque dur est accessible au travers de dossiers et fichiers
 
   * **interface réseau** etc…
+````
 
 +++
 
@@ -243,19 +243,16 @@ tutu
 ce message d'erreur `command not found` - ou `commande introuvable` - vous indique le plus
 souvent qu'il y a quelque chose de mal installé
 
-+++ {"tags": ["level_intermediate"]}
++++
 
-### le `PATH`
-
-+++ {"tags": ["level_intermediate"]}
+````{note} le PATH (pour les curieux)
+:class: dropdown
 
 le `PATH` c'est le mécanisme qui permet au terminal de trouver les commandes
 
 du coup quand on installe un nouveau logiciel, comme on va le faire tout de suite avec
 'git for windows', il est parfois nécessaire de modifier le `PATH` pour que les nouvelles
 commandes deviennent accessibles depuis le terminal
-
-+++ {"tags": ["level_intermediate"]}
 
 ce n'est pas crucial de le savoir, mais si vous êtes curieux, sachez que
 
@@ -264,12 +261,15 @@ ce n'est pas crucial de le savoir, mais si vous êtes curieux, sachez que
 
 * et que c'est une liste de répertoires où sont cherchées les commandes
 
-```{code-cell}
-:tags: [level_intermediate]
-
-# ici le ':' est un séparateur
-echo $PATH
+```bash
+# un exemple sur linux/macos
+# le ':' est un séparateur
+$ echo $PATH
+/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
+````
+
++++
 
 (label-install-git-for-windows)=
 ### installation de  `bash`
@@ -386,32 +386,6 @@ ls foo.txt
 ls -l foo.txt
 ```
 
-```{code-cell}
-:tags: [level_intermediate]
-
-# pourquoi sa taille est de 12 ?
-# on a écrit dedans
-#
-# hello (5 caractères)
-# espace (1 caractère)
-# world (5 caractères)
-# newline (1 caractère)
-```
-
-+++ {"tags": ["level_advanced"]}
-
-pour les geeks, petite devinette, pourquoi est-ce que la taille de `bar.txt` est cette
-fois-ci de 13 ?
-
-```{code-cell}
-:tags: [level_advanced]
-
-echo "Hellö World" > bar.txt
-
-# ll c'est un raccourci pour ls -l
-ll bar.txt
-```
-
 reprenons; une autre commande utile c'est `cat`; ça permet tout simplement de voir le
 contenu d'un fichier
 
@@ -455,7 +429,7 @@ cat foo.txt
 
 ### chemins relatifs
 
-+++ {"tags": ["level_intermediate"]}
++++ {"tags": []}
 
 ce serait aussi équivalent de faire
 
