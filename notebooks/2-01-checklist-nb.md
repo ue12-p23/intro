@@ -28,6 +28,7 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
+(label-checklist)=
 # checklist
 
 un résumé des compétences attendues pour commencer les cours d'info

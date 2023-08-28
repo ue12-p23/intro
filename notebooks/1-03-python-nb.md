@@ -39,6 +39,7 @@ HTML(filename="_static/style.html")
 
 +++
 
+(label-install-python)=
 ## installation de base
 
 * il y a de très nombreuses distributions disponibles

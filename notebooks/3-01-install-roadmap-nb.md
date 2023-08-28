@@ -33,6 +33,8 @@ HTML(filename="_static/style.html")
 
 ce notebook est un résumé des installations qu'il va nous falloir faire
 
++++
+
 ## les outils
 
 il nous faut a minima
@@ -48,6 +50,8 @@ il nous faut a minima
 * et enfin **`git`** pour la gestion de versions  
   c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser
 
++++
+
 ## les installations
 
 voici un parcours accéléré pour faire toutes les installations:
@@ -55,11 +59,9 @@ voici un parcours accéléré pour faire toutes les installations:
 ````{admonition} installation de git (et bash sur Windows)
 :class: dropdown
 
-* **(Windows seulement)** git for windows (git + bash)
-  <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-01-os-terminal-nb.html#installation-de-bash>
+* **(Windows seulement)** [git for windows (git + bash)](label-install-git-for-windows)
 
-* **(tous sauf Windows)** installation git seul
-  <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-git-setup-nb.html#installation>
+* **(tous sauf Windows)** [installation git seul](label-install-git-others)
 ````
 
 puis ensuite, pour tous les OS
@@ -67,37 +69,39 @@ puis ensuite, pour tous les OS
 ````{admonition} installation de vs-code
 :class: dropdown
 
-voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-02-vscode-nb.html#installation-editeur-de-code>
+[toutes les plateformes](label-install-vscode)
 ````
 
 ````{admonition} installation de miniconda (pour Python et IPython)
 :class: dropdown
 
-voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-03-python-nb.html#installation-de-base>
+[toutes les plateformes](label-install-python)
 ````
 
 ````{admonition} configuration git
 :class: dropdown
 
-voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-git-setup-nb.html#setup-git>
+[toutes les plateformes](label-setup-git)
 ````
+
++++
 
 ## et pour se servir de tout cela
 
 ````{admonition} cloner le dépôt du cours
 :class: dropdown
 
-voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-git-setup-nb.html#cloner-le-depot-du-cours>
+[clôner le dépôt du cours](label-clone-course)
 ````
 
 ````{admonition} ouvrir les notebooks sur votre ordi
 :class: dropdown
 
-voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-05-local-notebooks-nb.html#notebooks-en-local>
+[exécuter les notebooks sur votre ordinateur](label-notebooks-locally)
 ````
 
 ````{admonition} la checklist
 :class: dropdown
 
-voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/2-01-checklist-nb.html>
+[une vidéo et une liste de compétences](label-checklist)
 ````

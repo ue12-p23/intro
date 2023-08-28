@@ -47,6 +47,7 @@ c'est un éditeur de texte, et pas un éditeur de code !
 
 +++
 
+(label-install-vscode)=
 ### installation éditeur de code
 
 +++

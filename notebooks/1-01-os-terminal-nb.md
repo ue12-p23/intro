@@ -271,6 +271,7 @@ ce n'est pas crucial de le savoir, mais si vous êtes curieux, sachez que
 echo $PATH
 ```
 
+(label-install-git-for-windows)=
 ### installation de  `bash`
 
 +++

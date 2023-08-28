@@ -52,8 +52,7 @@ notez que
 * le cours est **coopératif**, et pas compétitif  
   ceux qui savent déjà **aident leurs camarades**
 
-* voyez aussi la liste des compétences requises - [notebook
-  `2-01-checklist-nb.md`](https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/2-01-checklist-nb.html) qui contient notamment [une vidéo YouTube en guise de checklist](https://youtu.be/i_ZcP7iNw-U)
+* [voyez aussi la checklist](label-checklist) qui contient la liste des compétences requises, ainsi qu'une vidéo de démonstration sur YouTube(https://youtu.be/i_ZcP7iNw-U)
 
 * à terminer pour la prochaine fois si nécessaire
 

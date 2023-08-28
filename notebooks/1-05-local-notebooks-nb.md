@@ -31,6 +31,7 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
+(label-notebooks-locally)=
 # notebooks en local
 
 Les notebooks sont de petits *cahiers* d'exercices exécutables. Ils sont très pratiques

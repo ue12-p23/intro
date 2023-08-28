@@ -189,6 +189,7 @@ https://github.com/gvanrossum/cpython
 
 +++
 
+(label-install-git-others)=
 ## installation
 
 +++
@@ -209,6 +210,7 @@ pour vérifier votre installation, vous devez pouvoir taper dans le terminal
 git --version
 ```
 
+(label-setup-git)=
 ## setup git
 
 +++
@@ -398,6 +400,7 @@ puis allez dans le cours (ici `intro`), et copiez l'URL du cours
 
 +++
 
+(label-clone-course)=
 ## cloner le dépôt du cours
 
 +++
