@@ -48,7 +48,7 @@ Il nous faut a minima
 * et enfin **`git`** pour la gestion de versions  
   c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser
 
-## roadmap
+## les installations
 
 Voici un parcours accéléré pour faire toutes les installations:
 
@@ -82,7 +82,7 @@ voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-03-pyth
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-git-setup-nb.html#setup-git>
 ````
 
-et pour se servir de tout cela
+## et pour se servir de tout cela
 
 ````{admonition} cloner le dépôt du cours
 :class: dropdown
@@ -94,4 +94,10 @@ voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-04-git-
 :class: dropdown
 
 voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/1-05-local-notebooks-nb.html#notebooks-en-local>
+````
+
+````{admonition} la checklist
+:class: dropdown
+
+voir <https://nbhosting.inria.fr/builds/ue12-p23-intro/handouts/latest/2-01-checklist-nb.html>
 ````
