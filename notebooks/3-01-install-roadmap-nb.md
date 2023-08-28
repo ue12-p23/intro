@@ -57,30 +57,21 @@ il nous faut a minima
 voici un parcours accéléré pour faire toutes les installations:
 
 ````{admonition} installation de git (et bash sur Windows)
-:class: dropdown
-
-* **(Windows seulement)** [git for windows (git + bash)](label-install-git-for-windows)
-
+* **(Windows seulement)** [installation de git for windows (git + bash)](label-install-git-for-windows)
 * **(tous sauf Windows)** [installation git seul](label-install-git-others)
 ````
 
 puis ensuite, pour tous les OS
 
 ````{admonition} installation de vs-code
-:class: dropdown
-
 [toutes les plateformes](label-install-vscode)
 ````
 
 ````{admonition} installation de miniconda (pour Python et IPython)
-:class: dropdown
-
 [toutes les plateformes](label-install-python)
 ````
 
 ````{admonition} configuration git
-:class: dropdown
-
 [toutes les plateformes](label-setup-git)
 ````
 
@@ -89,19 +80,13 @@ puis ensuite, pour tous les OS
 ## et pour se servir de tout cela
 
 ````{admonition} cloner le dépôt du cours
-:class: dropdown
-
 [clôner le dépôt du cours](label-clone-course)
 ````
 
 ````{admonition} ouvrir les notebooks sur votre ordi
-:class: dropdown
-
 [exécuter les notebooks sur votre ordinateur](label-notebooks-locally)
 ````
 
 ````{admonition} la checklist
-:class: dropdown
-
 [une vidéo et une liste de compétences](label-checklist)
 ````
