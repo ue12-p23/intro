@@ -67,7 +67,7 @@ puis ensuite, pour tous les OS
 [toutes les plateformes](label-install-vscode)
 ````
 
-````{admonition} installation de miniconda (pour Python et IPython)
+````{admonition} installation de miniconda (pour Python, IPython et Jupyter)
 [toutes les plateformes](label-install-python)
 ````
 

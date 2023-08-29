@@ -365,6 +365,62 @@ Out[2]: '1.19.1'
 
 +++
 
+## installation de jupyter
+
+le socle s'installe comme ceci (ça peut prendre un moment) :
+
+```console
+pip install -U jupyter
+```
+
+je vous invite à installer également ceci, c'est nécessaire pour lire les notebooks du cours
+
+```console
+pip install -U jupytext jupyterlab-myst jupyterlab-courselevels
+```
+
+enfin pour pouvoir plus facilement ouvrir les notebooks jupytext,
+je vous invite également à taper ceci dans votre terminal
+
+```bash
+jupytext-config set-default-viewer
+```
+
+````{note} à quoi ça sert ?
+:class: dropdown
+
+en l'absence de cette commande, vous pouvez toujours ouvrir les notebooks jupytext,
+mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
+une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
+simplement en double-cliquant dessus
+````
+
++++
+
+### vérification
+
+si tout s'est bien passé vous devez pouvoir voir les versions des différents morceaux de
+Jupyter comme ceci :
+
+```{code-cell}
+jupyter --version
+```
+
+````{note} notebook 7
+:class: dropdown
+
+depuis Juillet 2023, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
+
+si vous avez installé votre environnement avant cette date, il se peut que vous ayez
+des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
+et dans ce cas il est recommandé de mettre à jour votre installation,
+c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U` 
+qui signifie *mettre à jour*.
+
+````
+
++++
+
 ## la complétion
 
 +++
