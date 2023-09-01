@@ -222,7 +222,7 @@ ou alors vous risquez de sérieusement galérer plus tard…
 
 +++
 
-### tout d'un coup
+### les recettes
 
 dans votre terminal, entrez les commandes suivantes, en remplaçant évidemment...
 
@@ -230,14 +230,16 @@ dans votre terminal, entrez les commandes suivantes, en remplaçant évidemment.
 # remplacez ici vos nom et prénom et mail
 git config --global user.name "Jean Mineur"
 git config --global user.email jean.mineur@mines-paristech.fr
+```
 
+```bash
 # peut être copié tel quel
 git config --global core.editor "code --wait"
 git config --global init.defaultbranch main
-
-# enfin par commodité - voir le cours git
+git config --global pull.rebase false
 git config --global alias.l "log --oneline --graph"
 git config --global alias.la "log --oneline --graph --all"
+git config --global alias.s "status"
 ```
 
 pour comprendre pourquoi on fait ça, lisez les sections suivantes:
@@ -259,21 +261,36 @@ et git a besoin de savoir **quel éditeur de code** vous voulez utiliser pour en
 
 dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage qui s'appelle `core.editor`
 
-**remarque**  
+````{attention}
 lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
 et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est simplement de  
-***fermer l'onglet qui édite le message***   
+***fermer l'onglet qui édite le message***  
 il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, mais pas suffisant)  
-et dans l'autre sens ce n'est pas non plus la peine de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
+et dans l'autre sens, ce n'est pas non plus la peine de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
+````
 
-**note**  
+````{note}  
 pour que ça fonctionne, il faut bien sûrœ que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, allez dans vs-code, ouvrez la palette et cherchez `Shell Command: Install 'code' command in PATH`
+````
 
 +++
 
 ### la branche par défaut
 
-enfin la dernière commande de configuration, celle qui définit `init.defaultbranch`, est là pour que lors de la création d'un repo avec `git init`, on crée une branche qui s'appelle `main` et pas `master` (qui était le défaut il y a quelques années)
+la configuration qui définit `init.defaultbranch` est là pour que, lors de la création d'un repo avec `git init`, on crée une branche qui s'appelle `main` et pas `master`
+
++++
+
+### comment réconcilier les branches
+
+le réglage `pull.rebase` indique la stratégie à utiliser pendant un `pull` (mais pour l'instant ça ne vous parle pas) :)
+sachez simplement que si on ne le fait pas maintenant, on risque d'être bloqué au moment d'aller chercher, par exemple, les dernières mises à jour du cours...
+
++++
+
+### les alias
+
+les dernières lignes sont des commodités, on définit comme ceci des commandes custom comme `git l`, ce n'est pas strictement nécessaire
 
 +++
 
