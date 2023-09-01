@@ -7,11 +7,11 @@ tracks:
       # - name: intro
       #   notebooks: [ "notebooks/0-*-nb.md" ]
       - name: installations
-        notebooks: [ "notebooks/3-*-nb.md" ]
-      - name: les outils
         notebooks: [ "notebooks/1-*-nb.md" ]
-      - name: compléments
+      - name: les outils
         notebooks: [ "notebooks/2-*-nb.md" ]
+      - name: compléments
+        notebooks: [ "notebooks/3-*-nb.md" ]
 
 builds:
   - id: handouts
