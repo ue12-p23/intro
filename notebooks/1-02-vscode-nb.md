@@ -119,7 +119,8 @@ rare en informatique), venez nous voir plus tard pour que nous vous aidions.
 
 * sur Windows, pour choisir 'bash' comme terminal
   * utiliser la palette et taper
-  * `Select Default Shell`
+  * *`Terminal: Select Default Profile`* (anciennement *`Terminal: Select Default Shell`*`)
+
 
 * montrer comment lancer le terminal
   * Control \` - la deuxième fois on le ferme

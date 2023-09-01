@@ -405,7 +405,11 @@ et vous ajoutez votre clé publique SSH; mettez ce que vous voulez comme titre, 
 
 ### pour conclure
 
-à ce stade vous pouvez naviguer jusqu'au cours; pour cela, repartez de l'organisation qui va bien, ici `ue12-p23`, c'est-à–dire ici
+à ce stade vous pouvez naviguer jusqu'au cours; pour cela, repartez de l'organisation qui va bien:
+
+<https://github.com/ue12-p23/>
+
+allez éventuellement à l'onglet *Repositories* 
 
 <img src="media/github-orga.png" width="60%">
 
@@ -445,9 +449,9 @@ il vous suffit pour ça de faire (lisez bien jusqu'au bout avant de copier-colle
 
 pour vérifier que tout s'est bien passé :
 
-    # si vous avez utilisé la deuxième forme
+    # bien sûr si vous avez utilisé la deuxième forme
     # votre répertoire local s'appelle ue12-p23-intro et pas juste intro
-    cd ue12-p23-intro
+    cd intro
 
     # le répertoire est rempli avec la dernière version du cours
     cat README.md
@@ -460,7 +464,7 @@ pour vérifier que tout s'est bien passé :
 
 si vous n'arrivez pas à cloner le repo, il y a pas mal de documentation sur github, je vous propose de commencer avec ceci pour vérifier votre setup SSH:
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection>
 
 +++
 

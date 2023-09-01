@@ -57,22 +57,22 @@ il nous faut a minima
 voici un parcours accéléré pour faire toutes les installations:
 
 ````{admonition} installation de git (et bash sur Windows)
-* **(Windows seulement)** [installation de git for windows (git + bash)](label-install-git-for-windows)
-* **(tous sauf Windows)** [installation git seul](label-install-git-others)
+* **(Windows seulement)** [git for windows (git + bash)](label-install-git-for-windows)
+* **(tous sauf Windows)** [git seulement](label-install-git-others) (bash est pré-installé)
 ````
 
 puis ensuite, pour tous les OS
 
 ````{admonition} installation de vs-code
-[toutes les plateformes](label-install-vscode)
+[vs-code - toutes les plateformes](label-install-vscode)
 ````
 
 ````{admonition} installation de miniconda (pour Python, IPython et Jupyter)
-[toutes les plateformes](label-install-python)
+[Python - toutes les plateformes](label-install-python)
 ````
 
 ````{admonition} configuration git
-[toutes les plateformes](label-setup-git)
+[git - toutes les plateformes](label-setup-git)
 ````
 
 +++

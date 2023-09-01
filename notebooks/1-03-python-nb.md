@@ -110,10 +110,15 @@ droite par exemple)
 
 +++
 
+````{attention}
 vous lancez le `.exe`, vous prenez toutes les options par défaut lorsqu'on vous pose une
-question, **sauf pour les deux écrans qui suivent**
+question  
+**sauf pour les deux écrans qui suivent**
+````
 
 +++
+
+### le choix du dossier où installer (windows only)
 
 (1) sur cet écran vous remplacez le chemin qu'on vous propose par défaut, et vous
 choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'est-à-dire
@@ -123,32 +128,32 @@ choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'e
 
 +++
 
-(2) il est important de **bien cocher la case en rouge** (malgré l'avertissement); l'autre est recommandée également
+### advanced options: *add to my PATH environment variable*
+
+(2) il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
 
 ![](media/fig-miniconda-install.png)
 
 +++
 
-<div class=outline>
+````{attention}
+juste après l'installation de conda, **quittez vos terminaux actifs**  
+conda a modifié la séquence d'initialisation des terminaux bash, 
+il faut donc faire les tests qui suivent **dans un terminal tout neuf**
+
+```{note} 
 
 en théorie c'est tout ce qu'il y a à faire pour installer conda
 
-toutefois certains élèves nous ont signalé un souci, aussi on vous recommande de lancer à
-ce stade dans un terminal
-
-`conda init bash`
-
-</div>
+toutefois certains élèves nous ont signalé un souci, aussi à ce stade on vous recommande de
+* lancer un nouveau terminal
+* et dedans lancer `conda init bash`
+```
+````
 
 +++
 
 ## première utilisation / vérification
-
-+++
-
-juste après l'installation de conda, **quittez vos terminaux actifs**; conda a modifié la
-séquence d'initialisation des terminaux bash, il faut donc faire les tests qui suivent
-dans un terminal tout neuf.
 
 +++
 
@@ -178,7 +183,10 @@ $ type python
 
 (attention à ne pas coller le `$`, donc)  
 qui doit vous répondre quelque chose comme
-```
+```console
+# sur Windows avec notre setup vous devez avoir
+python is /c/miniconda/python
+# sur Mac par exemple je vois 
 python is /c/Users/Thierry Parmentelat/miniconda3/python
 ```
 
@@ -254,44 +262,69 @@ environnments virtuels)
 python --version
 ```
 
-## installation de IPython avec `pip`
+## installations complémentaires
 
 +++
 
-lorsqu'on installe Python on installe un ensemble minimal de **librairies**  
-par exemple dans `fact.py` on a fait `import sys`  
-pour pouvoir utiliser la librairie `sys`
+### tout en un: `pip install`
 
-+++
+voici un bloc de commandes que vous pouvez copier-coller **dans le terminal**  
+pour faire en un seul coup toutes les installations dont on aura besoin
 
-c'est très facile d'installer d'autres librairies au delà de cet ensemble minimal  
-pour cela python vient avec une commande qui s'appelle `pip`  
-qui s'utilise directement **depuis le terminal**
+par contre cela peut prendre un moment...
 
-+++
-
-pour avoir la liste des librairies installées on pourrait faire
 ```bash
+pip install ipython 
+pip install numpy pandas matplotlib
+pip install -U jupyter
+pip install -U jupytext jupyterlab-myst
+
+jupytext-config set-default-viewer
+```
+
++++
+
+#### pourquoi `pip install -U`
+
+````{note} un mot à propos de notebook 7
+:class: dropdown
+
+depuis Juillet 2023, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
+
+si vous avez installé votre environnement avant cette date, il se peut que vous ayez
+des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
+et dans ce cas il est recommandé de mettre à jour votre installation,
+c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U` 
+qui signifie *mettre à jour*
+````
+
++++
+
+#### pourquoi `jupytext-config` 
+
+````{note} à quoi sert la config jupytext ?
+:class: dropdown
+
+en l'absence de cette dernière commande, vous pouvez toujours ouvrir les notebooks jupytext,
+mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
+une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
+simplement en double-cliquant dessus
+````
+
++++
+
+### vérifier les librairies installées avec `pip list`
+
+```bash
+# pour obtenir la liste des librairies installées (possiblement beaucoup)
 pip list
+# pour voir la version installée de UNE librairie, par exemple
+pip show numpy
 ```
 
 +++
 
-### installer d'autres librairies avec `pip install`
-
-nous allons utliser `pip install` pour installer IPython, et pour ça vous allez taper
-(dans un terminal)
-
-```bash
-la première fois qu'on installe une librairie, ça peut prendre
-# un petit moment pour aller chercher les packages
-# sur Internet et les installer
-pip install ipython
-```
-
-+++
-
-## micro-démo `ipython`
+### micro-démo `ipython`
 
 si vous devez taper du code Python directement dans le terminal, je vous recommande
 d'utiliser la commande `ipython` plutôt que l'interpréteur standard `python`
@@ -324,27 +357,12 @@ pratique dès qu'on va au delà de ce genre de session de démo, notamment pour
 
 +++
 
-## installation de numpy / pandas / matplotlib
+### vérification de numpy
 
-+++
-
-le calcul scientifique en Python se fait avec 3 librairies très très communes, sur
-lesquelles on reviendra très prochainement
-
-pour l'instant nous allons les installer avec la commande
-
-```console
-pip install numpy pandas matplotlib
+comme on l'a vu pour vérifier, vous pouvez d'abord, depuis le terminal, faire
+```bash
+pip show numpy
 ```
-
-+++
-
-### vérification
-
-pour vérifier, vous pouvez d'abord, depuis le terminal, faire
-
-    pip show numpy
-
 qui vous montrera en plus le numéro de version de `numpy`
 
 +++
@@ -365,39 +383,7 @@ Out[2]: '1.19.1'
 
 +++
 
-## installation de jupyter
-
-le socle s'installe comme ceci (ça peut prendre un moment) :
-
-```console
-pip install -U jupyter
-```
-
-je vous invite à installer également ceci, c'est nécessaire pour lire les notebooks du cours
-
-```console
-pip install -U jupytext jupyterlab-myst jupyterlab-courselevels
-```
-
-enfin pour pouvoir plus facilement ouvrir les notebooks jupytext,
-je vous invite également à taper ceci dans votre terminal
-
-```bash
-jupytext-config set-default-viewer
-```
-
-````{note} à quoi ça sert ?
-:class: dropdown
-
-en l'absence de cette commande, vous pouvez toujours ouvrir les notebooks jupytext,
-mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
-une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
-simplement en double-cliquant dessus
-````
-
-+++
-
-### vérification
+### vérification de jupyter
 
 si tout s'est bien passé vous devez pouvoir voir les versions des différents morceaux de
 Jupyter comme ceci :
@@ -405,21 +391,6 @@ Jupyter comme ceci :
 ```{code-cell}
 jupyter --version
 ```
-
-````{note} notebook 7
-:class: dropdown
-
-depuis Juillet 2023, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
-
-si vous avez installé votre environnement avant cette date, il se peut que vous ayez
-des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
-et dans ce cas il est recommandé de mettre à jour votre installation,
-c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U` 
-qui signifie *mettre à jour*.
-
-````
-
-+++
 
 ## la complétion
 
