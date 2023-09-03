@@ -16,7 +16,7 @@ language_info:
   nbconvert_exporter: python
   pygments_lexer: ipython3
 nbhosting:
-  title: présentation des UEs
+  title: "pr\xE9sentation des UEs"
 ---
 
 Licence CC BY-NC-ND, Thierry Parmentelat & Valérie Roy
@@ -33,39 +33,45 @@ HTML(filename="_static/style.html")
 
 Unités d'Enseignement du premier et du second semestre
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ## nos objectifs
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
-**prise d'autonomie** dans l'**utilisation des ressources digitales**  
+````{admonition} **prise d'autonomie** dans l'**utilisation des ressources digitales**
 pas de salle informatique  
 le premier objectif est que vous sachiez **rapidement utiliser votre propre ordinateur** pour travailler
 
 > vous devez apporter votre portable (et son chargeur) **à toutes les séances d'informatique**
+````
+
 ----
 
-**prise d'autonomie** dans le **numérique et la programmation**  
+````{admonition} **prise d'autonomie** dans le **numérique et la programmation**
 avec pour cela un focus sur quelques outils (du moment)  
 
 > ces outils serviront aux autres enseignements (mathématiques, machine-learning...)
----
+````
 
-nos cours sont introductifs, seul un **travail personnel entre les cours** vous permettra  
+----
+
+````{admonition} nos cours sont introductifs
+seul un **travail personnel entre les cours** vous permettra  
 **d'assimiler** les rudiments et d'**acquérir** quelques automatismes (nécessaires à la programmation)
 
-> ne pas travailler l'informatique pour vous consacrer aux autres matières plus fondamentales/exigentes n'est pas un bon choix
+> ne pas travailler l'informatique pour vous consacrer aux autres matières plus fondamentales/exigeantes n'est pas un bon choix
 
 > vous avez déjà un bon niveau en informatique ? venez-nous voir, vous éviterez de perdre votre temps
+````
 
----
+----
 
 ces quelques compétences en informatiques sont **incontournables** quel que soit vos futurs métiers  
 
 > il vous faudra aussi les tenir à jour
 
----
+----
 
 en cas de **dificulté**: compréhension, charge de travail, rapidité des cours (trop/pas assez), motivation, problème de portable...
 
@@ -84,56 +90,54 @@ en cas de **dificulté**: compréhension, charge de travail, rapidité des cours
 **PE** *Programmation Élémentaire* (2 ECTS)
 
 ||séances|contenu|
-|---|---|---|
-|python-numérique|5 | pandas, numpy, matplotlib| 
+|---:|---|---|
+|python-numérique| 5 | pandas, numpy, matplotlib|
 |git| 2 | système de gestion de versions de projets|
-|hackaton | 1 | réaliser du code en groupe (min 2 max 4)| 
+|hackaton | 1 | réaliser du code en groupe (min 2 max 4)|
 
 **AP** *Apprentissage de la Programmation* (2 ECTS)
 
 |langage (au choix) |séances|contenu|
-|---|---|---|
-|python-avancé|9 | approfondissements du langage Python| 
+|---:|---|---|
+|python-avancé| 9 | approfondissements du langage Python|
 |c++| 9 | découverte d'un langage compilé de haut niveau|
-|hackaton | 2 | réaliser du code en groupe de 4| 
+|hackaton | 2 | réaliser du code en groupe de 4|
 
-**
-
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ### second semestre (4 ECTS)
 
 **PFC** *Programme fiables et concurrents* (2 ECTS)
 
 ||séances|contenu|
-|---|---|---|
-| rudiments de Web|5 | html, css, javascript| 
+|---:|---|---|
+| rudiments de Web| 5 | html, css, javascript|
 |réseau| 2 | |
-|site Web | 1 | réaliser un site web en flask| 
-|hackaton | 1 | réaliser un code en groupe de 4| 
+|site Web | 1 | réaliser un site web en flask|
+|hackaton | 1 | réaliser un code en groupe de 4|
 
 **PI** *Projet Informatique* (2 ECTS) en groupe de 4 élèves
-- implication des alumins et d'enseignants-chercheurs-ingénieurs de l'école qui proposent et encadrent des sujets
+- implication des alumnis et d'enseignants-chercheurs-ingénieurs de l'école qui proposent et encadrent des sujets
 - parfois sur un domaine que vous ne connaissez pas
-- parfois avec des techniques que vous ne connaissez pas (encore) 
+- parfois avec des techniques que vous ne connaissez pas (encore)
 
 | |séances|contenu|
 |---|---|---|
-|travail en groupe| 6 | libérées| 
+|travail en groupe| 6 | libérées|
 |propriété intellectuelle/industrielle| 1 | conférence|
-|soutenances | 2 | présentation des projets en groupe| 
+|soutenances | 2 | présentation des projets en groupe|
 
-
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ## les cours
 
 ### les supports de cours
-Ce sont des **notebooks** formés de
+ce sont des **notebooks** formés de
 * cellules de textes: les explications (en `markdown`)
 * cellules de code: que vous exécutez et pouvez modifier
 
-> les contenus des notbooks sont également publiés dans leur version textuelle (statique) dans laquelle vous pouvez facilement faire des recherches  
+> les contenus des notebooks sont également publiés dans leur version textuelle
+> (statique) dans laquelle vous pouvez facilement faire des recherches  
 > <https://nbhosting.inria.fr/public/mines-p23/>
 
 qui contiennent
@@ -171,7 +175,7 @@ un mini-projet de programmation (noté et personnel)
 
 ### à savoir
 
-> les enseignants ne pourront pas attribuer de note de contrôle continu aux élèves trop souvent absents (qui iront donc rattrapage)
+> les enseignants ne pourront pas attribuer de note de contrôle continu aux élèves trop souvent absents (qui iront donc en rattrapage)
 
 > si vous êtes absent parce que vous connaissez déjà parfaitement toutes ces notions: contacter valerie.roy@minesparis.psl.eu
 
