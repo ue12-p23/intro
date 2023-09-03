@@ -101,7 +101,7 @@ en cas de **dificulté**: compréhension, charge de travail, rapidité des cours
 |---:|---|---|
 |python-avancé| 9 | approfondissements du langage Python|
 |c++| 9 | découverte d'un langage compilé de haut niveau|
-|hackaton | 2 | réaliser du code en groupe de 4|
+|hackaton (pour tous) | 2 | réaliser du code en groupe de 4|
 
 +++
 
