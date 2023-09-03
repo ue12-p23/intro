@@ -15,8 +15,8 @@ tracks:
 
 builds:
   - id: handouts
-    name: format HTML
-    description: contenu statique et cherchable
+    name: intro UE12 & UE22
+    description: HTML statique et cherchable
     directory: notebooks
     script: |
       pip install jupyter-book
