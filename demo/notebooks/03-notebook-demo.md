@@ -90,9 +90,9 @@ et aussi
 
 pour les liens hypertexte, on a plusieurs choix de présentation
 
-* on peut simplement mettre l'URL telle quelle https://www.youtube.com/watch?v=QJYmyhnaaek  
-  je vous recommande toutefois de prendre l'habitude de mettre l'URL entre des `<>` comme ici <https://www.youtube.com/watch?v=QJYmyhnaaek>
-* on peut aussi [l'habiller un peu](https://www.youtube.com/watch?v=QJYmyhnaaek) et pour
+* on peut simplement mettre l'URL telle quelle https://www.youtube.com/watch?v=i_ZcP7iNw-U  
+  je vous recommande toutefois de prendre l'habitude de mettre l'URL entre des `<>` comme ici <https://www.youtube.com/watch?v=i_ZcP7iNw-U>
+* on peut aussi [l'habiller un peu](https://www.youtube.com/watch?v=i_ZcP7iNw-U) et pour
   ça on utilise la notation markdown
 
       [le texte](url de la cible)
