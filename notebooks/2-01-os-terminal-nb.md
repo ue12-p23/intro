@@ -290,12 +290,16 @@ pierre deux coups, et installer à la fois `bash` et `git`
 
 lancez l'installation...
 
-à la question ***Adjusting your PATH environment*** :  
+vous pouvez prendre toutes les options par défaut
+
+````{admonition} prenez toutes les options par défaut
+:class: dropdown warning
+
+et entre autres, à la question ***Adjusting your PATH environment*** :  
 choisissez au moins l'option recommandée (#2), idéalement l'option #3
 
-+++
-
 ![](media/fig-set-path-git-for-windows.png)
+````
 
 +++
 
