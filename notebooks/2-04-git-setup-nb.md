@@ -229,7 +229,7 @@ dans votre terminal, entrez les commandes suivantes, en remplaçant évidemment.
 ```bash
 # remplacez ici vos nom et prénom et mail
 git config --global user.name "Jean Mineur"
-git config --global user.email jean.mineur@mines-paristech.fr
+git config --global user.email jean.mineur@etu.minesparis.psl.eu
 ```
 
 ```bash
