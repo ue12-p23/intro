@@ -35,7 +35,10 @@ ce notebook est un résumé des installations qu'il va nous falloir faire
 
 +++
 
-## les outils
+## la liste des outils
+
+````{admonition} la liste des outils
+:class: seealso dropdown
 
 il nous faut a minima
 
@@ -49,6 +52,7 @@ il nous faut a minima
   * et de $\LaTeX$ pour les formules mathématiques
 * et enfin **`git`** pour la gestion de versions  
   c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser
+````
 
 +++
 
