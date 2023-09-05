@@ -375,6 +375,8 @@ ce programme va vous poser des questions, à ce stade je vous recommande de touj
 `ssh-keygen` va avoir pour effet de créer deux fichiers situés dans le dossier `~/.ssh` (le tilda signifie: directement sous votre homedir); du coup vous affichez le contenu de la clé publique en faisant maintenant
 
 ```bash
+# pensez à copier-coller
+# si vous ne trouvez pas le ~ sur votre clavier
 cat ~/.ssh/id_rsa.pub
 ```
 
