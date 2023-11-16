@@ -56,7 +56,7 @@ tapez dans votre terminal
   ```bash
   conda init bash
   ```
-  avant de lancer un nouveau terminal et de réessayez
+  avant de lancer un nouveau terminal et de réessayer
 
   ```{admonition} sur mac
   :class: warning
@@ -76,7 +76,7 @@ si ce n'est pas cela, le plus probable est que vous n'avez pas bien coché la ca
 
 ## `code: command not found`
 
-+++ {"tags": ["level_intermediate"]}
++++ {"tags": []}
 
 ````{admonition} symptôme
 :class: error
@@ -85,11 +85,13 @@ vous lancez `code` dans le terminal et ça vous dit `code: command not found`
 ````
 
 ````{admonition} solution
-:class: seealso 
+:class: seealso
 
-lancez code par les menus   
+tout d'abord, si vous êtes sur Mac, assurez-vous **de bien avoir copié votre application `Visual Studio Code` dans le dossier `Applications`**
+
+si c'est le cas, lancez vs-code par les menus   
 puis dans la palette (ctrl-shift-P sur Windows, command-shift-p sur mac)  
-tapez `shell command: install 'code' command in PATH`
+trouvez la commande `shell command: install 'code' command in PATH`
 
 comme toujours, relancez un nouveau terminal et réessayez
 ````
@@ -174,7 +176,7 @@ avec Windows: vous essayez de lancer votre programme Python depuis vs-code, mais
 ````{admonition} solution
 :class: seealso
 
-puis dans la palette (ctrl-shift-P sur Windows, command-shift-p sur mac)  
+puis dans la palette (ctrl-shift-P sur Windows, command-shift-P sur mac)  
 tapez `select default profile`  
 et choisissez `bash` plutôt que `PowerShell`
 ````
