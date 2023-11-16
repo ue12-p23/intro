@@ -189,17 +189,6 @@ https://github.com/gvanrossum/cpython
 
 +++
 
-(label-install-git-others)=
-## installation
-
-+++
-
-* les Windows : à ce stade, vous avez déjà installé *git for windows*, rien de plus à faire
-* les MacOS et linux, utilisez ce lien:  
-  <https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git>
-
-+++
-
 **vérification**
 
 +++
