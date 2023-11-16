@@ -86,7 +86,9 @@ et donc ce dont il a besoin c'est que vous lui disiez **lequel** vous voulez uti
 
 +++ {"tags": []}
 
-````{note}
+````{admonition}
+:class: note
+
 lorsqu'on fait du développement professionnel, on a habituellement une installation Python
 par projet; une partie optionnelle avancée sera consacrée à ce sujet un peu plus loin
 ````
@@ -207,7 +209,9 @@ mental est simple :
 
 voici à titre indicatif une session sous MacOS pour illustrer tout ceci
 
-````{note}
+````{admonition}
+:class: note
+
 vous remarquerez comme le *prompt* bash reflète **l'environnement dans lequel on se
 trouve**  
 ça semble **relativement impératif** si on ne veut pas s'emmêler les pinceaux  

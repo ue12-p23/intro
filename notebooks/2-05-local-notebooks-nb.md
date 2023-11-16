@@ -64,8 +64,8 @@ pour lancer un serveur jupyter vous tapez dans le terminal la commande
 jupyter lab
 ```
 
-````{note} notebook classic
-:class: dropdown
+````{admonition} notebook classic
+:class: dropdown note
 
 si on préfère on peut aussi lancer ceci - c'est une interface un peu plus simple, mais le principe est grosso-modo le même
 
@@ -172,7 +172,9 @@ il y a aussi des raccourcis pratiques pour créer directement des sections
 
 pour une liste exhaustive, à partir du menu, faites *Help* → *Keyboard Shortcuts*
 
-````{note}
+````{admonition}
+:class: note
+
 en fait, le préfixe `Control-M` est un raccourci pour **revenir en mode commande**  
 et donc quand on dit que, par exemple, `Control-M M` fait passer en `Markdown`, il faut comprendre qu'en mode commande, la lettre `M` fait passer en `Markdown`; on ajoute juste le `Control-M` pour être sûr que la séquence marche dans les deux modes, mais si on est déjà en mode commande on n'a pas besoin de taper le `Control-M`
 ````
@@ -237,7 +239,9 @@ faire
 pip install -r requirements.txt
 ```
 
-````{note}
+````{admonition}
+:class: note
+
 évidemment, pour pouvoir faire ceci, il faut d'abord avoir cloné le repo, car c'est dans le repo que se trouve le fichier `requirements.txt`
 ````
 

@@ -139,7 +139,9 @@ exercice :
 
 +++ {"tags": []}
 
-````{note}
+````{admonition}
+:class: note
+
 il est recommandé, avec vs-code, de prendre l'habitude d'ouvrir un **répertoire** plutôt
 qu'un fichier
 
@@ -148,7 +150,7 @@ de fichiers), vs-code va vous ouvrir le fichier dans une fenêtre déjà ouverte
 va arriver comme un cheveu sur la soupe, dans un autre répertoire; si votre objectif c'est
 d'ouvrir une nouvelle fenêtre, préfèrez ouvrir tout un dossier
 
-pour cela, vous pouvez soit 
+pour cela, vous pouvez soit
 
 * taper `code .` dans le terminal comme on l'a vu (et ici le `.` correspond au dossier courant)
 * ou utiliser le clic droit depuis l'explorateur Windows, mais sur le dossier lui-même et non le fichier

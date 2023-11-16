@@ -261,7 +261,9 @@ et git a besoin de savoir **quel éditeur de code** vous voulez utiliser pour en
 
 dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage qui s'appelle `core.editor`
 
-````{attention}
+````{admonition}
+:class: attention
+
 lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
 et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est simplement de  
 ***fermer l'onglet qui édite le message***  
@@ -269,7 +271,9 @@ il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, m
 et dans l'autre sens, ce n'est pas non plus la peine de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
 ````
 
-````{note}  
+````{admonition}
+:class: note
+  
 pour que ça fonctionne, il faut bien sûrœ que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, allez dans vs-code, ouvrez la palette et cherchez `Shell Command: Install 'code' command in PATH`
 ````
 

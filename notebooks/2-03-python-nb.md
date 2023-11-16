@@ -110,7 +110,9 @@ droite par exemple)
 
 +++
 
-````{attention}
+````{admonition}
+:class: attention
+
 vous lancez le `.exe`, vous prenez toutes les options par défaut lorsqu'on vous pose une
 question  
 **sauf pour les deux écrans qui suivent**
@@ -136,12 +138,15 @@ choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'e
 
 +++
 
-````{attention}
+````{admonition}
+:class: attention
+
 juste après l'installation de conda, **quittez vos terminaux actifs**  
-conda a modifié la séquence d'initialisation des terminaux bash, 
+conda a modifié la séquence d'initialisation des terminaux bash,
 il faut donc faire les tests qui suivent **dans un terminal tout neuf**
 
-```{note} 
+```{admonition}
+:class: note
 
 en théorie c'est tout ce qu'il y a à faire pour installer conda
 
@@ -286,15 +291,15 @@ jupytext-config set-default-viewer
 
 #### pourquoi `pip install -U`
 
-````{note} un mot à propos de notebook 7
-:class: dropdown
+````{admonition} un mot à propos de notebook 7
+:class: dropdown note
 
 depuis Juillet 2023, la version de `jupyterlab` est la 4.x, et la version de `notebook` est la 7.x.
 
 si vous avez installé votre environnement avant cette date, il se peut que vous ayez
 des versions plus anciennes, typiquement `notebook` en 6.x et `jupyterlab` en 3.x;
 et dans ce cas il est recommandé de mettre à jour votre installation,
-c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U` 
+c'est la raison pour laquelle les commandes ci-dessus contiennent `pip install -U`
 qui signifie *mettre à jour*
 ````
 
@@ -302,8 +307,8 @@ qui signifie *mettre à jour*
 
 #### pourquoi `jupytext-config` 
 
-````{note} à quoi sert la config jupytext ?
-:class: dropdown
+````{admonition} à quoi sert la config jupytext ?
+:class: dropdown note
 
 en l'absence de cette dernière commande, vous pouvez toujours ouvrir les notebooks jupytext,
 mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
@@ -492,8 +497,8 @@ c.InteractiveShellApp.exec_lines.append('%autoreload 2')
 EOF
 ```
 
-````{note} pour les curieux
-:class:dropdown
+````{admonition} pour les curieux
+:class: dropdown note
 
 pour ceux qui veulent comprendre, ce script
 

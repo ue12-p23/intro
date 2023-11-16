@@ -116,7 +116,9 @@ dans 99% des cas, c'est parce que vous avez plusieurs environnements Python diff
 
 vérifiez bien des deux cotés de quel python il s'agit, en tapant par exemple `type python`  
 il faut bien sûr que ce soit le même python des deux cotés (à nouveau, là où vous installez et là où vous exécutez)
-```{note}
+```{admonition}
+:class: note
+
 souvenez-vous aussi que sous VS-code vous avez un menu pour, justement, choisir l'environnement Python à utiliser
 ```
 ````

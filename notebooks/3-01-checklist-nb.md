@@ -41,7 +41,8 @@ un résumé des compétences attendues pour commencer les cours d'info
 
 voici une vidéo d'une dizaine de minutes qui vous montre le minimum de choses que vous devriez pouvoir faire sur votre ordi, afin de vérifier que vous avez bien tout installé
 
-````{warning} Attention
+````{admonition} Attention
+:class: warning
 la vidéo a été tournée en 2022 et certaines petites choses ont changé depuis, et notamment
 
 * cette année nous allons utiliser `jupyter lab` plus volontiers que `jupyter notebook`
