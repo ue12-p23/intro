@@ -110,7 +110,7 @@ droite par exemple)
 
 +++
 
-````{admonition}
+````{admonition} les réponses
 :class: attention
 
 vous lancez le `.exe`, vous prenez toutes les options par défaut lorsqu'on vous pose une
@@ -138,14 +138,14 @@ choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'e
 
 +++
 
-````{admonition}
+````{admonition} pensez à recréer un terminal
 :class: attention
 
 juste après l'installation de conda, **quittez vos terminaux actifs**  
 conda a modifié la séquence d'initialisation des terminaux bash,
 il faut donc faire les tests qui suivent **dans un terminal tout neuf**
 
-```{admonition}
+```{admonition} pour être sûr
 :class: note
 
 en théorie c'est tout ce qu'il y a à faire pour installer conda

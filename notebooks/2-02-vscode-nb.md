@@ -37,42 +37,7 @@ HTML(filename="_static/style.html")
 
 +++
 
-pour pouvoir facilement modifier le contenu de nos fichiers texte, comme tout à l'heure le
-fichier `foo.txt`, on va utiliser un programme qui s'appelle un **éditeur de code**
-
-en effet, il **ne faut pas** utiliser un **outil comme Word** pour éditer des programmes:
-c'est un éditeur de texte, et pas un éditeur de code !
-
-> l'enseignant lance Visual Studio Code et le montre très très rapidement
-
-+++
-
-(label-install-vscode)=
-### installation éditeur de code
-
-+++
-
-nous demandons à **tous** les élèves d'installer et de savoir utiliser vs-code
-
-et **ATTENTION** il y a eu **beaucoup de problèmes** les années passé avec les éditeurs de type *pyzo*, ne les utilisez surtout pas dans nos cours, vous allez perdre un temps précieux et en faire perdre à vos enseignants pour des raisons inintéressantes et extérieures à Python
-
-+++
-
-On y va. Le site est là <https://code.visualstudio.com/>. Vous voulez installer donc il va
-falloir que vous alliez dans une section *download* ... vous la voyez ? à vous de jouer
-maintenant
-
-+++
-
 ### micro-démo vs-code
-
-+++
-
-Que vous ayez réussi à installer visual studio code sur votre portable ou pas encore,
-suivez maintenant ce que montre l'enseignant.
-
-Si vous avez rencontré des problèmes imprévus lors de l'installation (ce qui n'est pas
-rare en informatique), venez nous voir plus tard pour que nous vous aidions.
 
 +++
 
@@ -139,11 +104,11 @@ exercice :
 
 +++ {"tags": []}
 
-````{admonition}
+````{admonition} ouvrir un dossier plutôt qu'un fichier
 :class: note
 
-il est recommandé, avec vs-code, de prendre l'habitude d'ouvrir un **répertoire** plutôt
-qu'un fichier
+il est recommandé, avec vs-code, de prendre l'habitude d'ouvrir un **dossier**
+(on dit aussi parfois un **répertoire**) plutôt qu'un fichier
 
 si vous ouvrez un fichier (par exemple par un clic droit sur le fichier dans l'explorateur
 de fichiers), vs-code va vous ouvrir le fichier dans une fenêtre déjà ouverte - souvent ça
