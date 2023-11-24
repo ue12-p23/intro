@@ -188,7 +188,7 @@ vous devez pouvoir
 
 +++
 
-## exercice: le dossier `cours-info`
+### exercice: le dossier `cours-info`
 
 depuis le terminal on peut tout faire ! et pour commencer on va apprendre à créer un dossier  
 c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
@@ -493,16 +493,13 @@ et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
 ````{admonition} le prompt (rappel)
 :class: dropdown
 
-* les signes `$ ` ou `>>> ` ne font pas partie de ce que vous devez taper
-* c'est juste une indication pour dire
-  * avec `$ ` :  que la commande s'adresse au terminal  
+* le signes `$ ` ne fait pas partie de ce que vous devez taper
+* c'est juste une indication pour dire que la commande s'adresse au terminal  
   c-à-d à nouveau : GitBash sur Windows, Terminal sur MacOS,  
   et n'importe quel terminal bash sur linux
 
-  * avec `>>> ` : que la commande s'adresse à l'interpréteur Python
-
 ça signifie que ce que vous voyez ici correspond à ce qui sera affiché dans le terminal,
-mais si vous suivez bien les indications vous n'avez pas à taper le `$` ou les `>>>`, ce
+mais si vous suivez bien les indications vous n'avez pas à taper le `$`, ce
 sera déjà affiché lorsque vous taperez vos commandes
 ````
 
@@ -542,7 +539,7 @@ vous **devez** avoir une version 3.x, et **surtout pas** 2.7
 
 +++
 
-## exercice: code + python
+### exercice: code + python
 
 * créer un nouveau terminal
 * aller dans le dossier `cours-info` (on fait comment déjà ?)
@@ -552,7 +549,7 @@ vous **devez** avoir une version 3.x, et **surtout pas** 2.7
   ```
 * copiez-collez le code ci-dessous dans un fichier qui s'appelle `fact.py`
   ```python
-  # une fonction qui calcule factorielle
+  une fonction qui calcule factorielle
   def fact(n):
       return 1 if n <= 1 else n * fact(n-1)
 
@@ -561,6 +558,14 @@ vous **devez** avoir une version 3.x, et **surtout pas** 2.7
   for n in [4, 25]:
       print(f"fact({n}) = {fact(n)}")
   ```
+  ```{admonition} quelques trucs
+  :class: tip dropdown
+
+  utilisez les raccourcis clavier (remplacer Control par Command sur Mac)
+  * Control-N: créer un nouveau fichier
+  * Control-S: sauver le nouveau fichier, et lui donner un nom si nécessaire
+  * Control-A Control-C Control-V: comme d'habitude pour le copier-coller
+  ```
 * exécutez le programme
   ```bash
   $ python fact.py
@@ -568,6 +573,128 @@ vous **devez** avoir une version 3.x, et **surtout pas** 2.7
   fact(25) = 15511210043330985984000000
   ```
 
++++
+
+## installation des extras Python
+
+c'est-à-dire: numpy/pandas/matplotlib et IPython/Jupyter
+
+voici un bloc de commandes que vous pouvez copier-coller **dans le terminal**  
+pour faire en un seul coup toutes les installations dont on aura besoin
+
+par contre cela peut prendre un moment...
+
+
+```bash
+# c'est avec pip install qu'on installe quasiment tout pour Python
+pip install numpy pandas matplotlib
+pip install ipython jupyter
+pip install jupytext jupyterlab-myst
+
+jupytext-config set-default-viewer
+```
+
+```{admonition} à quoi servent Jupyter et Jupytext ?
+:class: note dropdown
+
+le cours est écrit sous forme de notebooks Jupyter, dans un format textuel (ici du markdown) grâce à Jupytext
+
+de manière générale vous aurez le choix entre 
+* lire le cours en HTML (comme ce premier cours), 
+* ou de l'exécuter sous forme de notebook en lançant Jupyter sur votre ordi; on en reparlera
+```
+
+````{admonition} à quoi sert jupytext-config ?
+:class: note dropdown
+
+en l'absence de cette dernière commande, depuis Jupyter vous pouvez toujours ouvrir les notebooks jupytext ,
+mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
+une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
+simplement en double-cliquant dessus
+````
+
++++
+
+`````{admonition} on vérifie
+:class: important dropdown
+
+````{admonition} version de ipython et numpy
+:class: seealso dropdown
+
+lancez `ipython` et tentez de reproduire cette session  
+vous ne devez pas avoir d'erreur du type `ModuleNotFound`
+
+```bash
+$ ipython
+Python 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:10:28) [Clang 15.0.7 ]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.14.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import numpy
+
+In [2]: print(numpy.__version__)
+1.26.0
+
+In [3]: exit()
+$
+```
+````
+
+````{admonition} version de jupyter
+:class: seealso dropdown
+
+de retour dans le terminal, affichez les versions des composants de Jupyter avec cette commande  
+vous ne devez pas avoir de `command not found`
+```bash
+jupyter --version
+```
+````
+
+````{admonition} les modules installés avec pip (optionnel)
+:class: seealso dropdown
+
+```bash
+# pour obtenir la liste des librairies installées
+# (possiblement beaucoup)
+pip list
+# pour voir la version installée de UNE librairie, par exemple
+pip show numpy
+```
+````
+
+`````
+
++++
+
+### exercice: mon premier notebook (optionnel)
+
+* créez un nouveau terminal
+* allez dans `cours-info`
+* tapez la commande `jupyter lab`
+  cela doit ouvrir un nouvel onglet dans votre navigateur
+  dans lequel tourne l'application Jupyter
+  et le terminal devient inutilisable
+* menu *Jupytext* -> *New Text Notebook* -> *Markdown MyST*
+* renommez le nouveau fichier, qui a été créé sous le nom `Untitled.md`, en `mon-premier-notebook.md`
+* dans la première cellule vous mettez le code de la fonction `fact()` (voir + haut)
+* calculez différentes valeurs de `fact()` dans les cellules suivantes
+* créez une cellule markdown et voyez ce que ça donne
+  * les styles gras, italique, code, etc..
+  * les listes à bullet
+  * les titres
+  * etc...
+* (option)  dans une autre cellule markdown vous insérez une ou des équations $\LaTeX$, j'invente:
+  $$
+  \forall c \in \mathbb{C}^3-{1}, \exists c' \in \mathbb{C}^3, \phi(c') = \frac{c^2+1}{c-1}
+  $$
+* sortez de JupyterLab en faisant *File* -> *Shutdown*
+* vous retournez dans le terminal qui maintenant fonctionne à nouveau
+
++++
+
+***
+***
+***
 
 +++
 
