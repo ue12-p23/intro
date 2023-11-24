@@ -38,7 +38,35 @@ dans tous les cas, essayez d'abord de trouver par vous même avant de demander d
 
 +++
 
+## `code: command not found`
+
+(label-troubleshoot-code-command-not-found)=
+
++++ {"tags": []}
+
+````{admonition} symptôme
+:class: error
+
+vous lancez `code` dans le terminal et ça vous dit `code: command not found`
+````
+
+````{admonition} solution
+:class: seealso
+
+tout d'abord, si vous êtes sur Mac, assurez-vous **de bien avoir copié votre application `Visual Studio Code` dans le dossier `Applications`**
+
+si c'est le cas, lancez vs-code par les menus   
+puis dans la palette (ctrl-shift-P sur Windows, command-shift-p sur mac)  
+trouvez la commande `shell command: install 'code' command in PATH`
+
+comme toujours, relancez un nouveau terminal et réessayez
+````
+
++++
+
 ## `python: command not found`
+
+(label-troubleshoot-python-command-not-found)=
 
 +++
 
@@ -70,30 +98,6 @@ tapez dans votre terminal
 :class: seealso
 
 si ce n'est pas cela, le plus probable est que vous n'avez pas bien coché la case `mettre à jour $PATH` lors de l'installation de miniconda; réinstallez, relancez un terminal, et réessayez
-````
-
-+++
-
-## `code: command not found`
-
-+++ {"tags": []}
-
-````{admonition} symptôme
-:class: error
-
-vous lancez `code` dans le terminal et ça vous dit `code: command not found`
-````
-
-````{admonition} solution
-:class: seealso
-
-tout d'abord, si vous êtes sur Mac, assurez-vous **de bien avoir copié votre application `Visual Studio Code` dans le dossier `Applications`**
-
-si c'est le cas, lancez vs-code par les menus   
-puis dans la palette (ctrl-shift-P sur Windows, command-shift-p sur mac)  
-trouvez la commande `shell command: install 'code' command in PATH`
-
-comme toujours, relancez un nouveau terminal et réessayez
 ````
 
 +++

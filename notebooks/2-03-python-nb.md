@@ -39,111 +39,9 @@ HTML(filename="_static/style.html")
 
 +++
 
-(label-install-python)=
-## installation de base
-
-* il y a de très nombreuses distributions disponibles
-* notre recommandation : miniconda
-  * relativement léger
-  * permet d'installer en mode "user", c'est-à-dire sans droits administrateur
-* (ça va sans le dire mais ne prenez **surtout pas Python 2.7** !)
-
-nous allons
-
-* faire une démonstration de l'installation miniconda sur Windows à partir de
-  <https://docs.conda.io/en/latest/miniconda.html> (les linux et les macos le font pour
-  leur OS + architectures)
-
-* puis écrire un ou deux programmes Python très simples
-* et les exécuter dans un terminal
+xxx à recaser qlq part
 
 +++
-
-## préparation : création d'un dossier `c:\miniconda`
-
-+++
-
-une première précaution, spécifique à Windows; il s'agit de contourner un bug dans l'installateur conda, qui se déclenche lorsqu'on choisit un dossier d'installation dans le nom duquel se trouve un caractère accentué ou un espace
-
-+++
-
-du coup, nous allons pour commencer créer un dossier dont le nom est court et simple,
-et **qui ne contient pas d'accent** (c'est très important que le chemin complet pour
-accéder au dossier où on installe miniconda ne comporte pas d'accents.)
-
-pour cela nous allons lancer la console Windows qui s'appelle `PowerShell`, et créer le
-dossier `c:/miniconda`
-
-en deux étapes, ça se présente comme ceci :
-
-+++
-
-(1) pour lancer la console `PowerShell`
-
-![](media/fig-miniconda-powershell-locate.png)
-
-+++
-
-(2) on va créer maintenant le dossier dans lequel on installera ensuite miniconda,
-et pour cela il y a une seule ligne à taper
-
-```console
-md c:/miniconda
-```
-
-![](media/fig-miniconda-powershell-md.png)
-
-+++
-
-une fois la commande tapée vous pouvez sortir de PowerShell (utiliser la croix en haut à
-droite par exemple)
-
-+++
-
-## installation de miniconda
-
-+++
-
-à ce stade, pour tous les OS, on peut lancer l'installation de miniconda
-
-![](media/fig-miniconda-download.png)
-
-+++
-
-````{admonition} les réponses
-:class: attention
-
-vous lancez le `.exe`, vous prenez toutes les options par défaut lorsqu'on vous pose une
-question  
-**sauf pour les deux écrans qui suivent**
-````
-
-+++
-
-### le choix du dossier où installer (windows only)
-
-(1) sur cet écran vous remplacez le chemin qu'on vous propose par défaut, et vous
-choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'est-à-dire
-`c:\miniconda` (pour les autres OS, vous pouvez prendre sans souci la valeur par défaut pour cette question)
-
-![](media/fig-miniconda-set-install-dir.png)
-
-+++
-
-### advanced options: *add to my PATH environment variable*
-
-(2) il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
-
-![](media/fig-miniconda-install.png)
-
-+++
-
-````{admonition} pensez à recréer un terminal
-:class: attention
-
-juste après l'installation de conda, **quittez vos terminaux actifs**  
-conda a modifié la séquence d'initialisation des terminaux bash,
-il faut donc faire les tests qui suivent **dans un terminal tout neuf**
 
 ```{admonition} pour être sûr
 :class: note
@@ -154,49 +52,10 @@ toutefois certains élèves nous ont signalé un souci, aussi à ce stade on vou
 * lancer un nouveau terminal
 * et dedans lancer `conda init bash`
 ```
-````
 
 +++
 
-## première utilisation / vérification
 
-+++
-
-***
-**attention**
-
-* les signes `$ ` ou `>>> ` ne font pas partie de ce que vous devez taper
-* c'est juste une indication pour dire
-  * avec `$ ` :  que la commande s'adresse au terminal  
-  c-à-d à nouveau : GitBash sur Windows, Terminal sur MacOS,  
-  et n'importe quel terminal bash sur linux
-
-  * avec `>>> ` : que la commande s'adresse à l'interpréteur Python
-***
-
-ça signifie que ce que vous voyez ici correspond à ce qui sera affiché dans le terminal,
-mais si vous suivez bien les indications vous n'avez pas à taper le `$` ou les `>>>`, ce
-sera déjà affiché lorsque vous taperez vos commandes
-
-+++
-
-### vérifier que Python est bien installé
-
-```console
-$ type python
-```
-
-(attention à ne pas coller le `$`, donc)  
-qui doit vous répondre quelque chose comme
-```console
-# sur Windows avec notre setup vous devez avoir
-python is /c/miniconda/python
-# sur Mac par exemple je vois 
-python is /c/Users/Thierry Parmentelat/miniconda3/python
-```
-
-si à ce stade vous avez un `python: not found` c'est que vous n'avez pas bien coché la case  
-*Add Miniconda3 to my PATH environment variable*; dans ce cas le plus simple est de recommencer l'installation
 
 +++
 
