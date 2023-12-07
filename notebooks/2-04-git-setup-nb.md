@@ -121,12 +121,12 @@ dans `media/git-workflow-animations.pdf`)
 
 +++
 
-Dans la petite présentation alice a choisi `GitHub` pour rendre son travail disponible à
+Dans la petite présentation alice a choisi `github.com` pour rendre son travail disponible à
 tout le monde en open-source sur Internet.
 
-En effet, `GitHub` est un service web dédié à l'hébergement et à la gestion du
+En effet, `github` est un service web dédié à l'hébergement et à la gestion du
 développement de logiciels (open source ou pas). Il utilise le logiciel de gestion de
-versions `Git`. Il est actuellement le plus grand hébergeur de code source au monde aussi
+versions `git`. Il est actuellement le plus grand hébergeur de code source au monde aussi
 c'est celui que nous allons vous demander d'utiliser.
 
 Vous devrez (pas tout de suite) allez sur <https://github.com/join> pour y créez un
@@ -134,10 +134,10 @@ compte. Il va naturellement vous falloir un nom d'utilisateur ... attention depu
 2020, il y a plus de 40 millions d'utilisateurs donc il se peut que le nom que vous
 vouliez soit déjà pris.
 
-Nous vous demanderons de nous *faire passer* vos identifiants `GitHub` vu que c'est le
+Nous vous demanderons de nous *faire passer* vos identifiants `github` vu que c'est le
 moyen que plusieurs UE vont employer pour *relever* vos projets.
 
-Pour prendre des projets dans `GitHub` vous n'avez pas besoin d'un nom d'utilisateur,
+Pour prendre des projets dans `github` vous n'avez pas besoin d'un nom d'utilisateur,
 c'est pour y mettre des projets que vous en avez besoin.
 
 +++
@@ -180,8 +180,8 @@ https://en.wikipedia.org/wiki/URL
 
 à l'intérieur du serveur github, les URLs des dépôts ressemblent toutes à celles-ci
 
-https://github.com/python/cpython  
-https://github.com/gvanrossum/cpython
+<https://github.com/python/cpython>  
+<https://github.com/gvanrossum/cpython>  
 
 * le premier étage (`python` ou `gvanrossum`) désigne une organisation ou un individu
 * le second étage (`cpython`) désigne un dépôt  
@@ -189,214 +189,9 @@ https://github.com/gvanrossum/cpython
 
 +++
 
-**vérification**
+xxx un peu de ménage à faire ici
 
-+++
-
-pour vérifier votre installation, vous devez pouvoir taper dans le terminal
-
-```{code-cell}
-git --version
-```
-
-(label-setup-git)=
-## setup git
-
-+++
-
-avant de pouvoir utiliser git, il nous faire un minimum de configuration
-
-c'est **très important** de bien **suivre toutes ces consignes**, 
-ou alors vous risquez de sérieusement galérer plus tard…
-
-+++
-
-### les recettes
-
-dans votre terminal, entrez les commandes suivantes, en remplaçant évidemment...
-
-```bash
-# remplacez ici vos nom et prénom et mail
-git config --global user.name "Jean Mineur"
-git config --global user.email jean.mineur@etu.minesparis.psl.eu
-```
-
-```bash
-# peut être copié tel quel
-git config --global core.editor "code --wait"
-git config --global init.defaultbranch main
-git config --global pull.rebase false
-git config --global alias.l "log --oneline --graph"
-git config --global alias.la "log --oneline --graph --all"
-git config --global alias.s "status"
-```
-
-pour comprendre pourquoi on fait ça, lisez les sections suivantes:
-
-+++
-
-### votre identité
-
-pour pouvoir créer un commit, git a besoin de savoir votre nom et votre adresse de messagerie
-
-c'est le propos des deux premières commandes ci-dessus, qui définissent `user.name` et `user.email`
-
-+++
-
-### l'éditeur
-
-toujours pour commiter: à chaque commit est associé **un message**  
-et git a besoin de savoir **quel éditeur de code** vous voulez utiliser pour entrer ce message
-
-dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage qui s'appelle `core.editor`
-
-````{admonition}
-:class: attention
-
-lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
-et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est simplement de  
-***fermer l'onglet qui édite le message***  
-il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, mais pas suffisant)  
-et dans l'autre sens, ce n'est pas non plus la peine de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
-````
-
-````{admonition}
-:class: note
-  
-pour que ça fonctionne, il faut bien sûrœ que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, allez dans vs-code, ouvrez la palette et cherchez `Shell Command: Install 'code' command in PATH`
-````
-
-+++
-
-### la branche par défaut
-
-la configuration qui définit `init.defaultbranch` est là pour que, lors de la création d'un repo avec `git init`, on crée une branche qui s'appelle `main` et pas `master`
-
-+++
-
-### comment réconcilier les branches
-
-le réglage `pull.rebase` indique la stratégie à utiliser pendant un `pull` (mais pour l'instant ça ne vous parle pas) :)
-sachez simplement que si on ne le fait pas maintenant, on risque d'être bloqué au moment d'aller chercher, par exemple, les dernières mises à jour du cours...
-
-+++
-
-### les alias
-
-les dernières lignes sont des commodités, on définit comme ceci des commandes custom comme `git l`, ce n'est pas strictement nécessaire
-
-+++
-
-## pour tester déjà tout ceci
-
-+++
-
-pour tester tout ceci, procédez comme suit, depuis le terminal (bash bien sûr):
-
-* créez un dossier vierge (souvenez-vous de la commande `mkdir`)
-* allez dans ce dossier (avec `cd`) et créez un dépît git
-  ```bash
-  cd le-dossier
-  git init
-  ```
-
-* ouvrez l'éditeur de code (avec `code .`)
-  ```bash
-  code .
-  ```
-  puis dans vs-code, créez le fichier `readme.md` avec une ou deux lignes de texte, sauvez-le
-
-* de retour dans le terminal, faites
-  ```bash
-  git add readme.md
-  git commit
-  ```
-
-* vous devez voir une fenêtre s'ouvrir dans vs-code; allez-y, tapez un message sur la première ligne
-  (par exemple `mon premier commit`), puis faites `Control-S` auivi de `Control-W` (ou Command sur mac)
-
-* et là si tout se passe bien: la fenêtre dans vs-code se ferme, et si vous retournez dans le terminal vous voyez que le `git commit` est terminé
-* à ce stade faites simplement
-  ```bash
-  git log
-  ```
-  et vérifiez:
-
-  * que votre nom et mail est correct
-  * et que la branche s'appelle bien `main`
-
-+++
-
-## la clé SSH
-
-depuis Août 2021, il est devenu très compliqué d'utiliser la méthode dite 'HTTPS' pour s'authentifier chez github;
-aussi nous allons ensemble voir comment créer une clé pour la méthode SSH
-
-+++
-
-### c'est quoi SSH ?
-
-au départ, c'est un système de terminal distant pour pouvoir administrer les serveurs à distance; l'authentification est basée sur le principe d'une paire de clés publique/privée
-
-sans entrer dans les détails, ces deux morceaux sont en gros deux éléments symétriques l'un de l'autre dans un très gros groupe fini, et on ne peut pas facilement calculer l'un à partir de l'autre  
-
-par définition:
-
-* la clé publique peut être divulguée sans aucun souci au monde entier
-* par contre **la clé privée** doit être gardée secrète, donc **jamais exposée/copiée** en dehors de votre ordi
-
-et donc, ce qu'on va faire tout simplement, c'est:
-
-* générer une paire de clés
-* et déposer une copie de la clé publique sur github, en l'associant à votre compte github
-
-+++
-
-### création de la paire de clés
-
-pour générer la clé publique vous faites simplement dans le terminal
-```bash
-ssh-keygen
-```
-
-ce programme va vous poser des questions, à ce stade je vous recommande de toujours répondre par simplement la touche *Entrée* pour accepter les défauts et ne pas attacher de mot de passe votre clé privée (ce qui n'est pas une pratique hyper-sûre, mais à ce stade de votre cursus ça parait raisonnable; si vous êtes geek et/ou très soucieux de sécurité, mettez un mot de passe mais soyez prêt à taper votre mot de passe *ad nauseam*, ou à passer du temps à des configurations scabreuses pour ne pas avoir à le faire...)
-
-+++
-
-### affichage de la clé publique
-
-`ssh-keygen` va avoir pour effet de créer deux fichiers situés dans le dossier `~/.ssh` (le tilda signifie: directement sous votre homedir); du coup vous affichez le contenu de la clé publique en faisant maintenant
-
-```bash
-# pensez à copier-coller
-# si vous ne trouvez pas le ~ sur votre clavier
-cat ~/.ssh/id_rsa.pub
-```
-
-et vous copiez tout le contenu (en incluant bien tout, même le `ssh-rsa` et tout)
-
-+++
-
-### attachez la clé à votre compte github
-
-maintenant vous allez sur github  
-dans le coin en haut à droite il y a votre icône  
-qui ouvre un sous-menu dans lequel vous choisissez *Settings*  
-dans la partie gauche de la page qui s'ouvre, cliquez 'SSH and GPG Keys'
-
-+++
-
-<img src="media/github-profile-1.png" width="60%">
-
-+++
-
-et vous ajoutez votre clé publique SSH; mettez ce que vous voulez comme titre, mais vous collez la clé publique dans la zone qui va bien
-
-+++
-
-<img src="media/github-profile-2.png" width="60%">
-
-+++
+(label-clone-course)=
 
 ### pour conclure
 
@@ -416,7 +211,6 @@ puis allez dans le cours (ici `intro`), et copiez l'URL du cours
 
 +++
 
-(label-clone-course)=
 ## cloner le dépôt du cours
 
 +++

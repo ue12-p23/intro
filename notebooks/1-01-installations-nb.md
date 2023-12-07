@@ -94,12 +94,12 @@ ce n'est pas crucial de le savoir, mais si vous êtes curieux, sachez que
 
 * que c'est une liste de répertoires où sont cherchées les commandes
 
-```bash
-# un exemple sur linux/macos
-# le ':' est un séparateur
-$ echo $PATH
-/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-```
+  ```bash
+  # un exemple sur linux/macos
+  # le ':' est un séparateur
+  $ echo $PATH
+  /opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  ```
 
 * et qu'elle est le plus souvent définie/modifiée dans un fichier caché qui s'appelle `.bashrc` dans votre homedir
 
@@ -157,7 +157,7 @@ bash est préinstallé; pour git, utilisez ce lien:
 
 +++
 
-````{admonition} on vérifie
+````{admonition} on vérifie bash et git
 :class: important dropdown
 
 vous devez pouvoir
@@ -250,7 +250,7 @@ si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes as
 ````
 
 
-````{admonition} on vérifie
+````{admonition} on vérifie code
 :class: important dropdown
 
 * dans **un nouveau terminal** (voir + haut)  
@@ -485,7 +485,7 @@ les questions/réponses se passent dans le terminal, voici quelques trucs utiles
 
 +++
 
-`````{admonition} on vérifie
+`````{admonition} on vérifie python
 :class: important dropdown
 
 et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
@@ -613,9 +613,7 @@ une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les
 simplement en double-cliquant dessus
 ````
 
-+++
-
-`````{admonition} on vérifie
+`````{admonition} on vérifie numpy et jupyter
 :class: important dropdown
 
 ````{admonition} version de ipython et numpy
@@ -692,33 +690,211 @@ pip show numpy
 
 +++
 
-***
-***
-***
+## configuration git
+
+avant de pouvoir utiliser git, il nous faire un minimum de configuration
+
+c'est **très important** de bien **suivre toutes ces consignes**, 
+ou alors vous risquez de sérieusement galérer plus tard…
+
+````{admonition} votre identité
+:class: seealso dropdown
+
+pour commencer vous devez configurer git pour qu'il connaisse votre identité, cela sera utilisé à chaque fois que vous faites un *commit*
+
+  ```bash
+  # remplacez ici vos nom et prénom et mail
+  git config --global user.name "Jean Mineur"
+  git config --global user.email jean.mineur@etu.minesparis.psl.eu
+  ```
+````
+
+`````{admonition} les autres réglages
+:class: seealso dropdown
+
+à copier-coller tel quel dans le terminal
+  ````bash
+  # peut être copié tel quel
+  git config --global core.editor "code --wait"
+  git config --global init.defaultbranch main
+  git config --global pull.rebase false
+  git config --global alias.l "log --oneline --graph"
+  git config --global alias.la "log --oneline --graph --all"
+  git config --global alias.s "status"
+  ````
+
+````{admonition} à quoi ça sert ?
+:class: note dropdown
+
+* avec `core.editor` on choisit vs-code comme éditeur (voir ci-dessous)
+* avec `init.defaultbranch` on indique que la branche initiale s'appelle `main`
+* avec `pull.rebase` on indique qu'on veut *merge* et non pas *rebase* lorsqu'on *pull*
+* avec les trois `alias` on définit des raccourcis; c'est comme ça par exemple qu'on pourra taper simplement  
+  `git la`  
+  au lieu de devoir taper  
+  `git log --oneline --graph --all`
+````
+
+````{admonition} pour utiliser vs-code avec git
+:class: dropdown note
+
+à chaque commit est associé **un message**, et git a besoin de savoir **quel éditeur de code** vous voulez utiliser pour entrer ce message
+
+dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage qui s'appelle `core.editor`
+
+```{admonition} terminer la rédaction du message
+:class: attention
+
+lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
+et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est:
+- il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, mais pas suffisant)  
+- ce qui compte c'est que vous ***fermiez l'onglet qui édite le message***;
+vous pouvez utiliser par exemple `Control-W` (ou Command-W sur mac); ou encore utiliser la petite croix en x à droite de l'onglet
+- ce n'est **pas la peine** de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
+```
+````
+
+````{admonition} command not found ?
+:class: note dropdown
+  
+pour que ça fonctionne, il faut bien sûr que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, [reportez-vous à la section sur ce problème](label-troubleshoot-code-command-not-found)
+````
+`````
+
+`````{admonition} on vérifie: mon premier commit
+:class: important dropdown
+
+voici un petit scénario qui vous fait créer un dossier, un repo git, un fichier, et un commit; toutes les commandes sont à taper dans le terminal (bash bien sûr)
+
+  ````bash
+  # je repars de mon homedir
+  cd
+  # je vais dans le dossier cours-info
+  cd cours-info
+  # je crée un nouveau dossier 
+  mkdir my-first-git-repo
+  # je vais dedans
+  cd my-first-git-repo
+  # j'initialise ce dossier comme un repo git
+  git init
+  # je lance l'éditeur de code
+  code .
+  
+  # à ce stade, dans vs-code, créez le fichier `readme.md`
+  # avec une ou deux lignes de texte, sauvez-le
+  # puis retournez dans le terminal:
+
+  # on veut que readme.md soit dans le commit qu'on va créer
+  git add readme.md
+  git commit
+
+  # à ce stade, vous devez voir une fenêtre s'ouvrir dans vs-code
+  # allez-y, tapez un message sur la première ligne
+  # (par exemple `mon premier commit`), 
+  # puis faites `Control-S` suivi de `Control-W`
+  # (ou Command-S suivi de Command-W sur mac)
+
+  # et là si tout se passe bien: 
+  # la fenêtre dans vs-code se ferme, 
+  # et si vous retournez dans le terminal
+  # vous voyez que le `git commit` est terminé
+
+  # on peut alors continuer, et faire
+  git log
+
+  # qui doit vous montrer UN commit; vérifiez
+  # que votre nom et mail est correct
+  # et que la branche s'appelle bien `main`
+  ````
+
+`````
 
 +++
 
-## configuration git
-[git - toutes les plateformes](label-setup-git)
+## github et la clé SSH
+
+depuis Août 2021, il est devenu très compliqué d'utiliser la méthode dite 'HTTPS' pour s'authentifier chez github;
+aussi nous allons ensemble voir comment créer une clé pour la méthode SSH
+
+pour commencer, créez-vous un compte sur github si ce n'est pas déjà fait
+
++++
+
+### c'est quoi SSH ?
+
+au départ, c'est un système de terminal distant pour pouvoir administrer les serveurs à distance; l'authentification est basée sur le principe d'une paire de clés publique/privée
+
+sans entrer dans les détails, ces deux morceaux sont en gros **deux éléments symétriques** l'un de l'autre dans un très gros groupe fini, et on ne peut pas facilement calculer l'un à partir de l'autre  
+
+par définition:
+
+* la clé publique peut être divulguée sans aucun souci au monde entier
+* par contre **la clé privée** doit être gardée secrète, donc **jamais exposée/copiée** en dehors de votre ordi
+
+et donc, ce qu'on va faire tout simplement, c'est:
+
+* générer une paire de clés
+* et déposer une copie de la clé publique sur github, en l'associant à votre compte github
+
++++
+
+````{admonition} création de la paire de clés
+:class: seealso dropdown
+
+pour générer la clé publique vous faites simplement dans le terminal
+```bash
+ssh-keygen
+```
+
+ce programme va vous poser des questions, à ce stade je vous recommande de toujours répondre par simplement la touche *Entrée* pour accepter les défauts et ne pas attacher de mot de passe votre clé privée (ce qui n'est pas une pratique hyper-sûre, mais à ce stade de votre cursus ça parait raisonnable; si vous êtes geek et/ou très soucieux de sécurité, mettez un mot de passe mais soyez prêt à taper votre mot de passe *ad nauseam*, ou à passer du temps à des configurations scabreuses pour ne pas avoir à le faire...)
+````
+
+````{admonition} affichage de la clé publique
+:class: seealso dropdown
+
+`ssh-keygen` va avoir pour effet de créer deux fichiers situés dans le dossier `~/.ssh` (le tilda signifie: directement sous votre homedir); du coup vous affichez le contenu de la clé publique en faisant maintenant
+
+```bash
+# pensez à copier-coller
+# si vous ne trouvez pas le ~ sur votre clavier
+cat ~/.ssh/id_rsa.pub
+```
+
+et vous copiez tout le contenu (en incluant bien tout, même le `ssh-rsa` et tout)
+````
+
+`````{admonition} attachez la clé à votre compte github
+:class: seealso dropdown
+
+````{div}
+
+maintenant vous allez sur github  
+dans le coin en haut à droite il y a votre icône  
+qui ouvre un sous-menu dans lequel vous choisissez *Settings*  
+dans la partie gauche de la page qui s'ouvre, cliquez 'SSH and GPG Keys'
+
+```{image} media/github-profile-1.png
+:width: 600px
+:align: center
+```
+
+et vous ajoutez votre clé publique SSH; mettez ce que vous voulez comme titre, mais vous collez la clé publique dans la zone qui va bien
+
+```{image} media/github-profile-2.png
+:width: 600px
+:align: center
+```
+````
+`````
+
++++
+
+***
+***
+***
 
 +++
 
 ## configurations diverses
 
 ### autoreload
-
-+++
-
-## et pour se servir de tout cela
-
-````{admonition} cloner le dépôt du cours
-[clôner le dépôt du cours](label-clone-course)
-````
-
-````{admonition} ouvrir les notebooks sur votre ordi
-[exécuter les notebooks sur votre ordinateur](label-notebooks-locally)
-````
-
-````{admonition} la checklist
-[une vidéo et une liste de compétences](label-checklist)
-````
