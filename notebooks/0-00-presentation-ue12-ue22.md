@@ -29,13 +29,13 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
-# présentation générale des ue12 et ue22 d'informatique
+# Présentation générale des ue12 et ue22 d'informatique
 
 Unités d'Enseignement du premier et du second semestre
 
 +++
 
-## nos objectifs
+## Nos objectifs
 
 +++
 
@@ -79,13 +79,13 @@ en cas de **dificulté**: compréhension, charge de travail, rapidité des cours
 
 +++
 
-## le programme des enseignements sur l'année (8 ECTS)
+## Le programme sur l'année (8 ECTS)
 
 2 ECTS = 9 séances de 3 heures
 
 +++
 
-### premier semestre (4 ECTS)
+### UE12: premier semestre (4 ECTS)
 
 **PE** *Programmation Élémentaire* (2 ECTS)
 
@@ -105,7 +105,7 @@ en cas de **dificulté**: compréhension, charge de travail, rapidité des cours
 
 +++
 
-### second semestre (4 ECTS)
+### UE22: second semestre (4 ECTS)
 
 **PFC** *Programme fiables et concurrents* (2 ECTS)
 
@@ -129,9 +129,9 @@ en cas de **dificulté**: compréhension, charge de travail, rapidité des cours
 
 +++
 
-## les cours
+## Les cours
 
-### les supports de cours
+### Les supports de cours
 ce sont des **notebooks** formés de
 * cellules de textes: les explications (en `markdown`)
 * cellules de code: que vous exécutez et pouvez modifier
@@ -154,22 +154,20 @@ les notebooks sont plutôt rédigés pour être étudiés *en autonomie*
 
 > à-la-maison: vous terminez les notebooks commencés et vous relisez les notebooks déjà vus
 
-
-### ce qu'on attend de vous
+### Ce qu'on attend de vous
 * que vous soyez présents à tous les cours (ils sont obligatoires)
 * que vous préveniez votre enseignant en cas d'absence (avant si cela vous est possible)
   il vous indiquera quoi rattraper
 * que vous soyez à l'heure (un contrôle continu sera fait en début de séance)
 
-### votre comportement
+### Votre comportement
 
 soyez constructif, coopératifs
 *  vis-à-vis des autres élèves en les aidant sans être compétitif
 *  vis-à vis de vos enseignants en leur posant des questions, en leur disant si ils vont trop/pas assez vite...  
   aidez les à comprendre où vous en êtes
 
-
-### pour savoir où vous en êtes ? et pour vous évaluer
+### Pour savoir où vous en êtes ? et pour vous évaluer
 
 *pour le fun* (non noté)
 > des hackatons pour vous apprendre à travailler ensemble
@@ -178,11 +176,11 @@ un contrôle continu noté (quiz ou exercices au début de chaque cours)
 
 des mini-projets de programmation (notés et **personnels**)
 
-### à savoir
+### À savoir
 
 > les enseignants ne pourront pas attribuer de note de contrôle continu aux élèves trop souvent absents (qui iront donc en rattrapage)
 
-> si vous êtes absent parce que vous connaissez déjà parfaitement toutes ces notions: contacter valerie.roy@minesparis.psl.eu
+> si vous êtes absent parce que vous connaissez déjà parfaitement toutes ces notions: contacter `valerie.roy@minesparis.psl.eu`
 
 +++
 
