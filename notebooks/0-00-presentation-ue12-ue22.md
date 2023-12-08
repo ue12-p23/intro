@@ -40,8 +40,9 @@ Unités d'Enseignement du premier et du second semestre
 +++
 
 ````{admonition} **prise d'autonomie** dans l'**utilisation des ressources digitales**
+
 pas de salle informatique  
-le premier objectif est que vous sachiez **rapidement utiliser votre propre ordinateur** pour travailler
+le premier objectif est que vous sachiez **rapidement utiliser votre propre ordinateur** pour travailler - *BYOD: Bring Your Own Device*
 
 > vous devez apporter votre portable (et son chargeur) **à toutes les séances d'informatique**
 ````

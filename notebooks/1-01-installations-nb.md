@@ -281,7 +281,7 @@ si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes as
 
 +++
 
-## installation de miniconda (pour Python, IPython et Jupyter)
+## installation de miniconda / Python
 
 * il y a de très nombreuses distributions de Python disponibles
 * notre choix : **miniconda**
@@ -579,20 +579,23 @@ vous **devez** avoir une version 3.x, et **surtout pas** 2.7
 
 c'est-à-dire: numpy/pandas/matplotlib et IPython/Jupyter
 
+````{admonition} installation numpy et jupyter
+:class: seealso dropdown
+
 voici un bloc de commandes que vous pouvez copier-coller **dans le terminal**  
 pour faire en un seul coup toutes les installations dont on aura besoin
 
 par contre cela peut prendre un moment...
 
+  ```bash
+  # c'est avec pip install qu'on installe quasiment tout pour Python
+  pip install numpy pandas matplotlib
+  pip install ipython jupyter
+  pip install jupytext jupyterlab-myst
 
-```bash
-# c'est avec pip install qu'on installe quasiment tout pour Python
-pip install numpy pandas matplotlib
-pip install ipython jupyter
-pip install jupytext jupyterlab-myst
-
-jupytext-config set-default-viewer
-```
+  jupytext-config set-default-viewer
+  ```
+````
 
 ```{admonition} à quoi servent Jupyter et Jupytext ?
 :class: note dropdown
@@ -661,6 +664,60 @@ pip show numpy
 ````
 
 `````
+
++++
+
+### configuration de l'autoreload
+
+````{admonition} autoreload
+:class: seealso dropdown
+
+copiez-collez ceci dans votre terminal
+
+```bash
+mkdir -p ~/.ipython/profile_default
+cat >> ~/.ipython/profile_default/ipython_config.py << EOF
+c.InteractiveShellApp.exec_lines = []
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')
+EOF
+```
+````
+
+````{admonition} à  quoi ça sert ?
+:class: note dropdown
+
+**le problème**: vous êtes dans `ipython` ou dans un notebook, et vous faites
+
+```python
+from my_module import my_function
+my_function(...)
+```
+
+et puis ensuite un peu plus tard, vous modifiez `my_module.py` sous vs-code, et vous
+voulez essayer la nouvelle version; votre première idée est de refaire l'import pour
+recharger le module dans l'interpréteur
+
+là attention, **un second `import` ne recharge pas le fichier** c'est le
+comportement attendu, et souhaitable, car charger un module est coûteux; c'est
+pourquoi l'interpréteur garde en mémoire les modules qu'il a déjà chargés, et du
+coup vous pouvez ré-importer autant que vous voulez, vous allez toujours utiliser
+le premier code, et non le nouveau
+
+**la solution**: avec cette astuce, vous n'aurez plus besoin de ré-importer,
+vous pourrez juste ré-exécuter `my_function()` et vous utiliserez la dernière
+version du module (pour autant que le nouveau module ne contienne pas d'erreur qui
+empêche son chargement, bien entendu)
+````
+
+````{admonition} comment ça marche ?
+:class: dropdown note
+
+pour les curieux qui veulent comprendre, ce script
+
+* commence par s'assurer que le dossier `.ipython/profile_default` existe sous le home directory
+* puis dans ce dossier, il ajoute dans le fichier `ipython_config.py` les 3 lignes de configuration qui précèdent le `EOF` (c'est du Python bien sûr); le fichier est créé s'il n'existait pas
+````
 
 +++
 
@@ -886,15 +943,3 @@ et vous ajoutez votre clé publique SSH; mettez ce que vous voulez comme titre, 
 ```
 ````
 `````
-
-+++
-
-***
-***
-***
-
-+++
-
-## configurations diverses
-
-### autoreload
