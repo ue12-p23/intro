@@ -22,7 +22,7 @@ jupyterlab
 notebook
 jupytext
 jupyterlab-myst
-jupyterlab-courselevels
+jupyterlab-hidecell
 
 ipywidgets >= 8.0
 ipympl

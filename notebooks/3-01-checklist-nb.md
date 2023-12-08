@@ -55,7 +55,7 @@ editable: true
 hide_input: true
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 from IPython.display import IFrame
 
