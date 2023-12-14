@@ -35,15 +35,12 @@ HTML(filename="_static/style.html")
 
 # OS & terminal
 
-+++ {"slideshow": {"slide_type": ""}}
-
 * votre OS (Operating System), c'est Windows, MacOS, ou linux
 * quelques différences (très) visibles
 * mais en réalité de très nombreux concepts communs
 
-+++ {"slideshow": {"slide_type": ""}}
-
-## à quoi ça sert ?
+````{admonition} à quoi ça sert ?
+:class: dropdown
 
 * calculette  
   * un programme a accès à toutes les ressources
@@ -51,10 +48,12 @@ HTML(filename="_static/style.html")
 * ordinateurs
   * plein de programmes **en même temps**
   * accessoirement plein d'utilisateurs
+````
 
 +++ {"slideshow": {"slide_type": ""}}
 
-### rôle de l'OS
+````{admonition} rôle de l'OS
+:class: dropdown
 
 * fournir de l'**isolation** entre les programmes
   * si deux programmes différents utilisent la case mémoire 1  
@@ -71,10 +70,12 @@ HTML(filename="_static/style.html")
 
 
 (\*) ou alors:  *Task Manager* sous Windows, et *top* sous linux
+````
 
 +++ {"slideshow": {"slide_type": ""}}
 
-### notion de **processus** (en anglais *process*)
+````{admonition} notion de **processus** (en anglais *process*)
+:class: dropdown
 
 * chaque programme qui tourne constitue un ***process***
 * les process sont isolés les uns des autres  
@@ -83,6 +84,7 @@ HTML(filename="_static/style.html")
   * dans un mode ***chacun son tour***
   * à relativement haute fréquence
   * c'est le travail du *scheduler*
+````
 
 +++ {"tags": []}
 
@@ -117,138 +119,33 @@ c'est-à-dire techniquement :
 
 +++
 
-### multi-utilisateurs, administrateur
-
-+++
-
-#### historiquement
-
-le modèle d'usage des ordinateurs (très chers) était  
-1 ordi = plusieurs (dizaines/centaines d') utilisateurs
-
-ce qui a mis en évidence le rôle de l'**administrateur** (*super-user*)  
-qui se chargeait des tâches de maintenance et d'installation
-
-+++
-
-les usages ont beaucoup changé, mais cette dualité (user lambda / admin) est restée  
-dans beaucoup d'institutions / compagnies c'est la *DSI* (Direction des Systèmes
-d'Information) qui se charge de l'installation de base et de la sécurité
-
-+++
-
-jusque récemment, le modèle mental était que :  
-"pour faire une installation, il faut les droits d'administrateur"  
-de cette façon on peut faire des économies d'échelle  
-(installation = processus compliqué, autant le faire 1 bonne fois pour tous les
-utilisateurs)
-
-+++
-
-#### les usages ont changé
-
-+++
-
-* non seulement pour les postes de travail c'est maintenant  
-  1 ordi = 1 personne
-
-* mais en plus, la **même personne** peut avoir besoin de **plusieurs environnements** par
-  exemple, un développeur peut travailler sur plusieurs projets, un en Python-3.8, un
-  autre en Python-3.10, avec des combinaisons de librairies différentes pour chaque projet
-
-+++
-
-si bien que *la notion d'installation unique pour 1 ordi* n'a **que des inconvénients**
-
-* c'est compliqué d'avoir les droits d'administrateur : la DSI y veille, et même sans DSI ça demande des manipulations en plus
-* et ça rend très compliqué la mise à disposition de multiples environnements  
-  si tout le monde a le même Python, a fortiori un développeur aura toujours le même Python
-
-+++
-
-#### choisir un mode d'installation dans l'espace utilisateur
-
-+++
-
-c'est pourquoi je vous recommande de choisir, lorsque c'est possible, un mode
-d'installation **dans l'espace utilisateur** plutôt qu'une installation dans la zone
-système
-
-ainsi vos installations seront plus simples, et plus extensibles : vous pourrez plus
-facilement jongler entre les environnements lorsque vous serez plus agiles avec tout ceci
-
-pour anticiper un peu, c'est la raison pour laquelle on vous recommandera d'installer
-Python avec miniconda (dans la section qui traite de Python)
-
-ça veut dire en pratique que si à un moment de l'installation on vous demande un mot de
-passe administrateur, c'est que vous vous êtes fourvoyés et qu'il faut changer d'angle
-d'attaque
-
-+++ {"slideshow": {"slide_type": ""}}
-
 ## le terminal
-
-+++
 
 le premier outil que nous allons voir c'est ce qu'on appelle le terminal;  
 un terminal qu'est-ce que c'est ?
 
-le terminal c'est tout simplement un programme qui permet d'exécuter des commandes
+le terminal c'est tout simplement un programme (processus) qui permet de lancer d'autres programmes
 
-```{code-cell}
-:hide_input: false
-
-# la commande la plus basique est `pwd`
-# pour afficher le répertoire courant
-
-pwd
-```
-
-### `bash`
+ça peut paraitre moins pratique que de cliquer sur les icones du bureau...  
+**MAIS** c'est **beaucoup plus puissant** parce que
+- d'abord c'est de cette manière qu'on accède à des ressources distantes (cloud, cluster de calcul, ...)
+- et surtout c'est un peu comme un langage de programmation, on peut faire en une ligne ce qui prendrait des heures avec un cliquodrome !
 
 +++
+
+### `bash`
 
 il y a plein de types de terminal selon les systèmes d'exploitation, mais pour que nous
 travaillions tous ensemble sur le même objet, nous allons choisir un terminal qui
 s'appelle ``bash``
 
-* `bash` vient avec l'installation de base sur MacOS et linux
-* sur Windows, il faut l'installer séparément.  
-  nous allons vous guider dans l'installation d'une app qui s'appelle ***git for
-  windows*** qui est cool parce qu'elle contient
-
-  * le terminal `bash`, comme ça tout le monde a le même sur tous les OS  
-  * et `git`, on va bientôt en parler, bref on fait d'une pierre deux coups
-
-**mais attendez un peu avant de vous précipiter à installer ça !**  
-
-en effet avant de voir cette installation, on va faire une digression sur la façon dont le
-terminal recherche ses commandes
-
-+++
-
-### lancez un terminal
-
-+++
-
-![](media/fig-git-for-windows.png)
-
-+++
-
-### exercice
-
-* installer *git for windows* si vous êtes sur windows
-* lancez un terminal
-* le cas échéant créez un raccourci pour pouvoir lancer un terminal rapidement
-* tapez les commandes suivantes :
-
-![](media/fig-terminal.png)
+* `bash` vient avec l'installation de base sur MacOS et lzinux
+* sur Windows, il faut l'installer séparément, on l'a vu avec ***git for
+  windows*** 
 
 +++
 
 ## dossiers et fichiers
-
-+++
 
 le contenu du disque dur est organisé en **dossiers** et **fichiers**
 
@@ -264,100 +161,111 @@ termes synonymes :
 
 +++
 
-### répertoire courant
+### répertoire utilisateur (*home directory*)
 
-+++
+chaque utilisateur possède un répertoire,  
+qui est la racine de l'arbre dans lequel il peut ranger ses affaires  
+indépendamment du système d'exploitation
+
+pour y aller le plus simple est de faire simplement `cd` sans paramètre
+
+```{admonition} nouveau terminal
+en principe, un terminal qui vient d'être créé a comme dossier courant le home directory  
+c'est le cas sur MacOS et Linux  
+toutefois sur Windows, en pratique ce n'est pas toujours le cas en fonction de votre setup  
+aussi si vous êtes dans ce cas-là, prenez l'habitude de faire `cd` avant toute chose dans le terminal
+```
+
+```{code-cell}
+# sans paramètre je vais tout en haut de mon espace
+cd
+```
+
+```{code-cell}
+# c'est mon home-directory
+pwd
+```
+
+### répertoire courant et chemins relatifs
 
 tous les programmes (processus) ont ce qu'on appelle un répertoire courant
 
 dans le terminal on peut le voir avec la commande `pwd`  
 (*print working directory*)
 
-```{code-cell}
-# petite digression, ici je suis dans un notebook 'bash'
-# et je peux exécuter des commandes comme dans un terminal
-pwd
-```
-
-#### à quoi ça sert
+````{admonition} à quoi ça sert
 
 c'est uniquement une **commodité** pour ne pas avoir à retaper le chemin complet depuis la
 racine des dossiers
 
-je m'explique :
+voyons ça sur un exemple; je vous invite à expérimenter tout ceci dans votre propre terminal  
+(et sans taper les `$ ` évidemment)
 
-```{code-cell}
-# on crée un fichier bidon
+  ```bash
+  $ cd
+  # évidemment chez vous ça sera différent
+  $ pwd 
+  /c/Users/Jean Mineur
+  
+  # on a créé ça dans un chapitre précédent
+  $ cd cours-info
 
-echo "Hello world" > foo.txt
-```
+  # je vous invite à ouvrir un explorateur de fichiers en même temps
+  # pour bien voir ce qui se passe
 
-```{code-cell}
-# avec la commande `ls`
-# on peut voir la liste des fichiers
-# et donc ici on va voir entre autres
-# le fichier 'foo.txt' qu'on vient de créer
+  # avec la commande 'ls' je peux voir le contenu de ce dossier
+  # si vous avez déjà cloné le repo du cours 
+  # vous allez avoir au moins le dossier 'intro'
+  $ ls  
+  intro/
 
-ls
-```
+  # je crée un fichier bidon, qui s'appelle foo.txt
+  $ echo Hello-World > foo.txt
 
-```{code-cell}
-# on peut vérifier que le fichier 'foo.txt' existe bien
+  # à ce stade vous devez voir apparaitre le fichier 
+  # dans votre explorateur de fichiers !
 
-ls foo.txt
-```
+  # je peux afficher ce qu'il y a dedans comme ceci
+  $ cat foo.txt
+  Hello-World
 
-```{code-cell}
-# ou avoir plus de détails sur ce fichier
-# sa taille, sa date
+  # mais je pourrais aussi bien accéder à ce fichier comme ceci
+  # on appelle ça le chemin absolu, i.e. en partant de la racine du disque
+  $ cat /c/Users/Jean\ Mineur/cours-info/foo.txt
+  Hello-World
+  ```
+````
 
-ls -l foo.txt
-```
+`````{admonition} screenshot
+:class: dropdown
 
-reprenons; une autre commande utile c'est `cat`; ça permet tout simplement de voir le
-contenu d'un fichier
+````{div}
+```{image} media/fig-bash-create-file.png
+:width: 600px
+````
+`````
 
-```{code-cell}
-# le point important c'est que je peux faire référence
-# à ce fichier sous le nom simplement 'foo.txt'
+`````{admonition} à noter sur cet exemple
+````{div}
+* la commande `cat` permet d'afficher le contenu d'un fichier  
+  c'est pratique sur des petits fichiers, pas besoin de lancer vs-code
+* vous voyez que, parce qu'on est dans le dossier `cours-info`  
+  on n'a **pas besoin** de taper **tout le chemin** qui mène à `foo.txt`  
+  c'est parce que `foo.txt` est considéré comme **relatif** au dossier courant  
+* si on était dans un autre dossier, on ne trouverait plus le fichier `foo.txt`; il faudrait alors
+  * soit donner le chemin absolu
+  * soit fabriquer un chemin relatif en partant du dossier courant
+  * voici par exemple si je remonte d'un étage pour revenir à mon homedir:
 
-cat foo.txt
-```
-
-```{code-cell}
-# et comme je suis dans le répertoire
-# /home/jovyan/work/notebooks
-
-pwd
-```
-
-```{code-cell}
-# je pourrais faire aussi
-# (à modifier éventuellement selon votre environnement)
-
-cat /home/jovyan/work/notebooks/foo.txt
-```
-
-et donc pour moi, parce que je suis dans le répertoire
-`/home/jovyan/work/notebooks/`
-
-c'est pareil de faire
-
-```console
-cat /home/jovyan/work/notebooks/foo.txt
-```
-
-ou tout simplement
-
-```
-cat foo.txt
-```
+  ```{image} media/fig-bash-relative-not-found.png
+  :width: 600px
+  ```
+````
+`````
 
 +++
 
-### chemins relatifs
-
-+++ {"tags": []}
+### `.` et `..`
 
 ce serait aussi équivalent de faire
 
@@ -367,9 +275,7 @@ cat ./foo.txt
 
 car le répertoire `.` désigne justement le répertoire courant
 
-+++
-
-par convention:
+en effet par convention:
 
 * `.` désigne le répertoire courant
 * `..` désigne le répertoire "au dessus" du répertoire courant  
@@ -377,125 +283,61 @@ par convention:
 
       cat ../frere/neveu
 
-+++
-
-pour "remonter" dans l'arborescence des dossiers, je peux donc utiliser un chemin relatif
-
-```{code-cell}
-pwd
-```
-
-```{code-cell}
-# `cd` ça veut dire *change directory* 
-
-cd ..
-```
-
-```{code-cell}
-pwd
-```
-
-enfin, une astuce utile c'est pour **revenir en arrière** avec `cd -`
-
-```{code-cell}
-# du coup là je me retrouve à mon point de départ
-cd -
-```
-
-```{code-cell}
-# pour créer un répertoire je peux utiliser mkdir
-# attention toutefois car on ne peut pas le faire 
-# s'il existe déjà
-
-mkdir new-folder
-cd new-folder
-pwd
-```
-
-```{code-cell}
-# qui bien sûr est vide 
-
-ls 
-```
-
-```{code-cell}
-# et pour revenir à mon point de départ
-# je pourrais faire comme tout à l'heure
-# cd - 
-# ou encore, puisque je sais que c'est juste un cran au dessus
-
-cd ..
-pwd
-```
-
-### répertoire utilisateur (*home directory*)
+pour "remonter" dans l'arborescence des dossiers, je peux donc utiliser un chemin relatif  
+comme on l'a fait un peu plus haut d'ailleurs
 
 +++
 
-enfin chaque utilisateur possède un répertoire,  
-qui est la racine de l'arbre dans lequel il peut ranger ses affaires  
-indépendamment du système d'exploitation
+### `cd -` (avancé)
 
-pour y aller le plus simple est de faire simplement `cd` sans paramètre
+enfin, une astuce utile c'est pour **revenir en arrière** avec `cd -`  
+avec cette commande, vous retournez au dossier où vous étiez avant le dernier `cd`
 
-```{code-cell}
-# sans paramètre je retourne tout en haut de mon espace
-cd
+```bash
+$ pwd
+/c/Users/Jean Mineur
+$ cd cours-info/intro
+$ pwd
+/c/Users/Jean Mineur/cours-info/intro
+$ cd -
+$ pwd 
+/c/Users/Jean Mineur
+$ cd - 
+$ pwd
+/c/Users/Jean Mineur/cours-info/intro
 ```
 
-```{code-cell}
-# c'est mon home-directory
-pwd
-```
-
-```{code-cell}
-# et je peux redescendre là d'où je venais
-cd -
-pwd
-```
++++
 
 ## organisation en dossiers: quelques conseils
-
-+++
 
 quelques conseils pour organiser votre travail en dossiers
 
 +++
 
-### choisissez-vous un "dossier principal"
+### un raccourci vers `cours-info`
 
 le *homedir*, c'est une racine tentante pour mettre ses affaires, mais souvent il y a pas
 mal de fourbis dès le départ; sur Windows par exemple si vous regardez son contenu
 (faites-le !), vous verrez que c'est pas mal encombré
 
-du coup je vous conseille de vous choisir un dossier principal, pas trop profond par
-rapport à votre *homedir*, mais qui est vide au démarrage
+c'est pourquoi on vous a demandé de créer un dossier `cours-info` dans lequel on va ranger vos différents dossiers: chaque cours dans un repo, puis au besoin un dossier par exercice ou TP ou hackaton, etc...
 
-un choix pas absurde, sur toutes les platesformes, c'est de prendre comme dossier
-principal  
-`~/Desktop/git`  (dans bash, `~` représente le *homedir*)  
-l'avantage de choisir un dossier directement sous `~/Desktop/` est qu'on le voit
-apparaitre sur le bureau
+je vous recommande de passer 5 minutes pour ajouter ce dossier dans les **raccourcis de votre explorateur de fichiers*
+de cette façon vous y aurez un accès direct en un clic, comme ceci
 
-et en dessous de ce dossier principal vous allez ranger vos différents dossiers
+```{image} media/fig-quick-access-cours-info.png
+:width: 600px
+```
+
 
 +++
 
 ### ne pas abuser sur la profondeur des arbres  
 
-évitez de couper les cheveux en 4 en créant plein de sous-répertoires, genre :
+dans tous les cas, évitez de couper les cheveux en 4 en créant plein de sous-répertoires, genre :
 
 ~~`/User/jeanmineur/Desktop/git/mines/première-année/info/ue12/numerique`~~
-
-au contraire :
-
-* si vous créez un dossier par sujet avec un nom explicite
-  * par exemple ce cours pourrait s'appeler `ue12-p23-numerique`
-* et que vous regroupez tous ces dossiers dans **un seul répertoire**,
-* ça peut largement suffire
-
-du coup créez plutôt un dossier  
-`/User/jeanmineur/Desktop/git/ue12-p23-numerique`
 
 +++
 
@@ -508,42 +350,6 @@ mais après ça devient rapidement compliqué de les utiliser, dans le terminal 
 
 c'est pourquoi on recommande d'**éviter les espaces et les accents** dans les noms de
 fichiers
-
-+++
-
-### créez des raccourcis
-
-pour pouvoir facilement accéder à vos fichiers, investissez un peu de temps pour trouver
-comment on peut créer des raccourcis depuis l'explorateur de fichiers
-
-+++
-
-sur le screenshot suivant, on a choisi
-
-* de créer un dossier `git` directement dans le Desktop
-* pour l'instant il est vide, mais c'est là qu'on va ranger tous les dossiers de premier
-  niveau
-
-* comme il est créé dans le dossier `Desktop`, on voit ce dossier `git` directement sur le
-  bureau
-
-* et pour faire bon poids on a même créé un raccourci dans l'explorateur de fichiers
-* tout ça pour pouvoir y accéder rapidement en toute circonstance
-* remarquez aussi le menu contextuel; on peut facilement créer un `git bash` qui démarrera
-  directement dans ce dossier (`git` sera son répertoire courant)
-
-+++
-
-*pour créer un raccourci dans l'explorateur Windows*
-
-![](media/fig-quick-acces-git.png)
-
-+++
-
-*une fois bien installé on peut rapidement accéder à notre dossier principal de plein de
-façons*
-
-![](media/fig-dossier-git.png)
 
 +++ {"tags": ["level_intermediate"]}
 
