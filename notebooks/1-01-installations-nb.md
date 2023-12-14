@@ -113,12 +113,6 @@ sur Mac, quand vous installez une application - comme par exemple vs-code - il e
 
 +++
 
-### ne pas installer en mode administrateur
-
-quelle que soit la plateforme, on s'efforce dans tous les cas où c'est possible d'installer **en mode user** et non pas en mode administrateur; l'idée d'installer en mode administrateur c'est de faire l'installation pour plusieurs utilisateurs à la fois, mais dans notre cas ça n'a aucun intérêt; et par contre l'installation en mode administrateur vient avec pas mal d'inconvénients, et notamment de devoir rebasculer sans arrêt en mode administrateur...
-
-+++
-
 ## installation de git (et bash sur Windows)
 
 +++
@@ -131,7 +125,7 @@ pierre deux coups, et installer à la fois `bash` et `git`
 
 * allez sur le site là  <https://gitforwindows.org/>
 * téléchargez et lancez l'installation...
-* vous pouvez prendre toutes les options par défaut
+* vous pouvez prendre **toutes les options par défaut**
 
 ```{admonition} on peut prendre toutes les options par défaut
 :class: dropdown tip
@@ -162,15 +156,21 @@ bash est préinstallé; pour git, utilisez ce lien:
 
 vous devez pouvoir
 
-* lancer un terminal `bash`  
-  pour Windows, cherchez *bash* dans le menu Démarrer, et n'hésitez pas à faire en sorte que ce programme, *Git Bash*, reste dans la barre des tâches même lorsqu'il est inactif; ça vous facilitera la vie
+* lancer un terminal `bash`
+  ```{admonition} Windows
+  :class: dropdown note
+  
+  cherchez *bash* dans le menu Démarrer  
+  lancez l'application qui s'appelle *Git Bash*  
+  n'hésitez pas à faire en sorte que ce programme reste dans la barre des tâches (*Pin to Taskbar*) même lorsqu'il est inactif; ça vous facilitera la vie...
+  ```
 * pour vérifier que c'est bien du `bash` - et pas du *PowerShell* par exemple, tapez
   ```bash
   echo $BASH_VERSION
   ```
   qui doit répondre
   ```
-  5.2.15(1)-release        # c'est un juste exemple hein
+  5.2.15(1)-release        # c'est juste un exemple hein
   ```
 * pour vérifer que vous avez bien installé `git`:
   ```bash
@@ -194,15 +194,27 @@ depuis le terminal on peut tout faire ! et pour commencer on va apprendre à cr�
 c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
 
 * créez un nouveau terminal
-* allez dans votre homedir en faisant simplement
+* regardez dans quel dossier vous êtes
+  ```bash
+  pwd
+  ```
+  qui devrait vous répondre quelque chose qio contient votre nom, comme genre
+  ```
+  # sur Windows
+  /c/Users/Jean Mineur
+  # sur Mac / Linux
+  /Users/jeanmineur
+  ```
+  c'est votre *home directory*, en abrégé *homedir*
+* **si nécessaire:** si vous voyez autre chose: forcez le terminal à aller dans votre homedir en faisant simplement
   ```bash
   cd
   ```
   ```{admonition} à quoi ça sert ?
   :class: note dropdown
   
-  sur mac et linux, c'est optionnel car le terminal démarre justement dans le homedir  
-  par contre sur Windows c'est bien de prendre l'habitude de faire un premier `cd` au début du terminal car il arrive que le terminal démarre dans un autre dossier...
+  sur mac et linux, c'est optionnel car le terminal démarre justement dans le homedir; c'est le comportement normal  
+  par contre selon les configurations sur Windows, il peut être nécessaire de prendre l'habitude de faire un premier `cd` au début du terminal, car dans certains setups le terminal démarre dans un autre dossier...
   ```
 * créez un dosser `cours-info`
   ```bash
@@ -212,7 +224,9 @@ c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
   ```bash
   cd cours-info
   ```
-* maintenant ouvrez votre **explorateur de fichiers**, et constatez qu'on a bien créé un dossier qui s'appelle `cours-info`
+  éventuellement refaites `pwd` pour constater que vous avez changé de dossier
+* maintenant ouvrez votre **explorateur de fichiers**,
+  et constatez qu'on a bien créé un dossier qui s'appelle `cours-info`
 
 +++ {"jp-MarkdownHeadingCollapsed": true}
 
@@ -231,11 +245,17 @@ ne les utilisez surtout pas dans nos cours, vous allez perdre un temps précieux
 ````{admonition} installation (toutes plateformes)
 :class: seealso dropdown
 
-On y va. Le site est là <https://code.visualstudio.com/>. Vous voulez installer donc il va
-falloir que vous alliez dans une section *download* ... vous la voyez ?  
+On y va. Le site est là <https://code.visualstudio.com/>.  
+Vous voulez installer donc il va falloir que vous alliez dans une section *download* ... vous la voyez ?  
 à vous de jouer maintenant
 
-```{admonition} pour les Mac
+```{admonition} Windows: toutes les option par défaut
+:class: seealso dropdown
+
+pour les Windows, à nouveau vous prenez **toutes les options par défaut**
+```
+
+```{admonition} pour les Mac: déplacez dans le dossier Applications !
 :class: warning dropdown
 
 **Attention**  
@@ -250,8 +270,10 @@ si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes as
 ````
 
 
-````{admonition} on vérifie code
+`````{admonition} on vérifie code
 :class: important dropdown
+
+* si le programme d'installation a lancé un exemplaire de vs-code, fermez-le
 
 * dans **un nouveau terminal** (voir + haut)  
   ```bash
@@ -260,13 +282,18 @@ si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes as
   1a5daa3a0231a0fbba4f14db7ec463cf99d7768e
   x64
   ```
-  qui doit afficher un numéro de version (et d'autres détails)  
-* si à la place vous voyez  
+  qui doit afficher un numéro de version (et d'autres détails)
+
+  ````{admonition} command not found ?
+  :class: dropdown note
+
+  si à la place vous voyez  
   ```
   code: command not found
   ```
   d'abord vérifiez que vous avez bien essayé **dans un nouveau terminal** (oui je sais...)  
   et sinon [allez voir cette page](label-troubleshoot-code-command-not-found)
+  ````
 * lorsque ça fonctionne, prenez l'habitude de lancer vs-code comme ceci
   ```bash
   # first I want to choose in which folder I am going to work
@@ -277,7 +304,13 @@ si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes as
 * et tant que vous y êtes, activez le mode *Auto Save*:  
   ⮑ dans le menu *File*, cliquez sur *Auto Save* (ça ajoute une check mark)  
   l'effet de ce réglage est que vos modifications sont sauvées toutes seules, pas besoin de *Control-S* sans arrêt
-````
+* pour ceux qui sont en avance, amusez-vous à créer un fichier:
+  * Control-n (ou Command-n sur mac) pour créer un nouveau fichier
+  * Control-s (sur mac c'est toujours Command-truc) pour indiquer dans quel fichier le sauver, disons `foo.txt`
+  * écrivez une ligne ou deux
+  * quittez vs-code
+  * depuis le terminal vous pouvez utiliser `cat foo.txt` pour afficher le contenu que vous venez de taper
+`````
 
 +++
 
@@ -288,7 +321,7 @@ si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes as
   * relativement léger
   * permet d'installer en mode "user", c'est-à-dire sans droits administrateur
   * permet également de fabriquer des environnements virtuels (pas de panique, on n'utilisera pas ça tout de suite, mais c'est une possibilité qui devient vite intéressante)
-* (ça va sans le dire mais ne prenez **surtout pas Python 2.7** !)
+* (ça va sans dire, mais ne prenez **surtout pas Python 2.7** !)
 
 +++
 
@@ -341,8 +374,7 @@ droite par exemple)
 :class: seealso dropdown
 
 ````{div}
-cherchez sur google *`download miniconda`*  
-vous allez trouver une page qui ressemble à ceci
+commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
 ```{image} media/fig-miniconda-download.png
 :width: 500px
@@ -360,10 +392,19 @@ puisqu'on est sur Windows, on n'a pas le choix, téléchargez le `*.exe`
 
 ````{div}
 vous lancez le `.exe`  
-et vous prenez toutes les options par défaut lorsqu'on vous pose une question  
-**sauf pour les deux écrans qui suivent**
+et vous prenez les options par défaut lorsqu'on vous pose une question  
+**sauf pour les écrans qui suivent**
 
-**(1) le choix du dossier où installer**  
+***Install for:*** (si la question vous est posée)   
+répondez *Just me (recommended)*
+
+```{image} media/fig-miniconda-just-me.png
+:width: 500px
+```
+
+<div style="height: 0.5cm"></div>
+
+**le choix du dossier où installer**  
 sur cet écran vous remplacez le chemin qu'on vous propose par défaut, et vous
 choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'est-à-dire
 `c:\miniconda`
@@ -374,15 +415,18 @@ choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'e
 
 <div style="height: 0.5cm"></div>
 
-**(2) advanced options: *add to my PATH environment variable***  
+**advanced options: *add to my PATH environment variable***  
 il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
 
-```{image} media/fig-miniconda-install.png
+```{image} media/fig-miniconda-add-path.png
 :width: 500px
-
 ```
+````
 
-si par mégarde vous êtes allé jusqu'au bout sans cocher cette case: relancez l'installation en faisant bien attention !
+````{admonition} pas coché la case ?
+:class: dropdown 
+
+si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](label-troubleshoot-python-command-not-found)
 ````
 `````
 ``````
@@ -413,8 +457,7 @@ et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* o
 :class: seealso dropdown
 
 ````{div}
-cherchez sur google *`download miniconda`*  
-vous allez trouver une page qui ressemble à ceci
+commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
 ```{image} media/fig-miniconda-download.png
 :width: 500px
@@ -438,8 +481,7 @@ il n'y a pas de choix particulier où on pourrait se tromper..
 :class: seealso dropdown
 
 ````{div}
-cherchez sur google *`download miniconda`*  
-vous allez trouver une page qui ressemble à ceci
+commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
 ```{image} media/fig-miniconda-download.png
 :width: 500px
@@ -485,7 +527,7 @@ les questions/réponses se passent dans le terminal, voici quelques trucs utiles
 
 +++
 
-`````{admonition} on vérifie python
+`````{admonition} on vérifie conda et python
 :class: important dropdown
 
 et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
@@ -493,34 +535,27 @@ et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
 ````{admonition} le prompt (rappel)
 :class: dropdown
 
-* le signes `$ ` ne fait pas partie de ce que vous devez taper
+* le signe `$ ` **ne fait pas partie** de ce que vous devez taper
 * c'est juste une indication pour dire que la commande s'adresse au terminal  
   c-à-d à nouveau : GitBash sur Windows, Terminal sur MacOS,  
   et n'importe quel terminal bash sur linux
 
-ça signifie que ce que vous voyez ici correspond à ce qui sera affiché dans le terminal,
-mais si vous suivez bien les indications vous n'avez pas à taper le `$`, ce
+ça signifie que vous **n'avez pas à taper le `$`**, ce
 sera déjà affiché lorsque vous taperez vos commandes
 ````
 
-````{admonition} quel python ?
+````{admonition} la commande conda
 :class: important dropdown
 
-pour savoir si la commande `python` est connue, et si oui, où on l'a trouvée
-```console
-$ type python
+vous créez un nouveau terminal, et vous tapez
+```bash
+$ conda --version
+conda 23.5.2
 ```
-(attention à ne pas coller le `$`, donc)  
-qui doit vous répondre quelque chose comme
-```console
-# sur Windows avec notre setup vous devez avoir
-python is /c/miniconda/python
-# sur Mac par exemple je vois 
-python is /c/Users/Thierry Parmentelat/miniconda3/python
-```
-
-si à ce stade vous avez un `python: not found` c'est que vous n'avez pas bien coché la case  
-*Add Miniconda3 to my PATH environment variable*; dans ce cas le plus simple est de recommencer l'installation - [voir aussi ici](label-troubleshoot-python-command-not-found)
+qui **ne doit pas** vous répondre `command not found`  
+si c'est le cas, c'est que vous n'avez pas bien coché la case  
+*Add Miniconda3 to my PATH environment variable*  
+[dans ce cas voyez ici](label-troubleshoot-python-command-not-found)
 
 ````
 
@@ -535,6 +570,22 @@ Python 3.11.4
 vous **devez** avoir une version 3.x, et **surtout pas** 2.7
 ````
   
+````{admonition} quel python ? (optionnel)
+:class: important dropdown
+
+pour savoir quelle version de `python` est utilisée, vous pouvez taper
+```console
+$ type python
+```
+qui doit vous répondre quelque chose comme
+```console
+# sur Windows avec notre setup vous devez avoir
+python is /c/miniconda/python
+# sur Mac par exemple je vois 
+python is /c/Users/Thierry Parmentelat/miniconda3/python
+```
+````
+
 `````
 
 +++

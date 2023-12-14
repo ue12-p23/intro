@@ -73,7 +73,7 @@ comme toujours, relancez un nouveau terminal et réessayez
 ````{admonition} symptôme
 :class: error
 
-vous lancez `python` dans le terminal et ça vous dit `python: command not found`
+vous lancez `python` ou `conda` dans le terminal et ça vous dit `python: command not found`
 ````
 
 ````{admonition} solution 1
@@ -94,7 +94,18 @@ tapez dans votre terminal
   ```
 ````
 
-````{admonition} solution 2
+````{admonition} solution 2 - Windows
+:class: seealso
+
+essayez de taper cette commande dans un terminal tout neuf  
+  ```bash
+  /c/miniconda/Scripts/conda.exe init bash
+  ```
+  avant de lancer un nouveau terminal et de réessayer
+````
+
+
+````{admonition} solution 3
 :class: seealso
 
 si ce n'est pas cela, le plus probable est que vous n'avez pas bien coché la case `mettre à jour $PATH` lors de l'installation de miniconda; réinstallez, relancez un terminal, et réessayez
