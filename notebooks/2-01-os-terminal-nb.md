@@ -141,7 +141,7 @@ s'appelle ``bash``
 
 * `bash` vient avec l'installation de base sur MacOS et lzinux
 * sur Windows, il faut l'installer séparément, on l'a vu avec ***git for
-  windows*** 
+  windows***
 
 +++
 
@@ -163,13 +163,14 @@ termes synonymes :
 
 ### répertoire utilisateur (*home directory*)
 
-chaque utilisateur possède un répertoire,  
+chaque utilisateur possède un répertoire (synonyme de dossier),  
 qui est la racine de l'arbre dans lequel il peut ranger ses affaires  
 indépendamment du système d'exploitation
 
 pour y aller le plus simple est de faire simplement `cd` sans paramètre
 
 ```{admonition} nouveau terminal
+
 en principe, un terminal qui vient d'être créé a comme dossier courant le home directory  
 c'est le cas sur MacOS et Linux  
 toutefois sur Windows, en pratique ce n'est pas toujours le cas en fonction de votre setup  
@@ -178,11 +179,15 @@ aussi si vous êtes dans ce cas-là, prenez l'habitude de faire `cd` avant toute
 
 ```{code-cell}
 # sans paramètre je vais tout en haut de mon espace
+# c'est mon home-directory
+
 cd
 ```
 
 ```{code-cell}
-# c'est mon home-directory
+# pour voir où il est
+# pwd = print working directory
+
 pwd
 ```
 
@@ -190,10 +195,7 @@ pwd
 
 tous les programmes (processus) ont ce qu'on appelle un répertoire courant
 
-dans le terminal on peut le voir avec la commande `pwd`  
-(*print working directory*)
-
-````{admonition} à quoi ça sert
+dans le terminal on peut le voir avec la commande `pwd` comme on vient de le faire 
 
 c'est uniquement une **commodité** pour ne pas avoir à retaper le chemin complet depuis la
 racine des dossiers
@@ -201,65 +203,33 @@ racine des dossiers
 voyons ça sur un exemple; je vous invite à expérimenter tout ceci dans votre propre terminal  
 (et sans taper les `$ ` évidemment)
 
-  ```bash
-  $ cd
-  # évidemment chez vous ça sera différent
-  $ pwd 
-  /c/Users/Jean Mineur
-  
-  # on a créé ça dans un chapitre précédent
-  $ cd cours-info
-
-  # je vous invite à ouvrir un explorateur de fichiers en même temps
-  # pour bien voir ce qui se passe
-
-  # avec la commande 'ls' je peux voir le contenu de ce dossier
-  # si vous avez déjà cloné le repo du cours 
-  # vous allez avoir au moins le dossier 'intro'
-  $ ls  
-  intro/
-
-  # je crée un fichier bidon, qui s'appelle foo.txt
-  $ echo Hello-World > foo.txt
-
-  # à ce stade vous devez voir apparaitre le fichier 
-  # dans votre explorateur de fichiers !
-
-  # je peux afficher ce qu'il y a dedans comme ceci
-  $ cat foo.txt
-  Hello-World
-
-  # mais je pourrais aussi bien accéder à ce fichier comme ceci
-  # on appelle ça le chemin absolu, i.e. en partant de la racine du disque
-  $ cat /c/Users/Jean\ Mineur/cours-info/foo.txt
-  Hello-World
-  ```
-````
-
 `````{admonition} screenshot
-:class: dropdown
+:class: note
 
 ````{div}
-```{image} media/fig-bash-create-file.png
+```{image} media/fig-bash-relative-paths.png
 :width: 600px
+```
 ````
 `````
 
 `````{admonition} à noter sur cet exemple
 ````{div}
-* la commande `cat` permet d'afficher le contenu d'un fichier  
-  c'est pratique sur des petits fichiers, pas besoin de lancer vs-code
-* vous voyez que, parce qu'on est dans le dossier `cours-info`  
-  on n'a **pas besoin** de taper **tout le chemin** qui mène à `foo.txt`  
-  c'est parce que `foo.txt` est considéré comme **relatif** au dossier courant  
-* si on était dans un autre dossier, on ne trouverait plus le fichier `foo.txt`; il faudrait alors
-  * soit donner le chemin absolu
-  * soit fabriquer un chemin relatif en partant du dossier courant
-  * voici par exemple si je remonte d'un étage pour revenir à mon homedir:
-
-  ```{image} media/fig-bash-relative-not-found.png
-  :width: 600px
-  ```
+* la commande `ls` permet d'afficher le contenu d'un dossier
+  ou de vérifier si un fichier existe
+* vous voyez que, parce qu'on est dans le dossier `intro`  
+  on n'a **pas besoin** de taper **tout le chemin** qui mène à `README.md`  
+  c'est parce que `README.md` est considéré comme **relatif** au dossier courant  
+* une fois que je change de dossier en allant dans `demo/python`, je ne **trouve plus** le fichier `README.md`
+  if faut que je dise bien qu'il est en fait deux étages plus haut
+  en indiquant `../../README.md` (car `..` signifie le dossier parent)
+* je peux faire tourner le programme `fact.py`
+  sans précider le dossier de `fact.py`
+  car il est dans le même dossier que moi
+* je *peux aussi* bien sûr lancerle même programme en donnant son **chemin absolu**
+  remarquez que cette forme marcherait alors quel que soit mon dossier courant !
+* remarquez enfin que le programme `python` a été trouvé comme étant en fait `/c/miniconda/python`
+  c'est grâce à cette fameuse variable `PATH` que le programme d'installation de conda a modifiée pour nous
 ````
 `````
 
@@ -267,21 +237,13 @@ voyons ça sur un exemple; je vous invite à expérimenter tout ceci dans votre 
 
 ### `.` et `..`
 
-ce serait aussi équivalent de faire
-
-```console
-cat ./foo.txt
-```
-
-car le répertoire `.` désigne justement le répertoire courant
-
-en effet par convention:
+par convention:
 
 * `.` désigne le répertoire courant
 * `..` désigne le répertoire "au dessus" du répertoire courant  
   on l'utilise pour fabriquer des chemins du genre de
 
-      cat ../frere/neveu
+      ls ../frere/neveu
 
 pour "remonter" dans l'arborescence des dossiers, je peux donc utiliser un chemin relatif  
 comme on l'a fait un peu plus haut d'ailleurs
@@ -330,7 +292,6 @@ de cette façon vous y aurez un accès direct en un clic, comme ceci
 :width: 600px
 ```
 
-
 +++
 
 ### ne pas abuser sur la profondeur des arbres  
@@ -351,7 +312,7 @@ mais après ça devient rapidement compliqué de les utiliser, dans le terminal 
 c'est pourquoi on recommande d'**éviter les espaces et les accents** dans les noms de
 fichiers
 
-+++ {"tags": ["level_intermediate"]}
++++ {"tags": []}
 
 ### affichez les extensions dans les noms de fichier
 
@@ -365,8 +326,13 @@ voici comment on peut changer ce comportement, pour voir les noms de fichier en 
 i.e. comme avec le terminal
 
 
-![](media/fig-show-extensions-1.png)
-![](media/fig-show-extensions-2.png)
+```{image} media/fig-show-extensions-1.png
+:width: 600px
+```
+
+```{image} media/fig-show-extensions-2.png
+:width: 600px
+```
 
 +++
 
@@ -394,16 +360,14 @@ voici pour résumer un rappel des commandes bash les plus simples et les plus ut
 
 ### redirections
 
-+++
-
 plutôt que d'afficher la résultat d'une commande dans le terminal, il est parfois pratique de rediriger cela dans un fichier
 
 par exemple si j'écris dans le terminal
 
-```{code-cell}
-# je crée ou j'écrase le fichier foo.txt
-echo "un petit fichier bidon" > foo.txt
-```
+  ```bash
+  # je crée ou j'écrase le fichier foo.txt
+  echo "un petit fichier bidon" > foo.txt
+  ```
 
 ce qui va se passer c'est que je vais créer (ou écraser) le fichier `foo.txt` pour y ranger dedans la chaine  
 `un petit fichier bidon\n`
@@ -414,53 +378,51 @@ le dernier cararactère (`\n`) correspond à un **saut de ligne**
 
 ### *globbing*
 
-+++
-
 si j'ai plusieurs fichiers qui se terminent en `.txt`, je peux les lister avec la notation en `*` comme ceci
 
-```{code-cell}
-# je crée (ou j'écrase) un second fichier bar.txt
-echo "un autre fichier bidon" > bar.txt
-```
+  ```bash
+  # je crée (ou j'écrase) un second fichier bar.txt
+  $ echo "un autre fichier bidon" > bar.txt
+  ```
 
-```{code-cell}
-# de là je peux lister tous les fichiers qui se terminent en .txt
+de là je peux lister tous les fichiers qui se terminent en .txt
 
-ls *.txt
-```
+  ```bash
+  $ ls *.txt
+  bar.txt foo.txt
+  ```
+ou tous ceux qui commencent par un f
 
-```{code-cell}
-# ou tous ceux qui commencent par un f
+   ```bash
+   $ ls f*
+   foo.txt
+   ```
 
-ls f*
-```
+ou toute combinaison du même genre
 
-```{code-cell}
-# ou toute combinaison du même genre
+   ```bash
+   $ ls f*txt
+   foo.txt
+   ```
 
-ls f*txt
-```
++++
 
 #### à n'importe quelle profondeur
 
-```{code-cell}
-# si je veux chercher tous les fichiers en *.txt
-# à n'importe quelle profondeur sous mon dossier courant
+  ```bash
+  # si je veux chercher tous les fichiers en *.txt
+  # à n'importe quelle profondeur sous mon dossier courant
 
-ls **/*.txt
-```
+  ls **/*.txt
+  ```
 
 +++ {"tags": ["level_intermediate"]}
 
-#### les crochets `[]`
+#### les crochets `[]` (avancé)
 
-```{code-cell}
-:tags: [level_intermediate]
+  ```bash
+  # on peut aussi utiliser les [] 
+  # ici tous les fichiers qui commencent par un f ou un b et qui finissent en .txt
 
-# on peut aussi utiliser les [] 
-# ici tous les fichiers qui commencent par un f ou un b et qui finissent en .txt
-
-ls [fb]*.txt
-```
-
-***
+  ls [fb]*.txt
+  ```
