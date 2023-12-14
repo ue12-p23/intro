@@ -349,7 +349,7 @@ en deux étapes, ça se présente comme ceci :
 1. pour lancer la console `PowerShell`
 
 ```{image} media/fig-miniconda-powershell-locate.png
-:width: 500px
+:width: 600px
 ```
 
 2. on va créer maintenant le dossier dans lequel on installera ensuite miniconda,
@@ -360,7 +360,7 @@ md c:/miniconda
 ```
 
 ```{image} media/fig-miniconda-powershell-md.png
-:width: 500px
+:width: 600px
 ```
 
 une fois la commande tapée vous pouvez sortir de PowerShell (utiliser la croix en haut à
@@ -377,7 +377,7 @@ droite par exemple)
 commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
 ```{image} media/fig-miniconda-download.png
-:width: 500px
+:width: 600px
 ```
 
 puisqu'on est sur Windows, on n'a pas le choix, téléchargez le `*.exe`  
@@ -399,7 +399,7 @@ et vous prenez les options par défaut lorsqu'on vous pose une question
 répondez *Just me (recommended)*
 
 ```{image} media/fig-miniconda-just-me.png
-:width: 500px
+:width: 600px
 ```
 
 <div style="height: 0.5cm"></div>
@@ -410,7 +410,7 @@ choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'e
 `c:\miniconda`
 
 ```{image} media/fig-miniconda-set-install-dir.png
-:width: 500px
+:width: 600px
 ```
 
 <div style="height: 0.5cm"></div>
@@ -419,7 +419,7 @@ choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'e
 il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
 
 ```{image} media/fig-miniconda-add-path.png
-:width: 500px
+:width: 600px
 ```
 ````
 
@@ -447,7 +447,7 @@ c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fa
 et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* où vous trouver l'information ici
 
 ```{image} media/fig-macos-about.png
-:width: 400px
+:width: 600px
 ```
 ````
 `````
@@ -460,7 +460,7 @@ et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* o
 commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
 ```{image} media/fig-miniconda-download.png
-:width: 500px
+:width: 600px
 ```
 
 vous téléchargez la seule entrée de type **`.pkg`** qui correspond à votre architecture  
@@ -484,7 +484,7 @@ il n'y a pas de choix particulier où on pourrait se tromper..
 commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
 ```{image} media/fig-miniconda-download.png
-:width: 500px
+:width: 600px
 ```
 
 vous téléchargez la première entrée pour Linux (`Linux 64-bit`), les autres correspondent à des architectures différentes de celles qu'on trouve usuellement sur un ordi personnel
