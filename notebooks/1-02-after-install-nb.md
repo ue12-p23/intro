@@ -65,7 +65,7 @@ une fois que vous aurez cliqué sur l'icône "copier-coller" (étape 3), vous au
 ```{admonition} prenez toujours SSH
 :class: warning
 
-à partir de maintenant, prenez l'habitude de toujours choisir le mode d'authentification 'SSH' lorsque vous clônez un repo !
+à partir de maintenant, prenez l'habitude de toujours choisir le mode d'authentification *`SSH`* lorsque vous clônez un repo !
 ```
 
 +++
