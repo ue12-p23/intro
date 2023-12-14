@@ -68,6 +68,12 @@ seul un **travail personnel entre les cours** vous permettra
 
 ----
 
+````{admonition} les cours sont coopératifs
+et non pas compétitifs; vous êtes très à l'aise ? aidez vos camarades, vous apprendrez plein de choses aussi !
+````
+
+----
+
 ces quelques compétences en informatiques sont **incontournables** quel que soit vos futurs métiers  
 
 > il vous faudra aussi les tenir à jour
@@ -148,7 +154,7 @@ qui contiennent
 
 les notebooks sont plutôt rédigés pour être étudiés *en autonomie*
 * ils sont donc trop détaillés pour être parcourus entièrement en cours
-* les enseignants en choisirons certains et les parcourons rapidement pour vous présenter des notions et des exercices    
+* les enseignants en choisirons certains et les parcourront rapidement pour vous présenter des notions et des exercices    
   **en cours**: écoutez vos enseignants et posez des questions  
   (plutôt que de lire les notebooks dans votre coin... vous les relirez bien sûr entre les cours)
 > en cours: on commence les apprentissages ensemble en parcourant des *notebooks*

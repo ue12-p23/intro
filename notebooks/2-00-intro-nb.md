@@ -29,44 +29,13 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
-# introduction
-
-bienvenue dans le premier cours d'informatique de **UE12**  
-*Unité d'Enseignement de l'informatique du premier semestre*
+# les supports de cours
 
 +++
 
-## objectifs pour cette introduction
+## dépôt git
 
-+++
-
-ce cours d'introduction vise à présenter, et à vous faire installer, les outils de base
-pour le cours d'informatique; il ne présente **aucune difficulté** mais vous êtes invité·e
-malgré tout à le suivre **avec une grande attention** car tous ces éléments sont
-**cruciaux pour la suite**
-
-+++
-
-notez que
-
-* le cours est **coopératif**, et pas compétitif  
-  ceux qui savent déjà **aident leurs camarades**
-
-* [voyez aussi la checklist](label-checklist) qui contient la **liste des compétences requises**, ainsi qu'une **vidéo de démonstration** sur YouTube
-
-* à terminer pour la prochaine fois si nécessaire
-
-+++
-
-## les supports de cours
-
-le plus souvent, les supports de cours sont fournis **sous forme de notebooks**; ce sont des documents hybrides contenant **du texte** (mis en page grâce à *markdown*) et du **code** directement **exécutable**; on peut également y inclure des équations mathématiques, et des média externes (images, vidéos, sons, ...)
-
-+++
-
-### dépôt git
-
-ces contenus vous sont exposés au travers d'un **dépôt git** (hébergé sur <https://github.com>)
+comme on l'a vu, les contenus de cours vous sont exposés au travers d'un **dépôt git** (hébergé sur <https://github.com>)
 
 en général il y aura **un dépôt par bloc de cours** (typiquement, un pour cette introduction, un pour le cours Python numérique, un pour votre cours de langage, …)
 
@@ -76,7 +45,7 @@ du côté **github.com**, les cours du premier semestre sont exposés sous une *
 
 +++
 
-### les contenus sur votre ordi
+## les contenus sur votre ordi
 
 une des premières choses que nous apprendrons, ce sera donc 
 
@@ -85,9 +54,9 @@ une des premières choses que nous apprendrons, ce sera donc
 
 +++
 
-### supports HTML cherchables 
+## supports HTML cherchables 
 
-les contenus des notebooks sont également publiés sur *nbhosting* dans un format `HTML`; il s'agit bien sûr d'une version statique (on ne peut plus modifier le code), mais par contre on peut y faire des recherches globalement, ce qui est pratique dans les cours qui contiennent un grand nombre de notebooks
+les contenus des notebooks sont également publiés sur *nbhosting* dans un format `HTML`; il s'agit bien sûr d'une version statique (on ne peut plus modifier le code), mais par contre on peut y faire des recherches globalement, ce qui est pratique dans les cours qui contiennent beaucoup de notebooks
 
 le point d'entrée se situe ici:
 
@@ -95,15 +64,17 @@ le point d'entrée se situe ici:
 
 +++
 
-### `nbhosting`
+## `nbhosting`
 
 enfin les années précédentes, nous avions utilisé une plateforme hébergée sur <https://nbhosting.inria.fr>, où les notebooks étaient accessibles en *live* (code modifiable et exécutable) sans installation préalable; 
 il s'agissait essentiellement d'une facilité pour les premiers cours, de sorte que l'on puisse avancer avant que toute la promo soit entièrement bien installée sur les ordis perso.
 
 il devrait être entendu que le mode d'utilisation "normal" des notebooks est **en local sur votre ordi**,
-aussi cette année 2023, nous allons essayer de nous passer totalement de nbhosting dans ce mode (il continue à servir les versions html, mais pas d'accès avec login); 
+aussi cette année 2023, nous allons essayer de nous passer totalement de nbhosting; 
 on pourra envisager de donner un accès à ce service aux élèves qui auraient des difficultés insurmontables avec leurs installations
 
 +++
 
----
+## la checklist
+
+s'agissant de cette introduction, [voyez aussi la checklist](label-checklist) qui contient la **liste des compétences requises**, ainsi qu'une **vidéo de démonstration** sur YouTube
