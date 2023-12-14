@@ -271,6 +271,32 @@ $ pwd
 
 +++
 
+## la complétion
+
+ce qu'on appelle complétion, c'est la capacité d'un outil à vous aider à taper votre code, en complétant la phrase que vous avez commencée
+
+
+exemple :
+
+* vous lancez un terminal, et si nécessaire vous allez dans votre home-directory
+* à cet endroit il y a en principe un dossier qui s'appelle `cours-info`
+  en admettant qu'aucun autre fichier ou dossier ne commence par `cours-`, vous pouvez faire ceci
+
+  ```bash
+  # vous tapez
+  $ cd cours-
+  # et à ce stade-là, vous tapez sur la touche 'Tabulation` ( ⇥ )
+  # et si en effet il n'y a pas d'autre dossier qui commence par cours-
+  # vous obtenez magiquement
+  $ cd cours-info/
+  ```
+
+la complétion est un outil **indispensable** pour ne pas perdre un temps précieux;
+apprenez à la maitriser, entrainez-vous à vous déplacer dans le dossier du cours
+sans taper l'intégralité des noms de dossier
+
++++
+
 ## organisation en dossiers: quelques conseils
 
 quelques conseils pour organiser votre travail en dossiers

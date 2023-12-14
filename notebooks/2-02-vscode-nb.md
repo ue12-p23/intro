@@ -31,15 +31,13 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 ```
 
-# vs-code
+# vs-code & markdown
+
++++
 
 ## éditeur de code
 
-+++
-
 ### micro-démo vs-code
-
-+++
 
 > micro démo de Visual Code sur le fichier `foo.txt`
 
@@ -87,7 +85,7 @@ HTML(filename="_static/style.html")
   * *`Terminal: Select Default Profile`* (anciennement *`Terminal: Select Default Shell`*`)
 
 
-* montrer comment lancer le terminal
+* avancé: montrer comment lancer le terminal
   * Control \` - la deuxième fois on le ferme
 
 +++
@@ -99,8 +97,7 @@ pour plus de détails, voir aussi
 
 exercice :
 
-* refaire les manipulations vous-mêmes une fois l'installation de l'éditeur de code
-  terminée.
+* refaire les manipulations vous-mêmes
 
 +++ {"tags": []}
 
@@ -310,13 +307,15 @@ $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 ```
 
-+++ {"tags": ["level_intermediate"]}
++++ {"tags": []}
+
+```{admonition} pour aller plus loin
+:class: dropdown
 
 ceux qui veulent creuser peuvent
 
 * s'exercer avec un outil en ligne <https://www.codecogs.com/latex/eqneditor.php>
-
 * commencer par cet article 
 <https://www.physicsoverflow.org/15329/mathjax-basic-tutorial-and-quick-reference>
-
 * approfondir avec celui-ci <https://en.wikibooks.org/wiki/LaTeX/Mathematics>
+```

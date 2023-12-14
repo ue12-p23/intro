@@ -39,50 +39,24 @@ HTML(filename="_static/style.html")
 
 +++
 
-xxx à recaser qlq part
-
-+++
-
-```{admonition} pour être sûr
-:class: note
-
-en théorie c'est tout ce qu'il y a à faire pour installer conda
-
-toutefois certains élèves nous ont signalé un souci, aussi à ce stade on vous recommande de
-* lancer un nouveau terminal
-* et dedans lancer `conda init bash`
-```
-
-+++
-
 ## la complétion
 
-```{code-cell}
+on a déjà parlé de la complétion avec le terminal, c'est disponible également avec python:
 
-```
-
-ce qu'on appelle complétion, c'est la capacité d'un outil à vous aider à taper votre code;
 exemple :
 
 * on lance `ipython`
 * on tape le début d'une commande, par exemple `import frac`
-* à ce point, on appuie sur la touche `Tabulation`
+* à ce point, on appuie sur la touche `Tabulation` ( ⇥ )
 * ipython se rend compte que le seul mot qui fait du sens dans ce contexte et qui commence
   par `frac` est `fractions`, du coup il remplit la commande
-
-+++
 
 la complétion est un outil **indispensable** pour ne pas perdre un temps précieux;
 apprenez à la maitriser
 
-notez d'ailleurs que **ça existe aussi dans le terminal**, typiquement très utile avec les
-noms de fichiers, entre autres
-
 +++
 
 ## *RTFEM*
-
-+++
 
 il est normal de faire des erreurs quand on code, tout le monde en fait
 
@@ -92,8 +66,6 @@ mais les cas où ça se produit quand même, la première chose à faire est bie
 **lire le message d'erreur**
 
 le langage Python s'efforce de vous donner des indications plutôt claires dans ces cas-là
-
-+++
 
 voici par exemple un fichier très proche de `fact.py` qu'on vient de faire tourner  
 mais j'y ai intentionnellement glissé une petite erreur de syntaxe  
@@ -112,8 +84,6 @@ python ../demo/python/fact-broken.py
 ```
 
 je vous demande en exercice de trouver l'erreur en question
-
-+++
 
 en pratique il arrive qu'on se trouve face à des erreurs plus difficiles à diagnostiquer,
 mais dans tous les cas **commencez par *RTFEM***  
